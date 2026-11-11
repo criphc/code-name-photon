@@ -1,0 +1,17 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/m0/verify/out/sdr-p3-alpha.heic
+  file        3892 bytes  sha256=7ee46a5290af7b76478c7ec8f5d231516ee74ae51c3e25908e60e23482e2e1ca
+  container   major=heic brands=[mif1, MiHE, MiPr, miaf, MiHB, heic] items=2
+  base image  320x200 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=last
+  aux ISO     ABSENT
+  aux HDRGain absent
+  sdrDecode   320x200 8bpc contentHeadroom=1.0000 calcHeadroom=0.9473
+  hdrDecode   OK 320x200 8bpc contentHeadroom=1.0000 calc=0.9473
+              measured peak=1.0000 mean=0.2981 frac>1=0.00%
+  baseCheck   mode=photo meanAbsDiff=37.8234 meanSignedDiff=-37.4534 p99=224 p99.9=233 maxAbsDiff=235 fracNonZero=0.8400 decodedVariance=6052.3795 (photo base -> distribution)
+  checks      basePreserved=FAIL dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=PASS isoAuxPresent=FAIL noAlpha=FAIL sdrFallbackPresent=PASS
+  skipped     headroomWithin5pct (no --expect-headroom supplied)
+  result      FAIL
+    failure: basePreserved: photo base: |meanSignedDiff|=37.4534 (<=0.5), meanAbsDiff=37.8234 (<=2.5), absDiffP99=224 (<=16), p99.9=233 / maxAbsDiff=235 (diagnostics), fractionNonZero=0.8400
+    failure: isoAuxPresent: kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)
+    failure: noAlpha: SDR decode hasAlpha=true (last), HDR decode hasAlpha=true (last)
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/alpha-diff.json

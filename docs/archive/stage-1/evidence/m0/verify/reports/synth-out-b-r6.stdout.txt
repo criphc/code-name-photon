@@ -1,0 +1,13 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/m0/synthetic/out-b-r6/hdr.heic
+  file        4203 bytes  sha256=8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e
+  container   major=heic brands=[mif1, tmap, miaf, MiHB, heic] items=12
+  base image  1024x768 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     present 1024x768 fmt=420f altHeadroom=3.9844x [ImageIO omitted aux data bytes]
+  aux HDRGain absent
+  sdrDecode   1024x768 8bpc contentHeadroom=1.0000 calcHeadroom=0.5020
+  hdrDecode   OK 1024x768 10bpc contentHeadroom=3.9844 calc=4.0029
+              measured peak=4.0030 mean=2.0218 frac>1=75.20%
+  baseCheck   mode=uniform meanAbsDiff=0.0000 meanSignedDiff=0.0000 p99=0 p99.9=0 maxAbsDiff=0 fracNonZero=0.0000 decodedVariance=0.0000 (uniform base -> strict)
+  checks      basePreserved=PASS dimsMatch=PASS hdrDecodeSucceeded=PASS headroomWithin5pct=PASS heifContainer=PASS isoAuxPresent=PASS noAlpha=PASS sdrFallbackPresent=PASS
+  result      PASS
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/synth-out-b-r6.json

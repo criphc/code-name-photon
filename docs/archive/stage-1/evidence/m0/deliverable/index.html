@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M0 — gain-map HEIC viewer check</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #000; color: #e8e8e8; font: 16px/1.5 -apple-system, BlinkMacSystemFont, sans-serif; }
+  main { max-width: 1400px; margin: 0 auto; padding: 16px 16px 64px; }
+  h1 { font-size: 22px; margin: 8px 0 4px; }
+  h2 { font-size: 18px; margin: 34px 0 6px; padding-top: 18px; border-top: 1px solid #333; }
+  p { margin: 8px 0; color: #bbb; }
+  .meta { font-size: 13px; color: #777; font-variant-numeric: tabular-nums; }
+  .warn { background: #2a1d00; border: 1px solid #6b4c00; padding: 12px 14px; border-radius: 8px; color: #ffd48a; margin: 14px 0; }
+  img { width: 100%; height: auto; display: block; background: #111; border-radius: 6px; }
+  figure { margin: 0; }
+  figcaption { font-size: 13px; color: #888; margin-top: 6px; }
+  code { background: #1a1a1a; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  a { color: #7cc4ff; }
+  .fail { padding: 24px; border: 1px dashed #a33; border-radius: 8px; color: #ff9a9a; }
+  ul { color: #bbb; }
+</style>
+</head>
+<body>
+<main>
+  <h1>HDR Highlight Finisher — M0 viewer check</h1>
+  <p class="meta" id="env">reading environment…</p>
+
+  <div class="warn">
+    <strong>How to judge.</strong> Lit room, ~50% brightness, True Tone / Night Shift off.
+    The HDR file should make the sun glints and specular highlights on cars and glass
+    <em>brighter than white</em>, while sky, road and everything else stay identical to the SDR
+    reference. If the two look exactly the same → <strong>fail</strong>. If the whole picture is
+    brighter or washed out → <strong>fail</strong>.
+  </div>
+
+  <h2>1 — Real pair, HDR (2560 px preview, base + gain map)</h2>
+  <figure>
+    <img id="i1" src="R0003777-M0-2560.heic" alt="HDR preview">
+    <figcaption>R0003777-M0-2560.heic · 883 KB · authored peak 2.5× (≈1.32 stops) · <a href="R0003777-M0-2560.heic">open</a></figcaption>
+  </figure>
+
+  <h2>2 — Same pair, SDR reference (gain map stripped)</h2>
+  <figure>
+    <img id="i2" src="R0003777-M0-sdr.heic" alt="SDR reference">
+    <figcaption>R0003777-M0-sdr.heic · 2.0 MB · must look like the Capture One export · <a href="R0003777-M0-sdr.heic">open</a></figcaption>
+  </figure>
+  <p>Compare 1 vs 2: only the highlights should differ.</p>
+
+  <h2>3 — Full-resolution delivered file (6000×4000)</h2>
+  <figure>
+    <img id="i3" src="R0003777-M0.heic" alt="Full resolution HDR">
+    <figcaption>R0003777-M0.heic · 3.9 MB · this is the file to AirDrop into Photos · <a href="R0003777-M0.heic">open</a></figcaption>
+  </figure>
+
+  <h2>4 — Synthetic control (known peak 4.0 linear)</h2>
+  <figure>
+    <img id="i4" src="synthetic-gradient.heic" alt="Synthetic gradient HDR">
+    <figcaption>synthetic-gradient.heic · 4 KB · left = SDR level, right edge = 4.0× white; with HDR working the ramp visibly runs past the SDR white end</figcaption>
+  </figure>
+
+  <h2>What to report back</h2>
+  <ul>
+    <li><code>Photos: pass/fail — notes</code> (did you need Settings → Apps → Photos → View Full HDR?)</li>
+    <li><code>Safari: pass/fail — notes</code> (this page: does section 1 look brighter than section 2?)</li>
+    <li>Which sections rendered at all, and whether any image showed black, transparent, or a broken-image placeholder.</li>
+    <li>If Safari shows the same as the SDR reference, note it — that is the Safari-26+ question M0 exists to answer.</li>
+  </ul>
+  <p class="meta">Recipe for this output: <a href="R0003777-M0.recipe.json">R0003777-M0.recipe.json</a></p>
+</main>
+<script>
+  const env = document.getElementById('env');
+  env.textContent = [
+    screen.width + '×' + screen.height,
+    'dpr ' + (window.devicePixelRatio || '?'),
+    navigator.userAgent
+  ].join(' · ');
+  for (const id of ['i1', 'i2', 'i3', 'i4']) {
+    const img = document.getElementById(id);
+    img.addEventListener('error', () => {
+      const d = document.createElement('div');
+      d.className = 'fail';
+      d.textContent = 'Could not render ' + img.getAttribute('src') + ' — this viewer does not decode that file as an image.';
+      img.replaceWith(d);
+    });
+  }
+</script>
+</body>
+</html>

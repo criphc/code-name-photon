@@ -1,0 +1,29 @@
+{
+ "recordedAt": "2026-11-03T16:20:00+08:00",
+ "environment": {
+  "mac": "M1 Max, macOS 27.2",
+  "ipad": "iPad Pro 12.9 (M2), iPadOS 27.0",
+  "referenceMode": "off",
+  "brightness": "~50% (record max pass separately)",
+  "trueTone": "off",
+  "nightShift": "off"
+ },
+ "delivery": {
+  "decodeSeconds": 0.28667497634887695,
+  "encodeSeconds": 1.3610800504684448,
+  "previewSeconds": 0.3679680824279785,
+  "renderSeconds": 0.19674301147460938,
+  "totalSeconds": 20.68299102783203,
+  "verifySeconds": 15.844279050827026
+ },
+ "deliveryTotalSeconds": 20.68299102783203,
+ "transfer": {
+  "route": "AirDrop 2 HEICs to Photos",
+  "seconds": "<5 (owner estimate)"
+ },
+ "viewerStartup": {
+  "photosOpenToImageSeconds": "quick (owner report)",
+  "safariPageToImageSeconds": "quick (owner report)"
+ },
+ "notes": "M5.2 device acceptance 2026-11-03: all five ladder rungs PASS, lock A/B chose the delivered HDR, no reject criterion. Delivery timings come from the report; the transfer/start-up values are the owner's estimates."
+}

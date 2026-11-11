@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:apps/ios/iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:client">
+   </FileRef>
+   <FileRef
+      location = "group:contract">
+   </FileRef>
+   <FileRef
+      location = "group:design">
+   </FileRef>
+   <FileRef
+      location = "group:server">
+   </FileRef>
+</Workspace>

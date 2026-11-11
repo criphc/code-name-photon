@@ -1,0 +1,978 @@
+{
+  "aux" : {
+    "hdrGainMap" : {
+      "label" : "hdrGainMap",
+      "present" : false,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeHDRGainMap"
+    },
+    "hdrGainMapAuxPresent" : false,
+    "hdrGainMapLinearHeadroom" : null,
+    "isoAuxLinearHeadroom" : 5.3359383570000301,
+    "isoAuxPresent" : true,
+    "isoGainMap" : {
+      "auxBytesPerRow" : 1536,
+      "auxHeight" : 2016,
+      "auxWidth" : 1512,
+      "colorSpace" : {
+        "description" : "<CGColorSpace 0x777ac01260> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "name" : "kCGColorSpaceDisplayP3_PQ"
+      },
+      "dataBytes" : null,
+      "dataDescription" : {
+        "BytesPerRow" : 1536,
+        "Height" : 2016,
+        "PixelFormat" : 875704422,
+        "Width" : 1512
+      },
+      "dataOmittedByImageIO" : true,
+      "infoKeys" : [
+        "kCGImageAuxiliaryDataInfoColorSpace",
+        "kCGImageAuxiliaryDataInfoDataDescription",
+        "kCGImageAuxiliaryDataInfoMetadata"
+      ],
+      "label" : "isoGainMap",
+      "metadata" : {
+        "gainMap" : {
+          "AlternateHeadroom" : "2.415742",
+          "alternateHeadroomLinear" : 5.3359383570000301,
+          "alternateHeadroomLog2" : 2.4157419999999998,
+          "BaseColorIsWorkingColor" : "True",
+          "BaseHeadroom" : "0.000000",
+          "baseHeadroomLinear" : 1,
+          "baseHeadroomLog2" : 0,
+          "channelCount" : 3,
+          "channels" : [
+            {
+              "AlternateOffset" : "0.015625",
+              "BaseOffset" : "0.015625",
+              "GainMapMax" : "2.402344",
+              "GainMapMin" : "-1.058594",
+              "Gamma" : "1.000000"
+            },
+            {
+              "AlternateOffset" : "0.015625",
+              "BaseOffset" : "0.015625",
+              "GainMapMax" : "1.474609",
+              "GainMapMin" : "-0.763184",
+              "Gamma" : "1.000000"
+            },
+            {
+              "AlternateOffset" : "0.015625",
+              "BaseOffset" : "0.015625",
+              "GainMapMax" : "1.538086",
+              "GainMapMin" : "-0.329346",
+              "Gamma" : "1.000000"
+            }
+          ],
+          "gainMapMax" : 2.4023439999999998,
+          "gainMapMin" : -1.058594,
+          "gamma" : 1,
+          "Version" : "1"
+        },
+        "kind" : "CGImageMetadata",
+        "present" : true,
+        "tags" : [
+          {
+            "kind" : "scalar",
+            "name" : "Version",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:Version",
+            "prefix" : "HDRToneMap",
+            "value" : "1"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseHeadroom",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:BaseHeadroom",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateHeadroom",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:AlternateHeadroom",
+            "prefix" : "HDRToneMap",
+            "value" : "2.415742"
+          },
+          {
+            "count" : 3,
+            "kind" : "array",
+            "name" : "ChannelMetadata",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[0]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.015625"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-1.058594"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "2.402344"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.015625"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[1]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.015625"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-0.763184"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "1.474609"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.015625"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[2]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.015625"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-0.329346"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "1.538086"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.015625"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseColorIsWorkingColor",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:BaseColorIsWorkingColor",
+            "prefix" : "HDRToneMap",
+            "value" : "True"
+          }
+        ],
+        "totalTags" : 23,
+        "truncated" : false
+      },
+      "pixelFormat" : {
+        "fourCC" : "420f",
+        "hex" : "0x34323066",
+        "raw" : 875704422
+      },
+      "present" : true,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeISOGainMap"
+    }
+  },
+  "baseCheck" : {
+    "available" : false,
+    "reason" : "no --base supplied"
+  },
+  "checks" : {
+    "dimsMatch" : {
+      "actualHeight" : 4032,
+      "actualWidth" : 3024,
+      "detail" : "HEIC SDR decode 3024x4032 vs primary image properties 3024x4032",
+      "expectedHeight" : 4032,
+      "expectedSource" : "primary image properties",
+      "expectedWidth" : 3024,
+      "pass" : true
+    },
+    "hdrDecodeSucceeded" : {
+      "detail" : "kCGImageSourceDecodeToHDR succeeded (3024x4032, 10bpc, contentHeadroom=5.3359)",
+      "isHDRContent" : true,
+      "pass" : true
+    },
+    "heifContainer" : {
+      "detail" : "input is not a HEIF/ISO BMFF image (major brand n/a); verify-heic only certifies HEIC deliverables",
+      "pass" : false
+    },
+    "isoAuxPresent" : {
+      "detail" : "kCGImageAuxiliaryDataTypeISOGainMap present",
+      "pass" : true
+    },
+    "noAlpha" : {
+      "detail" : "SDR decode hasAlpha=false (noneSkipLast), HDR decode hasAlpha=false (noneSkipFirst)",
+      "hdrHasAlpha" : false,
+      "pass" : true,
+      "sdrHasAlpha" : false
+    },
+    "sdrFallbackPresent" : {
+      "detail" : "plain CGImageSourceCreateImageAtIndex decoded 3024x4032",
+      "pass" : true
+    }
+  },
+  "container" : {
+    "ftyp" : null,
+    "infeCount" : 0,
+    "inputIsHEIF" : false,
+    "isISOBaseMedia" : false,
+    "itemCount" : null,
+    "itemCountError" : "no top-level meta box (not an ISO BMFF image container?)",
+    "items" : [
+
+    ],
+    "itemTypeCounts" : {
+
+    },
+    "primaryItemID" : null,
+    "tmapBrandPresent" : false,
+    "tmapItemPresent" : false,
+    "topLevelBoxCount" : 0,
+    "topLevelBoxes" : [
+
+    ]
+  },
+  "file" : {
+    "absolutePath" : "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7473.JPG",
+    "imageCount" : 1,
+    "imageIOType" : "public.heic",
+    "path" : "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7473.JPG",
+    "primaryImageIndex" : 0,
+    "sha256" : "e8cf64f7bd64c30e43addedc039f67169597ea96d7d05b575604ead08d86753f",
+    "sizeBytes" : 3567237
+  },
+  "hdrDecode" : {
+    "alphaInfo" : "noneSkipFirst",
+    "alphaInfoRaw" : 6,
+    "bitsPerComponent" : 10,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 2.837890625,
+    "colorSpaceName" : null,
+    "contentAverageLightLevel" : 0.79802954196929932,
+    "contentHeadroom" : 5.3359379768371582,
+    "decoded" : true,
+    "decodeOptions" : {
+      "kCGImageSourceDecodeRequest" : "kCGImageSourceDecodeToHDR"
+    },
+    "hasAlpha" : false,
+    "height" : 4032,
+    "isFloat" : false,
+    "isHDRContent" : true,
+    "measured" : {
+      "cap" : null,
+      "contentHeadroomUsedAsCap" : 5.3359379768371582,
+      "fractionAboveCap" : null,
+      "fractionAboveContentHeadroom" : 5.4677220682511691e-08,
+      "fractionAboveOne" : 0.16258536754465161,
+      "mean" : 0.50416718291906293,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : -1.6786667401902378e-05,
+      "nanCount" : 0,
+      "peak" : 5.5053277015686035,
+      "peakOverSdrPeak" : 3.1296203405240046,
+      "pixelCount" : 12192768,
+      "renderHeight" : 4032,
+      "renderWidth" : 3024,
+      "sampleCount" : 36578304
+    },
+    "success" : true,
+    "width" : 3024
+  },
+  "imageMetadata" : {
+    "headroomTags" : [
+
+    ],
+    "kind" : "CGImageMetadata",
+    "present" : true,
+    "tags" : [
+      {
+        "kind" : "scalar",
+        "name" : "PixelYDimension",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:PixelYDimension",
+        "prefix" : "exif",
+        "value" : "4032"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Version",
+        "namespace" : "http://ns.adobe.com/hdr-gain-map/1.0/",
+        "path" : "hdrgm:Version",
+        "prefix" : "hdrgm",
+        "value" : "1.0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "OffsetTime",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:OffsetTime",
+        "prefix" : "exif",
+        "value" : "+08:00"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "LensModel",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensModel",
+        "prefix" : "exifEX",
+        "value" : "iPhone Air back camera 5.96mm f/1.6"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureBiasValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureBiasValue",
+        "prefix" : "exif",
+        "value" : "0/1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureTime",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureTime",
+        "prefix" : "exif",
+        "value" : "68715/536870912"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "DateCreated",
+        "namespace" : "http://ns.adobe.com/photoshop/1.0/",
+        "path" : "photoshop:DateCreated",
+        "prefix" : "photoshop",
+        "value" : "2026-09-18T13:53:45.167"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "FocalLenIn35mmFilm",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:FocalLenIn35mmFilm",
+        "prefix" : "exif",
+        "value" : "26"
+      },
+      {
+        "count" : 1,
+        "kind" : "array",
+        "name" : "ISOSpeedRatings",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ISOSpeedRatings",
+        "prefix" : "exif"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[0]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ISOSpeedRatings[0]/exif:[0]",
+        "prefix" : "exif",
+        "value" : "50"
+      },
+      {
+        "count" : 4,
+        "kind" : "array",
+        "name" : "LensSpecification",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification",
+        "prefix" : "exifEX"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[0]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[0]/exifEX:[0]",
+        "prefix" : "exifEX",
+        "value" : "6249513/1048576"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[1]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[1]/exifEX:[1]",
+        "prefix" : "exifEX",
+        "value" : "6249513/1048576"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[2]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[2]/exifEX:[2]",
+        "prefix" : "exifEX",
+        "value" : "13421773/8388608"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[3]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[3]/exifEX:[3]",
+        "prefix" : "exifEX",
+        "value" : "13421773/8388608"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "CreateDate",
+        "namespace" : "http://ns.adobe.com/xap/1.0/",
+        "path" : "xmp:CreateDate",
+        "prefix" : "xmp",
+        "value" : "2026-09-18T13:53:45.167"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "OffsetTimeDigitized",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:OffsetTimeDigitized",
+        "prefix" : "exif",
+        "value" : "+08:00"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "GPSTimeStamp",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:GPSTimeStamp",
+        "prefix" : "exif",
+        "value" : "2026-09-18T05:53:39+0000"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Make",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Make",
+        "prefix" : "tiff",
+        "value" : "Apple"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExifVersion",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExifVersion",
+        "prefix" : "exif",
+        "value" : "0232"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ColorSpace",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ColorSpace",
+        "prefix" : "exif",
+        "value" : "65534"
+      },
+      {
+        "count" : 5,
+        "kind" : "dictionary",
+        "name" : "Flash",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash",
+        "prefix" : "exif"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Mode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Mode/exif:Mode",
+        "prefix" : "exif",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Fired",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Fired/exif:Fired",
+        "prefix" : "exif",
+        "value" : "False"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "RedEyeMode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.RedEyeMode/exif:RedEyeMode",
+        "prefix" : "exif",
+        "value" : "False"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Function",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Function/exif:Function",
+        "prefix" : "exif",
+        "value" : "False"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Return",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Return/exif:Return",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureProgram",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureProgram",
+        "prefix" : "exif",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ResolutionUnit",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:ResolutionUnit",
+        "prefix" : "tiff",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "BrightnessValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:BrightnessValue",
+        "prefix" : "exif",
+        "value" : "349265531/33554432"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "FocalLength",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:FocalLength",
+        "prefix" : "exif",
+        "value" : "6249513/1048576"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "FNumber",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:FNumber",
+        "prefix" : "exif",
+        "value" : "13421773/8388608"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "GPSAltitude",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:GPSAltitude",
+        "prefix" : "exif",
+        "value" : "2033755667/268435456"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "PhotographicSensitivity",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:PhotographicSensitivity",
+        "prefix" : "exifEX",
+        "value" : "50"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "XResolution",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:XResolution",
+        "prefix" : "tiff",
+        "value" : "72/1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "CreatorTool",
+        "namespace" : "http://ns.adobe.com/xap/1.0/",
+        "path" : "xmp:CreatorTool",
+        "prefix" : "xmp",
+        "value" : "27.0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SubsecTimeDigitized",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubsecTimeDigitized",
+        "prefix" : "exif",
+        "value" : "167"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "YResolution",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:YResolution",
+        "prefix" : "tiff",
+        "value" : "72/1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "MeteringMode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:MeteringMode",
+        "prefix" : "exif",
+        "value" : "5"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "WhiteBalance",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:WhiteBalance",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "LensMake",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensMake",
+        "prefix" : "exifEX",
+        "value" : "Apple"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "PixelXDimension",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:PixelXDimension",
+        "prefix" : "exif",
+        "value" : "3024"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "GPSAltitudeRef",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:GPSAltitudeRef",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureMode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureMode",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ApertureValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ApertureValue",
+        "prefix" : "exif",
+        "value" : "1456148375/1073741824"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SceneType",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SceneType",
+        "prefix" : "exif",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "CustomRendered",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:CustomRendered",
+        "prefix" : "exif",
+        "value" : "1"
+      },
+      {
+        "count" : 4,
+        "kind" : "array",
+        "name" : "SubjectArea",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea",
+        "prefix" : "exif"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[0]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[0]/exif:[0]",
+        "prefix" : "exif",
+        "value" : "2014"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[1]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[1]/exif:[1]",
+        "prefix" : "exif",
+        "value" : "1512"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[2]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[2]/exif:[2]",
+        "prefix" : "exif",
+        "value" : "2117"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[3]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[3]/exif:[3]",
+        "prefix" : "exif",
+        "value" : "1331"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "HostComputer",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:HostComputer",
+        "prefix" : "tiff",
+        "value" : "iPhone Air"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Orientation",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Orientation",
+        "prefix" : "tiff",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SubsecTimeOriginal",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubsecTimeOriginal",
+        "prefix" : "exif",
+        "value" : "167"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Model",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Model",
+        "prefix" : "tiff",
+        "value" : "iPhone Air"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SensingMethod",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SensingMethod",
+        "prefix" : "exif",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "GPSLongitude",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:GPSLongitude",
+        "prefix" : "exif",
+        "value" : "120,3.60193E"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ModifyDate",
+        "namespace" : "http://ns.adobe.com/xap/1.0/",
+        "path" : "xmp:ModifyDate",
+        "prefix" : "xmp",
+        "value" : "2026-09-18T13:53:45.167"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "OffsetTimeOriginal",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:OffsetTimeOriginal",
+        "prefix" : "exif",
+        "value" : "+08:00"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ShutterSpeedValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ShutterSpeedValue",
+        "prefix" : "exif",
+        "value" : "1735645753/134217728"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "GPSLatitude",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:GPSLatitude",
+        "prefix" : "exif",
+        "value" : "35,53.3932N"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "hasXMP",
+        "namespace" : "http://ns.apple.com/ImageIO/1.0/",
+        "path" : "iio:hasXMP",
+        "prefix" : "iio",
+        "value" : "True"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SubsecTime",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubsecTime",
+        "prefix" : "exif",
+        "value" : "167"
+      }
+    ],
+    "totalTags" : 64,
+    "truncated" : false
+  },
+  "overall" : {
+    "checkCount" : 6,
+    "failures" : [
+      "heifContainer: input is not a HEIF/ISO BMFF image (major brand n/a); verify-heic only certifies HEIC deliverables"
+    ],
+    "pass" : false,
+    "passedCount" : 5,
+    "skippedChecks" : [
+      "basePreserved (no --base supplied)",
+      "headroomWithin5pct (no --expect-headroom supplied)"
+    ]
+  },
+  "primaryImage" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "colorModel" : "RGB",
+    "decodedHeight" : 4032,
+    "decodedWidth" : 3024,
+    "depth" : 8,
+    "hasAlpha" : false,
+    "height" : 4032,
+    "isFloat" : false,
+    "isFloatDecoded" : false,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 3024
+  },
+  "properties" : {
+    "colorModel" : "RGB",
+    "depth" : 8,
+    "height" : 4032,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 3024
+  },
+  "sdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 1,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "hasAlpha" : false,
+    "height" : 4032,
+    "isFloat" : false,
+    "measured" : {
+      "cap" : null,
+      "fractionAboveCap" : null,
+      "fractionAboveOne" : 0.0001506904202010022,
+      "mean" : 0.34822413943327324,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : -0.0095465108752250671,
+      "nanCount" : 0,
+      "peak" : 1.7591040134429932,
+      "pixelCount" : 12192768,
+      "renderHeight" : 4032,
+      "renderWidth" : 3024,
+      "sampleCount" : 36578304
+    },
+    "width" : 3024
+  },
+  "tool" : {
+    "arguments" : {
+      "base" : null,
+      "expectHeadroom" : null,
+      "input" : "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7473.JPG",
+      "out" : "/Users/criphc/Sites/llm-photon/work/m0/verify/reports/non-heif-jpeg.json"
+    },
+    "generatedAt" : "2026-11-02T13:13:26Z",
+    "hostOS" : "Version 27.2 (Build 26B123)",
+    "name" : "verify-heic",
+    "version" : "0.1.0"
+  }
+}

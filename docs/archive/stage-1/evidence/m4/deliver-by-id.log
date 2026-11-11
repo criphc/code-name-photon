@@ -1,0 +1,17 @@
+photon deliver · R0003777-P3.tif
+  source       samples/sources/R0003777-P3.tif
+               sha256 bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116  6000x4000  Display P3  16-bit
+  recipe       renderKey 0bb774682c9d178c852f085b3badf2813397485c422dc50e79efc3e0be5fb747
+               start 0.1971  lift 2.0151 stops  transition 1.0000  cap 2.5000
+  hdr.heic     /Users/criphc/Sites/llm-photon/out/R0003777-P3-hdr.heic
+               5798146 B  sha256 826e27599cbbd6308d7695940dd3ec463a39ea5c8814024008bd6f36efb8df69
+  sdr.heic     /Users/criphc/Sites/llm-photon/out/R0003777-P3-sdr.heic
+               1946906 B  sha256 d639359abd87bc9c311d2f7351f79d307e34225269fc21c9236f144f96805b0e
+  recipe.json  /Users/criphc/Sites/llm-photon/out/R0003777-P3.recipe.json
+  report.json  /Users/criphc/Sites/llm-photon/out/R0003777-P3.report.json
+  checks       container=PASS identity=PASS alpha=PASS headroom=PASS clipping=PASS baseDeltaE=PASS fallback=PASS previewAgreement=PASS
+  headroom     authored 2.500000 linear (1.321928 stops), advertised 2.500000, expected 2.500000
+  base ΔE2000  mean 1.4406  p95 4.1200  max 28.3409
+  preview ΔE   mean 1.1902  p95 3.3700  (preview long edge 2560 px)
+  timings      decode 0.29 s + render 0.20 s + preview 0.37 s + encode 1.36 s + verify 15.84 s = 20.68 s
+  result       PASS (8/8 checks) — installed in /Users/criphc/Sites/llm-photon/out

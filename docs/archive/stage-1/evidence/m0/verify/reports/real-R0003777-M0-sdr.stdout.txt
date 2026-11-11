@@ -1,0 +1,15 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/m0/verify/real-snapshot/R0003777-M0-sdr.heic
+  file        2034332 bytes  sha256=33b5aec3c2e0ac39c83f6d9a552877a43a57a5fbc02cc84b5aa2b60d7914e467
+  container   major=heic brands=[mif1, miaf, MiHB, heic] items=43
+  base image  6000x4000 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     ABSENT
+  aux HDRGain absent
+  sdrDecode   6000x4000 8bpc contentHeadroom=1.0000 calcHeadroom=1.0000
+  hdrDecode   OK 6000x4000 8bpc contentHeadroom=1.0000 calc=1.0000
+              measured peak=1.1607 mean=0.3165 frac>1=0.09%
+  baseCheck   mode=photo meanAbsDiff=1.4266 meanSignedDiff=0.0137 p99=7 p99.9=11 maxAbsDiff=95 fracNonZero=0.7432 decodedVariance=4014.2273 (photo base -> distribution)
+  checks      basePreserved=PASS dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=PASS isoAuxPresent=FAIL noAlpha=PASS sdrFallbackPresent=PASS
+  skipped     headroomWithin5pct (no --expect-headroom supplied)
+  result      FAIL
+    failure: isoAuxPresent: kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/real-R0003777-M0-sdr.json

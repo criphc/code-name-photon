@@ -1,0 +1,15 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/m0/verify/out/uniform-sdr.heic
+  file        1095 bytes  sha256=19e868ea59a60b95d5712a1ccce473070df3463979c9af390b3bac5710207adb
+  container   major=heic brands=[mif1, MiHE, MiPr, miaf, heic] items=1
+  base image  320x200 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     ABSENT
+  aux HDRGain absent
+  sdrDecode   320x200 8bpc contentHeadroom=1.0000 calcHeadroom=0.2158
+  hdrDecode   OK 320x200 8bpc contentHeadroom=1.0000 calc=0.2158
+              measured peak=0.2159 mean=0.2159 frac>1=0.00%
+  baseCheck   mode=uniform meanAbsDiff=0.0000 meanSignedDiff=0.0000 p99=0 p99.9=0 maxAbsDiff=0 fracNonZero=0.0000 decodedVariance=0.0000 (uniform base -> strict)
+  checks      basePreserved=PASS dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=PASS isoAuxPresent=FAIL noAlpha=PASS sdrFallbackPresent=PASS
+  skipped     headroomWithin5pct (no --expect-headroom supplied)
+  result      FAIL
+    failure: isoAuxPresent: kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/negative-uniform-base.json

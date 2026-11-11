@@ -1,0 +1,102 @@
+[ExifTool]      ExifTool Version Number         : 13.55
+[System]        File Name                       : hdr.heic
+[System]        Directory                       : out-b-r25-H
+[System]        File Size                       : 3.1 kB
+[System]        File Modification Date/Time     : 2026:11:02 20:51:55+08:00
+[System]        File Access Date/Time           : 2026:11:02 20:55:44+08:00
+[System]        File Inode Change Date/Time     : 2026:11:02 20:51:55+08:00
+[System]        File Permissions                : -rw-r--r--
+[File]          File Type                       : HEIC
+[File]          File Type Extension             : heic
+[File]          MIME Type                       : image/heic
+[File]          Exif Byte Order                 : Big-endian (Motorola, MM)
+[File]          Image Width                     : 1024
+[File]          Image Height                    : 768
+[QuickTime]     Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)
+[QuickTime]     Minor Version                   : 0.0.0
+[QuickTime]     Compatible Brands               : mif1, tmap, miaf, MiHB, heic
+[QuickTime]     Handler Type                    : Picture
+[QuickTime]     Max Content Light Level         : 203
+[QuickTime]     Max Pic Average Light Level     : 64
+[QuickTime]     Image Spatial Extent            : 512x512
+[QuickTime]     Image Spatial Extent            : 1024x768
+[QuickTime]     Rotation                        : Horizontal (normal)
+[QuickTime]     Image Pixel Depth               : 8 8 8
+[QuickTime]     Color Profiles                  : nclx
+[QuickTime]     Color Primaries                 : Unspecified
+[QuickTime]     Transfer Characteristics        : Unspecified
+[QuickTime]     Matrix Coefficients             : BT.601
+[QuickTime]     Video Full Range Flag           : Full
+[QuickTime]     Image Spatial Extent            : 512x384
+[QuickTime]     Color Profiles                  : nclx
+[QuickTime]     Color Primaries                 : SMPTE EG 432-1
+[QuickTime]     Transfer Characteristics        : sRGB or sYCC
+[QuickTime]     Matrix Coefficients             : BT.601
+[QuickTime]     Video Full Range Flag           : Full
+[QuickTime]     HEVC Configuration Version      : 1
+[QuickTime]     General Profile Space           : Conforming
+[QuickTime]     General Tier Flag               : Main Tier
+[QuickTime]     General Profile IDC             : Main Still Picture
+[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main
+[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0
+[QuickTime]     General Level IDC               : 90 (level 3.0)
+[QuickTime]     Min Spatial Segmentation IDC    : 0
+[QuickTime]     Parallelism Type                : 0
+[QuickTime]     Chroma Format                   : 4:2:0
+[QuickTime]     Bit Depth Luma                  : 8
+[QuickTime]     Bit Depth Chroma                : 8
+[QuickTime]     Average Frame Rate              : 0
+[QuickTime]     Constant Frame Rate             : Unknown
+[QuickTime]     Num Temporal Layers             : 1
+[QuickTime]     Temporal ID Nested              : No
+[QuickTime]     HEVC Configuration Version      : 1
+[QuickTime]     General Profile Space           : Conforming
+[QuickTime]     General Tier Flag               : Main Tier
+[QuickTime]     General Profile IDC             : Main Still Picture
+[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main
+[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0
+[QuickTime]     General Level IDC               : 63 (level 2.1)
+[QuickTime]     Min Spatial Segmentation IDC    : 0
+[QuickTime]     Parallelism Type                : 0
+[QuickTime]     Chroma Format                   : 4:2:0
+[QuickTime]     Bit Depth Luma                  : 8
+[QuickTime]     Bit Depth Chroma                : 8
+[QuickTime]     Average Frame Rate              : 0
+[QuickTime]     Constant Frame Rate             : Unknown
+[QuickTime]     Num Temporal Layers             : 1
+[QuickTime]     Temporal ID Nested              : No
+[QuickTime]     Media Data Size                 : 1335
+[QuickTime]     Media Data Offset               : 1720
+[Meta]          Primary Item Reference          : 5
+[Meta]          Meta Image Size                 : 1024x768 0 0 192 0 0 0 1 147 14995 64 0 0 0 0 1 127 62579 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 0 0 0 1 127 62579 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 0 0 0 1 127 62579 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0
+[IFD0]          Photometric Interpretation      : RGB
+[IFD0]          Orientation                     : Horizontal (normal)
+[IFD0]          Resolution Unit                 : inches
+[ICC-header]    Profile CMM Type                : Apple Computer Inc.
+[ICC-header]    Profile Version                 : 4.0.0
+[ICC-header]    Profile Class                   : Display Device Profile
+[ICC-header]    Color Space Data                : RGB
+[ICC-header]    Profile Connection Space        : XYZ
+[ICC-header]    Profile Date Time               : 2022:01:01 00:00:00
+[ICC-header]    Profile File Signature          : acsp
+[ICC-header]    Primary Platform                : Apple Computer Inc.
+[ICC-header]    CMM Flags                       : Not Embedded, Independent
+[ICC-header]    Device Manufacturer             : Apple Computer Inc.
+[ICC-header]    Device Model                    : 
+[ICC-header]    Device Attributes               : Reflective, Glossy, Positive, Color
+[ICC-header]    Rendering Intent                : Perceptual
+[ICC-header]    Connection Space Illuminant     : 0.9642 1 0.82491
+[ICC-header]    Profile Creator                 : Apple Computer Inc.
+[ICC-header]    Profile ID                      : 0
+[ICC_Profile]   Profile Description             : Display P3
+[ICC_Profile]   Profile Copyright               : Copyright Apple Inc., 2022
+[ICC_Profile]   Media White Point               : 0.96419 1 0.82489
+[ICC_Profile]   Red Matrix Column               : 0.51512 0.2412 -0.00105
+[ICC_Profile]   Green Matrix Column             : 0.29198 0.69225 0.04189
+[ICC_Profile]   Blue Matrix Column              : 0.1571 0.06657 0.78407
+[ICC_Profile]   Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)
+[ICC_Profile]   Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168
+[ICC_Profile]   Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)
+[ICC_Profile]   Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)
+[Composite]     Image Size                      : 1024x768
+[Composite]     Megapixels                      : 0.786

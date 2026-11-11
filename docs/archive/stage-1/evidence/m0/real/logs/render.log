@@ -1,0 +1,59 @@
+=== llm-photon M0-C render ===
+mode=render input=samples/sources/R0003777-P3.tif outdir=work/m0/real
+recipe start=0.62 lift_stops=1.4 transition=0.28 cap=2.5
+encoder flags: -b -R 2.5 -d 8 -q 0.85 -c p3
+source: 6000x4000 bpc=16 bpp=48 samples=3 depth=16 profile='Display P3' cs=Optional(kCGColorSpaceDisplayP3) alphaInfo=0 hasAlpha=false
+source sha256: bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116  size=144058400
+wrote work/m0/real/sdr.tif size=144011414 sha256=5378900171aaa2f42fb698ecfe43b841d5032958cffb2bda84efc20d72c40604
+sdr.tif determinism (2 writes identical bytes): true
+sdr.tif readback: ["bits_per_pixel": 48, "height": 4000, "samples_per_pixel": 3, "alpha_info_raw": 0, "bits_per_component": 16, "profile": "Display P3", "width": 6000, "colorspace": "kCGColorSpaceDisplayP3"]
+base 16-bit delta vs source: ["samples_differing": 0, "mean_abs_lsb": 0.0, "identical": true, "samples": 72000000, "max_abs_lsb": 0]
+source CIImage extent=(0.0, 0.0, 6000.0, 4000.0) cs=Optional(kCGColorSpaceDisplayP3)
+decoded 6000x4000 to linear extended Display P3 float32 in 0.12s
+luma: min=0.0007739872 max=1.0 mean=0.30841703002781246 p50=0.24775 p90=0.68265 p99=0.81625 p999=0.99995
+mask coverage: ["0.62": 0.16486920833333332, "0.70": 0.08049204166666667, "1.00": 0.0009705833333333333, "0.80": 0.012815583333333333, "0.90": 0.005663916666666667]
+mask: untouched(20043141)=0.835130875 full(135934)=0.005663916666666667
+hdr buffer: min=0.0 max(peak)=2.5 nan=0
+pixels>1.0: 2626048 (10.941866666666666%)  channels>1.0: 4841388
+pixels at cap 2.5: 103346 (0.43060833333333337%)  channels at cap: 271326
+wrote work/m0/real/hdr.tif size=384032782 sha256=ea3d888c2f04cbf8d059de19ddf32846b15df5f2e832175f3012b3efeb9460cb
+hdr.tif readback layout: ["bitmap_info_raw": 8449, "height": 4000, "alpha_info_raw": 1, "width": 6000, "bits_per_pixel": 128, "colorspace": "nil", "samples_per_pixel": 4, "bits_per_component": 32]
+hdr.tif determinism (2 writes identical bytes): true
+hdr.tif CIImage readback extent=(0.0, 0.0, 6000.0, 4000.0) cs=nil
+hdr.tif readback: peak=2.5 min=0.0 nan=0 pixels>1.0=2626048 (10.941866666666666%) pixels_at_cap=103346 channels>1.0=4841388
+$ tools/toGainMapHDR/bin/toGainMapHDR work/m0/real/hdr.tif work/m0/real/out -b work/m0/real/sdr.tif -R 2.5 -d 8 -q 0.85 -c p3
+exit=0
+--- output ---
+
+
+delivered full: work/m0/real/out/R0003777-M0.heic size=3853079 sha256=1c9020c6ed8ae07720c165914fb3fb38b1a901355dd5162c554401e900783d39
+encoder determinism (same pair encoded twice): true
+preview base extent=(0.0, 0.0, 2560.0, 1707.0) target=2560x1707
+preview base tif: ["alpha_info_raw": 0, "height": 1707, "width": 2560, "bits_per_pixel": 48, "colorspace": "kCGColorSpaceDisplayP3", "bits_per_component": 16] size=26221974
+preview hdr extent=(0.0, 0.0, 2560.0, 1707.0)
+preview hdr: peak before cap clamp=2.977961, channels clamped=19012
+preview hdr tif size=69924054 readback peak=2.5
+$ tools/toGainMapHDR/bin/toGainMapHDR work/m0/real/.tmp/work/preview-hdr.tif work/m0/real/.tmp/encode-preview -b work/m0/real/.tmp/work/preview-base.tif -R 2.5 -d 8 -q 0.85 -c p3
+exit=0
+--- output ---
+
+
+delivered preview: work/m0/real/out/R0003777-M0-2560.heic size=882761 sha256=9941f74967eae1d7ef4764591696cf41a0e87bab051ff99167fb38ec7a30854c
+wrote work/m0/real/out/R0003777-M0-sdr.heic size=2034332 sha256=33b5aec3c2e0ac39c83f6d9a552877a43a57a5fbc02cc84b5aa2b60d7914e467
+delivered SDR fallback decode extremes: ["cap": 2.5, "mean_of_per_pixel_max_linear": 0.41830036966818834, "decode_path": "ImageIO CGImage -> CIImage -> extended linear Display P3, strip renders", "peak_linear": 1.1934481859207153, "fraction_pixels_gt_1_0": 0.0023452916666666665, "fraction_pixels_gt_cap": 0.0, "pixels_gt_cap": 0, "pixels_gt_1_0": 56287]
+delivered SDR base delta vs source (8-bit P3 LSB): ["channels_differing": 54006471, "channels_gt_4lsb8": 3168615, "p50_abs_lsb8": 1, "p99_abs_lsb8": 7, "p90_abs_lsb8": 3, "channels_total": 72000000, "pixels_any_channel_gt_2lsb8": 8663858, "mean_signed_lsb8": 0.09070466666666667, "mean_abs_lsb8": 1.9668261234843507, "max_abs_lsb8": 138, "p999_abs_lsb8": 12, "p9999_abs_lsb8": 18]
+sdr.heic delta vs source (8-bit P3 LSB): ["mean_abs_lsb8": 1.9196181398575003, "mean_signed_lsb8": 0.013695680555555555, "channels_total": 72000000, "p90_abs_lsb8": 3, "p99_abs_lsb8": 7, "p50_abs_lsb8": 1, "p999_abs_lsb8": 11, "p9999_abs_lsb8": 17, "channels_gt_4lsb8": 2884586, "channels_differing": 53507234, "max_abs_lsb8": 95, "pixels_any_channel_gt_2lsb8": 8262496]
+sdr.heic delta vs delivered SDR fallback (8-bit P3 LSB): ["max_abs_lsb8": 45, "mean_abs_lsb8": 1.6692556136610124, "p90_abs_lsb8": 2, "channels_total": 72000000, "channels_gt_4lsb8": 1134650, "p50_abs_lsb8": 1, "pixels_any_channel_gt_2lsb8": 4923544, "mean_signed_lsb8": -0.07700898611111111, "channels_differing": 41836958, "p999_abs_lsb8": 9, "p9999_abs_lsb8": 13, "p99_abs_lsb8": 5]
+delivered HDR fidelity vs authored hdr.tif: ["mean_abs_diff_linear": 0.006152925543146312, "p90_abs_diff_linear": 0.014, "p99_abs_diff_linear": 0.035, "decode_path": "CIImage(contentsOf: [.expandToHDR: true]) -> extended linear Display P3, strip renders", "delivered_peak_linear": 3.041346788406372, "delivered_mean_of_per_pixel_max": 0.4726496932315883, "fraction_pixels_delivered_over_cap": 0.0039605, "pixels_delivered_over_cap": 95052, "channels_abs_diff_gt_0.5": 8, "p999_abs_diff_linear": 0.074, "channels_total": 72000000, "authored_mean_of_per_pixel_max": 0.47081154631280464, "channels_abs_diff_gt_0.1": 24934, "max_abs_diff_linear": 0.8209500908851624, "authored_peak_linear": 2.5]
+[full] sdr=Optional(["colorspace": "kCGColorSpaceDisplayP3", "has_alpha_data": false, "content_headroom_linear": 1.0, "bits_per_component": 8, "calculated_content_headroom": 1.0, "width": 6000, "bits_per_pixel": 32, "height": 4000, "alpha_info_raw": 5])
+[full] hdr=Optional(["width": 6000, "bits_per_component": 10, "bits_per_pixel": 32, "height": 4000, "alpha_info_raw": 6, "colorspace": "nil", "content_headroom_linear": 2.499999761581421, "calculated_content_headroom": 2.6240234375])
+[full] iso_aux=Optional(["keys": ["kCGImageAuxiliaryDataInfoMetadata", "kCGImageAuxiliaryDataInfoColorSpace", "kCGImageAuxiliaryDataInfoDataDescription"], "present": true, "HDRToneMap_GainMapMax_stops_channels": [1.399812, 1.399812, 1.399812], "HDRToneMap_GainMapMin_stops_channels": [0.0, 0.0, 0.0], "HDRToneMap_AlternateHeadroom_stops": 1.321928, "HDRToneMap_BaseHeadroom_stops": 0.0, "HDRToneMap_AlternateHeadroom_linear": 2.499999835572736])
+[preview] sdr=Optional(["width": 2560, "bits_per_component": 8, "bits_per_pixel": 32, "alpha_info_raw": 5, "colorspace": "kCGColorSpaceDisplayP3", "content_headroom_linear": 1.0, "has_alpha_data": false, "calculated_content_headroom": 1.0, "height": 1707])
+[preview] hdr=Optional(["bits_per_pixel": 32, "colorspace": "nil", "calculated_content_headroom": 2.7490234375, "alpha_info_raw": 6, "width": 2560, "bits_per_component": 10, "content_headroom_linear": 2.499999761581421, "height": 1707])
+[preview] iso_aux=Optional(["HDRToneMap_GainMapMin_stops_channels": [0.0, 0.0, 0.0], "HDRToneMap_AlternateHeadroom_linear": 2.499999835572736, "HDRToneMap_GainMapMax_stops_channels": [1.399812, 1.399812, 1.399812], "HDRToneMap_BaseHeadroom_stops": 0.0, "keys": ["kCGImageAuxiliaryDataInfoMetadata", "kCGImageAuxiliaryDataInfoColorSpace", "kCGImageAuxiliaryDataInfoDataDescription"], "present": true, "HDRToneMap_AlternateHeadroom_stops": 1.321928])
+[sdr] sdr=Optional(["has_alpha_data": false, "alpha_info_raw": 5, "height": 4000, "width": 6000, "content_headroom_linear": 1.0, "calculated_content_headroom": 1.0, "colorspace": "kCGColorSpaceDisplayP3", "bits_per_component": 8, "bits_per_pixel": 32])
+[sdr] hdr=Optional(["width": 6000, "content_headroom_linear": 1.0, "bits_per_pixel": 32, "height": 4000, "alpha_info_raw": 5, "calculated_content_headroom": 1.0, "colorspace": "kCGColorSpaceDisplayP3", "bits_per_component": 8])
+[sdr] iso_aux=Optional(["HDRToneMap_GainMapMin_stops_channels": [], "HDRToneMap_BaseHeadroom_stops": <null>, "HDRToneMap_AlternateHeadroom_linear": <null>, "present": false, "HDRToneMap_AlternateHeadroom_stops": <null>, "keys": [], "HDRToneMap_GainMapMax_stops_channels": []])
+alpha summary: ["sdr_tif": ["bits_per_pixel": 48, "height": 4000, "samples_per_pixel": 3, "alpha_info_raw": 0, "bits_per_component": 16, "profile": "Display P3", "width": 6000, "colorspace": "kCGColorSpaceDisplayP3"], "delivered_preview": ["aux_present": true, "sdr_has_alpha_data": false, "sdr_alpha_info_raw": 5, "file": "preview", "heif_info_alpha_line": "alpha channel: no", "sdr_bits_per_pixel": 32], "hdr_tif": ["bitmap_info_raw": 8449, "height": 4000, "alpha_info_raw": 1, "width": 6000, "bits_per_pixel": 128, "colorspace": "nil", "samples_per_pixel": 4, "bits_per_component": 32], "delivered_full": ["file": "full", "sdr_alpha_info_raw": 5, "sdr_bits_per_pixel": 32, "aux_present": true, "sdr_has_alpha_data": false, "heif_info_alpha_line": "alpha channel: no"], "delivered_sdr_reference": ["sdr_has_alpha_data": false, "aux_present": false, "sdr_bits_per_pixel": 32, "sdr_alpha_info_raw": 5, "heif_info_alpha_line": "alpha channel: no", "file": "sdr"], "source": ["samples_per_pixel": 3, "has_alpha": false]]
+wrote work/m0/real/stats.json
+wrote work/m0/real/notes.md

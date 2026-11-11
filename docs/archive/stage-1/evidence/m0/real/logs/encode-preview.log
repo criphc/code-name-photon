@@ -1,0 +1,4 @@
+$ tools/toGainMapHDR/bin/toGainMapHDR work/m0/real/.tmp/work/preview-hdr.tif work/m0/real/.tmp/encode-preview -b work/m0/real/.tmp/work/preview-base.tif -R 2.5 -d 8 -q 0.85 -c p3
+exit=0
+--- output ---
+

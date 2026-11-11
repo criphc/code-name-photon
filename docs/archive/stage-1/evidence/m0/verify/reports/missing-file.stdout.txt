@@ -1,0 +1,1 @@
+verify-heic: error: file not found: /Users/criphc/Sites/llm-photon/work/m0/verify/out/does-not-exist.heic

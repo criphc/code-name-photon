@@ -1,0 +1,17 @@
+// Shared build settings for the Photon apps.
+//
+// apps/ios/iOS.xcodeproj uses this file as the base configuration of both the
+// Debug and Release project configurations. apps/macos/macOS.xcodeproj will use
+// the same file when it lands (macOS GUI is deferred).
+//
+// Committed file: no secrets, no per-machine paths.
+
+// Personal Team (signing), shared by both apps.
+DEVELOPMENT_TEAM = 289223FXNS
+
+// iOS app (apps/ios, target PhotonClient).
+MARKETING_VERSION = 1.0
+CURRENT_PROJECT_VERSION = 1
+PRODUCT_BUNDLE_IDENTIFIER = com.criphc.Photon.Client
+
+// macOS app (deferred): PRODUCT_BUNDLE_IDENTIFIER = com.criphc.Photon.ServerWrapper

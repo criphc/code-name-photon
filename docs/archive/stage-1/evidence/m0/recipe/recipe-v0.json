@@ -1,0 +1,25 @@
+{
+  "schema": 0,
+  "source": {
+    "path": "samples/sources/R0003777-P3.tif",
+    "sha256": "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+    "width": 6000,
+    "height": 4000
+  },
+  "base": { "profile": "DisplayP3", "tone_map": "c1_match_v1" },
+  "hdr": {
+    "start": 0.62,
+    "lift_stops": 1.4,
+    "transition": 0.28,
+    "headroom_cap": 2.5
+  },
+  "encoder": {
+    "tool": "toGainMapHDR",
+    "quality": 0.85,
+    "depth": 8,
+    "subsample": false,
+    "map": "iso-rgb"
+  },
+  "versions": { "recipe": 0, "tone_map": 1, "encoder": "5dba4e2" },
+  "created": "2026-11-02T20:52:00+08:00"
+}

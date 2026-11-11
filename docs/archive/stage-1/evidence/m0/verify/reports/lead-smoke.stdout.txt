@@ -1,0 +1,13 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/lead-smoke/out/hdr.heic
+  file        1824 bytes  sha256=384e9aa276dfbebeafbf3442efb29e18989c4c9bc0e47c68c63c667c8681a433
+  container   major=heic brands=[mif1, tmap, miaf, MiHB, heic] items=4
+  base image  256x128 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     present 256x128 fmt=420f altHeadroom=3.9375x [ImageIO omitted aux data bytes]
+  aux HDRGain absent
+  sdrDecode   256x128 8bpc contentHeadroom=1.0000 calcHeadroom=0.5020
+  hdrDecode   OK 256x128 10bpc contentHeadroom=3.9375 calc=3.9668
+              measured peak=3.9671 mean=2.0227 frac>1=75.39%
+  checks      dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=PASS isoAuxPresent=PASS noAlpha=PASS sdrFallbackPresent=PASS
+  skipped     basePreserved (no --base supplied); headroomWithin5pct (no --expect-headroom supplied)
+  result      PASS
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/lead-smoke.json

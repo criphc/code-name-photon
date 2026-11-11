@@ -1,0 +1,317 @@
+== build ==
+built /Users/criphc/Sites/llm-photon/tools/verify-heic/bin/verify-heic
+verify-heic 0.1.0
+
+== negative-control fixtures ==
+wrote controls to /Users/criphc/Sites/llm-photon/work/m0/verify/out:
+  sdr-p3.heic  3392 bytes
+  sdr-p3-alpha.heic  3892 bytes
+  checker-base.tif  384766 bytes
+  uniform-base.tif  192758 bytes
+  uniform-sdr.heic  1095 bytes
+
+== verifier runs ==
+positive-img7097           exit=0
+lead-smoke                 exit=0
+synth-out-b-r25            exit=0
+synth-out-b-r15            exit=0
+synth-out-b-r6             exit=0
+synth-out-b-r25-H          exit=0
+synth-out-nob-r25          exit=1
+real-R0003777-M0-2560      exit=0
+real-R0003777-M0-sdr       exit=1
+real-R0003777-M0           exit=0
+real-R0003777-M0-vs-sdrheic exit=0
+real-full-final            exit=0
+negative-sdr-p3            exit=1
+negative-sdr-p3-base       exit=1
+negative-uniform-base      exit=1
+alpha-diff                 exit=1
+non-heif-jpeg              exit=1
+headroom-mismatch          exit=1
+missing-file                exit=1
+no-args                     exit=1
+
+== assertions ==
+verifying reports in /Users/criphc/Sites/llm-photon/work/m0/verify/reports
+  PASS  positive control report exists
+  PASS  positive-img7097: overall present
+  PASS  positive-img7097: file.sha256 is 64 hex chars
+  PASS  positive-img7097: file.sizeBytes > 0
+  PASS  positive-img7097: container has ftyp brands
+  PASS  positive-img7097: container itemCount parsed
+  PASS  positive-img7097: primaryImage.width
+  PASS  positive-img7097: primaryImage.height
+  PASS  positive-img7097: primaryImage.bitsPerComponent
+  PASS  positive-img7097: primaryImage.bitsPerPixel
+  PASS  positive-img7097: primaryImage.alphaInfo
+  PASS  positive-img7097: primaryImage.hasAlpha
+  PASS  positive-img7097: primaryImage.profileName
+  PASS  positive-img7097: primaryImage.isFloat
+  PASS  positive-img7097: primaryImage.isFloatDecoded
+  PASS  positive-img7097: primaryImage.orientation
+  PASS  positive-img7097: sdrDecode.contentHeadroom
+  PASS  positive-img7097: sdrDecode.calculatedContentHeadroom
+  PASS  positive-img7097: hdrDecode.success
+  PASS  positive-img7097: hdrDecode.contentHeadroom
+  PASS  positive-img7097: hdrDecode.measured.peak
+  PASS  positive-img7097: hdrDecode.measured.mean
+  PASS  positive-img7097: hdrDecode.measured.fractionAboveOne
+  PASS  positive-img7097: checks.heifContainer present
+  PASS  positive-img7097: checks.isoAuxPresent present
+  PASS  positive-img7097: checks.dimsMatch present
+  PASS  positive-img7097: checks.noAlpha present
+  PASS  positive-img7097: checks.hdrDecodeSucceeded present
+  PASS  positive-img7097: checks.sdrFallbackPresent present
+  PASS  positive-img7097: overall.failures is a list
+  PASS  positive-img7097: tool.version recorded
+  PASS  positive-img7097: ISO gain-map aux present in this file (observed reality; task brief expected absent)
+  PASS  positive-img7097: Apple HDRGainMap aux present
+  PASS  positive-img7097: DecodeToHDR succeeded
+  PASS  positive-img7097: HDR decode is 10bpc
+  PASS  positive-img7097: HDR contentHeadroom ~5.5356x
+  PASS  positive-img7097: measured peak > 5.0
+  PASS  positive-img7097: no alpha in the SDR base
+  PASS  positive-img7097: dimensions 4032x3024
+  PASS  positive-img7097: container item count > 1 (hybrid: tiles + tmap + aux items)
+  PASS  positive-img7097: overall pass (all applicable checks pass)
+  PASS  positive-img7097: exit code 0
+  PASS  positive-img7097: ISO gain-map metadata tags parsed
+  PASS  positive-img7097: ISO gain-map AlternateHeadroom metadata
+  PASS  synthetic main report exists
+  PASS  synth-out-b-r25: overall present
+  PASS  synth-out-b-r25: file.sha256 is 64 hex chars
+  PASS  synth-out-b-r25: file.sizeBytes > 0
+  PASS  synth-out-b-r25: container has ftyp brands
+  PASS  synth-out-b-r25: container itemCount parsed
+  PASS  synth-out-b-r25: primaryImage.width
+  PASS  synth-out-b-r25: primaryImage.height
+  PASS  synth-out-b-r25: primaryImage.bitsPerComponent
+  PASS  synth-out-b-r25: primaryImage.bitsPerPixel
+  PASS  synth-out-b-r25: primaryImage.alphaInfo
+  PASS  synth-out-b-r25: primaryImage.hasAlpha
+  PASS  synth-out-b-r25: primaryImage.profileName
+  PASS  synth-out-b-r25: primaryImage.isFloat
+  PASS  synth-out-b-r25: primaryImage.isFloatDecoded
+  PASS  synth-out-b-r25: primaryImage.orientation
+  PASS  synth-out-b-r25: sdrDecode.contentHeadroom
+  PASS  synth-out-b-r25: sdrDecode.calculatedContentHeadroom
+  PASS  synth-out-b-r25: hdrDecode.success
+  PASS  synth-out-b-r25: hdrDecode.contentHeadroom
+  PASS  synth-out-b-r25: hdrDecode.measured.peak
+  PASS  synth-out-b-r25: hdrDecode.measured.mean
+  PASS  synth-out-b-r25: hdrDecode.measured.fractionAboveOne
+  PASS  synth-out-b-r25: checks.heifContainer present
+  PASS  synth-out-b-r25: checks.isoAuxPresent present
+  PASS  synth-out-b-r25: checks.dimsMatch present
+  PASS  synth-out-b-r25: checks.noAlpha present
+  PASS  synth-out-b-r25: checks.hdrDecodeSucceeded present
+  PASS  synth-out-b-r25: checks.headroomWithin5pct present
+  PASS  synth-out-b-r25: checks.basePreserved present
+  PASS  synth-out-b-r25: checks.sdrFallbackPresent present
+  PASS  synth-out-b-r25: overall.failures is a list
+  PASS  synth-out-b-r25: tool.version recorded
+  PASS  synth-out-b-r25: overall pass
+  PASS  synth-out-b-r25: exit code 0
+  PASS  synth-out-b-r25: HEIF container detected
+  PASS  synth-out-b-r25: ISO aux present
+  PASS  synth-out-b-r25: tmap item present
+  PASS  synth-out-b-r25: tmap brand present
+  PASS  synth-out-b-r25: tmap dialect total items 12
+  PASS  synth-out-b-r25: ISO aux map is full resolution 1024x768
+  PASS  synth-out-b-r25: ISO aux pixel format is 420f
+  PASS  synth-out-b-r25: ISO aux raw data omitted by ImageIO (observed 420f quirk)
+  PASS  synth-out-b-r25: ISO 3-channel gain map (ISO RGB map)
+  PASS  synth-out-b-r25: ISO GainMapMax present
+  PASS  synth-out-b-r25: ISO GainMapMin present
+  PASS  synth-out-b-r25: ISO Gamma present
+  PASS  synth-out-b-r25: ISO BaseColorIsWorkingColor present
+  PASS  synth-out-b-r25: AlternateHeadroom linear ~4.0
+  PASS  synth-out-b-r25: hdrDecode succeeded
+  PASS  synth-out-b-r25: hdrDecode 10bpc
+  PASS  synth-out-b-r25: hdrDecode contentHeadroom ~4.0
+  PASS  synth-out-b-r25: measured peak ~4.0
+  PASS  synth-out-b-r25: fractionAboveOne > 0.70
+  PASS  synth-out-b-r25: headroomWithin5pct passed
+  PASS  synth-out-b-r25: no alpha (sdr + hdr)
+  PASS  synth-out-b-r25: baseCheck.perChannel.r.meanAbsDiff
+  PASS  synth-out-b-r25: baseCheck.perChannel.r.maxAbsDiff
+  PASS  synth-out-b-r25: baseCheck.perChannel.r.fractionNonZero
+  PASS  synth-out-b-r25: baseCheck.perChannel.g.meanAbsDiff
+  PASS  synth-out-b-r25: baseCheck.perChannel.g.maxAbsDiff
+  PASS  synth-out-b-r25: baseCheck.perChannel.g.fractionNonZero
+  PASS  synth-out-b-r25: baseCheck.perChannel.b.meanAbsDiff
+  PASS  synth-out-b-r25: baseCheck.perChannel.b.maxAbsDiff
+  PASS  synth-out-b-r25: baseCheck.perChannel.b.fractionNonZero
+  PASS  synth-out-b-r25: baseCheck available
+  PASS  synth-out-b-r25: baseMode is uniform
+  PASS  synth-out-b-r25: baseThresholds.baseMode is uniform
+  PASS  synth-out-b-r25: baseCheck.percentiles reported
+  PASS  synth-out-b-r25: uniform base p99 == 0
+  PASS  synth-out-b-r25: uniform base preserved: decoded variance == 0
+  PASS  synth-out-b-r25: baseCheck meanAbsDiff == 0
+  PASS  synth-out-b-r25: baseCheck maxAbsDiff == 0
+  PASS  synth-out-b-r25: basePreserved passed
+  PASS  synth-out-b-r15: ISO aux present
+  PASS  synth-out-b-r15: DecodeToHDR succeeded
+  PASS  synth-out-b-r15: report written
+        synth-out-b-r15: aux map 1024x768, linear headroom 3.984373793501607, hdr bpc 10, alpha False, exit 0
+  PASS  synth-out-b-r6: ISO aux present
+  PASS  synth-out-b-r6: DecodeToHDR succeeded
+  PASS  synth-out-b-r6: report written
+        synth-out-b-r6: aux map 1024x768, linear headroom 3.984373793501607, hdr bpc 10, alpha False, exit 0
+  PASS  synth-out-b-r25-H: ISO aux present
+  PASS  synth-out-b-r25-H: DecodeToHDR succeeded
+  PASS  synth-out-b-r25-H: report written
+        synth-out-b-r25-H: aux map 512x384, linear headroom 4.926113948667077, hdr bpc 10, alpha False, exit 0
+  PASS  synth-out-nob-r25: ISO aux present
+  PASS  synth-out-nob-r25: DecodeToHDR succeeded
+  PASS  synth-out-nob-r25: report written
+        synth-out-nob-r25: aux map 1024x768, linear headroom 3.984373793501607, hdr bpc 16, alpha True, exit 1
+  PASS  negative plain-SDR report exists
+  PASS  negative-sdr-p3: overall present
+  PASS  negative-sdr-p3: file.sha256 is 64 hex chars
+  PASS  negative-sdr-p3: file.sizeBytes > 0
+  PASS  negative-sdr-p3: container has ftyp brands
+  PASS  negative-sdr-p3: container itemCount parsed
+  PASS  negative-sdr-p3: primaryImage.width
+  PASS  negative-sdr-p3: primaryImage.height
+  PASS  negative-sdr-p3: primaryImage.bitsPerComponent
+  PASS  negative-sdr-p3: primaryImage.bitsPerPixel
+  PASS  negative-sdr-p3: primaryImage.alphaInfo
+  PASS  negative-sdr-p3: primaryImage.hasAlpha
+  PASS  negative-sdr-p3: primaryImage.profileName
+  PASS  negative-sdr-p3: primaryImage.isFloat
+  PASS  negative-sdr-p3: primaryImage.isFloatDecoded
+  PASS  negative-sdr-p3: primaryImage.orientation
+  PASS  negative-sdr-p3: sdrDecode.contentHeadroom
+  PASS  negative-sdr-p3: sdrDecode.calculatedContentHeadroom
+  PASS  negative-sdr-p3: hdrDecode.success
+  PASS  negative-sdr-p3: hdrDecode.contentHeadroom
+  PASS  negative-sdr-p3: hdrDecode.measured.peak
+  PASS  negative-sdr-p3: hdrDecode.measured.mean
+  PASS  negative-sdr-p3: hdrDecode.measured.fractionAboveOne
+  PASS  negative-sdr-p3: checks.isoAuxPresent present
+  PASS  negative-sdr-p3: checks.noAlpha present
+  PASS  negative-sdr-p3: checks.sdrFallbackPresent present
+  PASS  negative-sdr-p3: overall.failures is a list
+  PASS  negative-sdr-p3: tool.version recorded
+  PASS  negative-sdr-p3: ISO aux absent
+  PASS  negative-sdr-p3: HDRGainMap aux absent
+  PASS  negative-sdr-p3: HEIF container detected
+  PASS  negative-sdr-p3: sdrFallbackPresent passed
+  PASS  negative-sdr-p3: noAlpha passed
+  PASS  negative-sdr-p3: isoAuxPresent failed
+  PASS  negative-sdr-p3: overall fails
+  PASS  negative-sdr-p3: exit code 1
+  PASS  negative-sdr-p3: failures list names isoAuxPresent
+  PASS  negative-sdr-p3: DecodeToHDR on SDR-only file returns SDR content
+  PASS  uniform-base report exists
+  PASS  negative-uniform-base: baseCheck available
+  PASS  negative-uniform-base: supplied base detected as uniform
+  PASS  negative-uniform-base: baseMode is uniform
+  PASS  negative-uniform-base: uniform rule is strict: decoded variance == 0
+  PASS  negative-uniform-base: uniform rule is strict: meanAbsDiff == 0
+  PASS  negative-uniform-base: uniform rule is strict: maxAbsDiff == 0
+  PASS  negative-uniform-base: uniform pass rule recorded
+  PASS  negative-uniform-base: basePreserved passed
+  PASS  negative-uniform-base: overall still fails (no gain map)
+  PASS  negative-uniform-base: exit code 1
+  PASS  negative-sdr-p3-base: non-uniform baseCheck available
+  PASS  negative-sdr-p3-base: baseMode is photo
+  PASS  negative-sdr-p3-base: photo pass rule recorded
+  PASS  negative-sdr-p3-base: meanAbsDiff <= 1 for same-source lossy HEIC
+  PASS  negative-sdr-p3-base: diffHistogram recorded
+        negative-sdr-p3-base: meanAbsDiff=0.57634375 maxAbsDiff=45 fractionAboveTwo=0.0130625 (lossy HEVC chroma subsampling)
+  PASS  alpha-diff report exists (verifier did not crash on alpha)
+  PASS  alpha-diff: SDR decode has alpha=true
+  PASS  alpha-diff: noAlpha check failed (as expected)
+  PASS  alpha-diff: baseCheck still ran with mixed alpha
+  PASS  alpha-diff: baseMode is photo
+  PASS  alpha-diff: alpha difference reported, not fatal
+  PASS  alpha-diff: report JSON is valid
+  PASS  headroom-mismatch report exists
+  PASS  headroom-mismatch: headroomWithin5pct failed for expected 2.5 vs actual ~4.0
+  PASS  headroom-mismatch: relativeError > 0.05
+  PASS  headroom-mismatch: overall fails
+  PASS  headroom-mismatch: exit code 1
+  PASS  non-heif-jpeg: not treated as an ISO BMFF container
+  PASS  non-heif-jpeg: heifContainer check failed
+  PASS  non-heif-jpeg: overall fails for a non-HEIC input
+  PASS  non-heif-jpeg: exit code 1
+        non-heif-jpeg: ImageIO reports isoAux=True, hdrDecode=True, contentHeadroom=5.335937976837158 (JPEG gain-map files are rejected by the HEIF check)
+  PASS  missing-file exit code 1
+  PASS  no-args exit code 1 (usage error)
+  INFO  real-R0003777-M0-2560: iso=True headroom=2.499999761581421 peak=3.0479736328125 alpha=False overall=True
+  PASS  real-R0003777-M0-2560: HEIF container detected
+  PASS  real-R0003777-M0-2560: HDR decode request succeeded
+  PASS  real-R0003777-M0-2560: ISO aux present
+  PASS  real-R0003777-M0-2560: no alpha
+  PASS  real-R0003777-M0-2560: overall pass
+  INFO  real-R0003777-M0-sdr: iso=False headroom=1 peak=1.1606968641281128 alpha=False overall=False
+        real-R0003777-M0-sdr: base mode=photo meanAbsDiff=1.4265757916666666 meanSignedDiff=0.013695680555555555 p99=7 p99.9=11 maxAbsDiff=95 decodedVariance=4014.2273232780317 uniform=False
+  PASS  real-R0003777-M0-sdr: baseMode recorded
+  PASS  real-R0003777-M0-sdr: percentiles reported
+  PASS  real-R0003777-M0-sdr: check.baseMode matches baseCheck.baseMode
+  PASS  real-R0003777-M0-sdr: photo rule p99 <= 16
+  PASS  real-R0003777-M0-sdr: photo rule |meanSignedDiff| <= 0.5
+  PASS  real-R0003777-M0-sdr: photo rule meanAbsDiff <= 2.5
+  PASS  real-R0003777-M0-sdr: basePreserved passed
+        real-R0003777-M0-sdr: basePreserved=True baseThresholds={"absDiffP99Max": 16, "baseMode": "photo", "diagnosticsOnly": ["p99_9", "maxAbsDiff", "perChannel"], "meanAbsDiffMax": 2.5, "meanSignedDiffAbsMax": 0.5, "passRule": "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"}
+  PASS  real-R0003777-M0-sdr: HEIF container detected
+  PASS  real-R0003777-M0-sdr: HDR decode request succeeded
+  PASS  real-R0003777-M0-sdr: map-stripped SDR reference has no gain map
+  PASS  real-R0003777-M0-sdr: map-stripped SDR reference plain decode works
+  PASS  real-R0003777-M0-sdr: map-stripped SDR reference overall fails (negative control)
+  INFO  real-R0003777-M0-vs-sdrheic: iso=True headroom=2.499999761581421 peak=2.9226901531219482 alpha=False overall=True
+        real-R0003777-M0-vs-sdrheic: base mode=photo meanAbsDiff=0.9699522916666666 meanSignedDiff=0.07700904166666667 p99=5 p99.9=9 maxAbsDiff=45 decodedVariance=4019.839755534351 uniform=False
+  PASS  real-R0003777-M0-vs-sdrheic: baseMode recorded
+  PASS  real-R0003777-M0-vs-sdrheic: percentiles reported
+  PASS  real-R0003777-M0-vs-sdrheic: check.baseMode matches baseCheck.baseMode
+  PASS  real-R0003777-M0-vs-sdrheic: photo rule p99 <= 16
+  PASS  real-R0003777-M0-vs-sdrheic: photo rule |meanSignedDiff| <= 0.5
+  PASS  real-R0003777-M0-vs-sdrheic: photo rule meanAbsDiff <= 2.5
+  PASS  real-R0003777-M0-vs-sdrheic: basePreserved passed
+        real-R0003777-M0-vs-sdrheic: basePreserved=True baseThresholds={"absDiffP99Max": 16, "baseMode": "photo", "diagnosticsOnly": ["p99_9", "maxAbsDiff", "perChannel"], "meanAbsDiffMax": 2.5, "meanSignedDiffAbsMax": 0.5, "passRule": "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"}
+  PASS  real-R0003777-M0-vs-sdrheic: HEIF container detected
+  PASS  real-R0003777-M0-vs-sdrheic: HDR decode request succeeded
+  PASS  real-R0003777-M0-vs-sdrheic: ISO aux present
+  PASS  real-R0003777-M0-vs-sdrheic: overall pass (main base matches SDR reference within codec loss)
+  PASS  real-R0003777-M0-vs-sdrheic: main HEIC SDR decode is close to the SDR-only HEIC (meanAbsDiff <= 2)
+  PASS  real-R0003777-M0-vs-sdrheic: no re-tone-map bias (|meanSignedDiff| <= 0.5)
+  INFO  real-R0003777-M0: iso=True headroom=2.499999761581421 peak=2.9226901531219482 alpha=False overall=True
+        real-R0003777-M0: base mode=photo meanAbsDiff=1.4752961111111111 meanSignedDiff=0.09070472222222223 p99=7 p99.9=12 maxAbsDiff=138 decodedVariance=4019.839755534351 uniform=False
+  PASS  real-R0003777-M0: baseMode recorded
+  PASS  real-R0003777-M0: percentiles reported
+  PASS  real-R0003777-M0: check.baseMode matches baseCheck.baseMode
+  PASS  real-R0003777-M0: photo rule p99 <= 16
+  PASS  real-R0003777-M0: photo rule |meanSignedDiff| <= 0.5
+  PASS  real-R0003777-M0: photo rule meanAbsDiff <= 2.5
+  PASS  real-R0003777-M0: basePreserved passed
+        real-R0003777-M0: basePreserved=True baseThresholds={"absDiffP99Max": 16, "baseMode": "photo", "diagnosticsOnly": ["p99_9", "maxAbsDiff", "perChannel"], "meanAbsDiffMax": 2.5, "meanSignedDiffAbsMax": 0.5, "passRule": "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"}
+  PASS  real-R0003777-M0: HEIF container detected
+  PASS  real-R0003777-M0: HDR decode request succeeded
+  PASS  real-R0003777-M0: ISO aux present
+  PASS  real-R0003777-M0: no alpha
+  PASS  real-R0003777-M0: overall pass
+  INFO  real-full-final: iso=True headroom=2.499999761581421 peak=2.9226901531219482 alpha=False overall=True
+        real-full-final: base mode=photo meanAbsDiff=1.4752961111111111 meanSignedDiff=0.09070472222222223 p99=7 p99.9=12 maxAbsDiff=138 decodedVariance=4019.839755534351 uniform=False
+  PASS  real-full-final: baseMode recorded
+  PASS  real-full-final: percentiles reported
+  PASS  real-full-final: check.baseMode matches baseCheck.baseMode
+  PASS  real-full-final: photo rule p99 <= 16
+  PASS  real-full-final: photo rule |meanSignedDiff| <= 0.5
+  PASS  real-full-final: photo rule meanAbsDiff <= 2.5
+  PASS  real-full-final: basePreserved passed
+        real-full-final: basePreserved=True baseThresholds={"absDiffP99Max": 16, "baseMode": "photo", "diagnosticsOnly": ["p99_9", "maxAbsDiff", "perChannel"], "meanAbsDiffMax": 2.5, "meanSignedDiffAbsMax": 0.5, "passRule": "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"}
+  PASS  real-full-final: HEIF container detected
+  PASS  real-full-final: HDR decode request succeeded
+  PASS  real-full-final: ISO aux present
+  PASS  real-full-final: no alpha
+  PASS  real-full-final: overall pass
+  PASS  real-full-final: exit code 0
+  PASS  real-full-final: expected headroomWithin5pct passed
+
+RESULT: PASS (258 assertions)
+
+SELF-TEST: PASS

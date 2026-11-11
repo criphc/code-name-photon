@@ -1,0 +1,22 @@
+MIME type: image/heic
+main brand: heic
+compatible brands: tmap, heic, mif1
+
+image: 2560x1707 (id=21), primary
+  tiles: 5x4, tile size: 512x512
+  colorspace: YCbCr, 4:2:0
+  bit depth: 8
+  color profile: prof
+  alpha channel: no 
+  depth channel: no
+metadata:
+  Exif: 102 bytes
+transformations:
+  angle (ccw): 0
+region annotations:
+  none
+text items:
+  none
+properties:
+none
+MIME items:

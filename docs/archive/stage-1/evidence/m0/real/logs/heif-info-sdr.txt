@@ -1,0 +1,25 @@
+MIME type: image/heic
+main brand: heic
+compatible brands: mif1, miaf, MiHB, heic
+
+image: 6000x4000 (id=43), primary
+  tiles: 6x7, tile size: 1024x576
+  colorspace: YCbCr, 4:2:0
+  bit depth: 8
+  color profile: prof
+  content light level: MaxCLL=203 MaxFALL=64
+  alpha channel: no 
+  depth channel: no
+metadata:
+  none
+transformations:
+  angle (ccw): 0
+region annotations:
+  none
+text items:
+  none
+properties:
+  content light level (clli):
+    max content light level: 203
+    max pic average light level: 64
+MIME items:

@@ -1,0 +1,46 @@
+{
+  "schema": 0,
+  "createdAt": "2026-11-03T13:42:58+08:00",
+  "seed": 9900937501100669718,
+  "out": "/Users/criphc/Sites/llm-photon/work/m5/ab-set",
+  "viewOrder": [
+    "U3.heic",
+    "P28.heic",
+    "W82.heic",
+    "H81.jpg"
+  ],
+  "files": {
+    "U3.heic": {
+      "original": "/Users/criphc/Sites/llm-photon/out/R0003777-P3-sdr.heic",
+      "kind": "sdr",
+      "extension": ".heic",
+      "order": 1,
+      "bytes": 1946906,
+      "sha256": "d639359abd87bc9c311d2f7351f79d307e34225269fc21c9236f144f96805b0e"
+    },
+    "P28.heic": {
+      "original": "/Users/criphc/Sites/llm-photon/out/R0003777-P3-hdr.heic",
+      "kind": "hdr",
+      "extension": ".heic",
+      "order": 2,
+      "bytes": 5798146,
+      "sha256": "826e27599cbbd6308d7695940dd3ec463a39ea5c8814024008bd6f36efb8df69"
+    },
+    "W82.heic": {
+      "original": "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7097.HEIC",
+      "kind": "reference",
+      "extension": ".heic",
+      "order": 3,
+      "bytes": 2496675,
+      "sha256": "003230bdfb2c15c92f76fbfeb25cdcd9485834d243d7a322d6f3fcc8d9dd23cd"
+    },
+    "H81.jpg": {
+      "original": "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7473.JPG",
+      "kind": "reference",
+      "extension": ".jpg",
+      "order": 4,
+      "bytes": 3567237,
+      "sha256": "e8cf64f7bd64c30e43addedc039f67169597ea96d7d05b575604ead08d86753f"
+    }
+  }
+}

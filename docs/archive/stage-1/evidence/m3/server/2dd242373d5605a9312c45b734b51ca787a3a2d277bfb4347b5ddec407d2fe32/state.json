@@ -1,0 +1,13 @@
+{
+  "appVersion" : "0.3.0-m21",
+  "encoderVersion" : "5dba4e2",
+  "height" : 5599,
+  "id" : "2dd242373d5605a9312c45b734b51ca787a3a2d277bfb4347b5ddec407d2fe32",
+  "name" : "FPL05190-P3.tif",
+  "recipeRenderKey" : "e8c2d1df99647652cab5d5964d861c30650cb69b77d3a41cbccb5ed3a2aeab0f",
+  "sourcePath" : "/Users/criphc/Sites/llm-photon/samples/sources/FPL05190-P3.tif",
+  "sourceSHA" : "2dd242373d5605a9312c45b734b51ca787a3a2d277bfb4347b5ddec407d2fe32",
+  "state" : "recipe_received",
+  "updatedAt" : "2026-11-03T03:46:39Z",
+  "width" : 8423
+}

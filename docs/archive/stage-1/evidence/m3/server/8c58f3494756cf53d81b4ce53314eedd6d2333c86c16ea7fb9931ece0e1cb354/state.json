@@ -1,0 +1,11 @@
+{
+  "appVersion" : "0.3.0-m21",
+  "encoderVersion" : "5dba4e2",
+  "id" : "8c58f3494756cf53d81b4ce53314eedd6d2333c86c16ea7fb9931ece0e1cb354",
+  "lastError" : "unsupported source: 'FPL05190.tif' has embedded colour profile 'Adobe RGB (1998)', which is not Display P3; export the SDR base as Display P3 from Capture One (docs/04 decision 1)",
+  "name" : "FPL05190.tif",
+  "sourcePath" : "/Users/criphc/Sites/llm-photon/samples/sources/FPL05190.tif",
+  "sourceSHA" : "8c58f3494756cf53d81b4ce53314eedd6d2333c86c16ea7fb9931ece0e1cb354",
+  "state" : "failed",
+  "updatedAt" : "2026-11-03T03:45:47Z"
+}

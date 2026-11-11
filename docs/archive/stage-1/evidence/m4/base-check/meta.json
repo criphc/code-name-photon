@@ -1,0 +1,90 @@
+{
+  "encoder" : {
+    "depth" : 8,
+    "elapsed_seconds" : 0.6144599914550781,
+    "executable" : "/Users/criphc/Sites/llm-photon/tools/toGainMapHDR/bin/toGainMapHDR",
+    "headroom_cap_arg" : 2.5,
+    "quality" : 0.85,
+    "tool" : "toGainMapHDR",
+    "version" : "5dba4e2"
+  },
+  "outputs" : {
+    "hdr_tif" : {
+      "bytes" : 384032782,
+      "path" : "hdr.tif",
+      "sha256" : "bd71c3019f3743c50980846e9cff26f8d45099dee736899245b5141a67296fa7"
+    },
+    "preview_heic" : {
+      "bytes" : 1247063,
+      "path" : "preview.heic",
+      "sha256" : "206b5e777ec7b0638e3b9241abb40c1ec5486d4f6b8babdc0350ff59fea90a11"
+    },
+    "sdr_tif" : {
+      "bytes" : 144011414,
+      "path" : "sdr.tif",
+      "sha256" : "5378900171aaa2f42fb698ecfe43b841d5032958cffb2bda84efc20d72c40604"
+    }
+  },
+  "recipe" : {
+    "base" : {
+      "profile" : "DisplayP3",
+      "tone_map" : "c1_match_v1"
+    },
+    "created" : "2026-11-03T11:45:38+08:00",
+    "encoder" : {
+      "depth" : 8,
+      "map" : "iso-rgb",
+      "quality" : 0.85,
+      "subsample" : false,
+      "tool" : "toGainMapHDR"
+    },
+    "hdr" : {
+      "headroom_cap" : 2.5,
+      "lift_stops" : 2.015059471130371,
+      "start" : 0.19711047410964966,
+      "transition" : 1
+    },
+    "schema" : 0,
+    "source" : {
+      "height" : 4000,
+      "path" : "/Users/criphc/Sites/llm-photon/samples/sources/R0003777-P3.tif",
+      "sha256" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+      "width" : 6000
+    },
+    "versions" : {
+      "encoder" : "5dba4e2",
+      "recipe" : 0,
+      "tone_map" : 1
+    }
+  },
+  "render" : {
+    "authored_peak_linear" : 2.5,
+    "authored_peak_stops" : 1.3219280948873624,
+    "fraction_above_one" : 0.25644808333333335,
+    "fraction_at_cap" : 0.007517166666666667,
+    "headroom_cap_linear" : 2.5,
+    "lift_stops" : 2.015059471130371,
+    "start" : 0.19711047410964966,
+    "tone_map" : "c1_match_v1",
+    "transition" : 1,
+    "working_space" : "linear-extended-DisplayP3-float32"
+  },
+  "schema" : 0,
+  "source" : {
+    "bitsPerComponent" : 16,
+    "height" : 4000,
+    "path" : "/Users/criphc/Sites/llm-photon/samples/sources/R0003777-P3.tif",
+    "profileName" : "Display P3",
+    "sha256" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+    "width" : 6000
+  },
+  "timings" : {
+    "decode_seconds" : 0.5095659494400024,
+    "encode_seconds" : 0.6144599914550781,
+    "hdr_seconds" : 0.19328296184539795,
+    "metadata_seconds" : 0.29577791690826416,
+    "preview_seconds" : 0.7349029779434204,
+    "sdr_base_seconds" : 0.007090091705322266,
+    "total_seconds" : 4.661466956138611
+  }
+}

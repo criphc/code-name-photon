@@ -1,0 +1,13 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/m0/verify/real-snapshot/R0003777-M0-2560.heic
+  file        882761 bytes  sha256=9941f74967eae1d7ef4764591696cf41a0e87bab051ff99167fb38ec7a30854c
+  container   major=heic brands=[tmap, heic, mif1] items=44
+  base image  2560x1707 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     present 2560x1707 fmt=420f altHeadroom=2.5000x [ImageIO omitted aux data bytes]
+  aux HDRGain absent
+  sdrDecode   2560x1707 8bpc contentHeadroom=1.0000 calcHeadroom=1.0000
+  hdrDecode   OK 2560x1707 10bpc contentHeadroom=2.5000 calc=2.7490
+              measured peak=3.0480 mean=0.3630 frac>1=6.76%
+  checks      dimsMatch=PASS hdrDecodeSucceeded=PASS headroomWithin5pct=PASS heifContainer=PASS isoAuxPresent=PASS noAlpha=PASS sdrFallbackPresent=PASS
+  skipped     basePreserved (no --base supplied)
+  result      PASS
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/real-R0003777-M0-2560.json

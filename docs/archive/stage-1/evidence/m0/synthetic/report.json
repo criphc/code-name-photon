@@ -1,0 +1,1532 @@
+{
+  "schema": "m0-synthetic-facts-v1",
+  "task": "task-1 / M0-A",
+  "generatedAt": "2026-11-02T20:56:51+08:00",
+  "host": "Version 27.2 (Build 26B123)",
+  "encoder": {
+    "path": "tools/toGainMapHDR/bin/toGainMapHDR"
+  },
+  "sourcePair": {
+    "generator": "work/m0/synthetic/make_pair.swift",
+    "baseTIFF": {
+      "bytes": 4719630,
+      "cgBpp": 48,
+      "cgBps": 16,
+      "cgColorSpace": "kCGColorSpaceDisplayP3",
+      "colorModel": "RGB",
+      "depth": 16,
+      "path": "base.tif",
+      "pixelHeight": 768,
+      "pixelWidth": 1024,
+      "profileName": "Display P3",
+      "sha256": "753c6aa0fbc9d190b73d7159fa71a57a12ce1ecaa43c387b4d927b6878fc6fef"
+    },
+    "hdrTIFF": {
+      "bytes": 12584462,
+      "cgBpp": 128,
+      "cgBps": 32,
+      "cgColorSpace": "nil",
+      "colorModel": "RGB",
+      "depth": 32,
+      "path": "hdr.tif",
+      "pixelHeight": 768,
+      "pixelWidth": 1024,
+      "profileName": "Display P3 Linear",
+      "sha256": "a7976a36f23fcfcecb9edec31456978af4f1ad318ce94f74b4a89a38840688fe"
+    },
+    "authoring": {
+      "baseLinearRGB": 0.49998557567596436,
+      "hdrRampLinearP3": {
+        "left": 0.021943358704447746,
+        "right": 3.998056650161743
+      },
+      "peakLinearRequested": 4,
+      "peakLinearMeasured": 3.998056650161743,
+      "generatorDeterministicOnRerun": true
+    },
+    "baseTIFFDecodedLinearP3Stats": [
+      {
+        "max": 0.49998557567596436,
+        "mean": 0.49998557567596436,
+        "min": 0.49998557567596436,
+        "variance": -2.4796553699246715e-12
+      },
+      {
+        "max": 0.49998557567596436,
+        "mean": 0.49998557567596436,
+        "min": 0.49998557567596436,
+        "variance": -2.4796553699246715e-12
+      },
+      {
+        "max": 0.49998557567596436,
+        "mean": 0.49998557567596436,
+        "min": 0.49998557567596436,
+        "variance": -2.4796553699246715e-12
+      }
+    ],
+    "baseTIFFDecoded8bitP3Stats": [
+      {
+        "max": 188,
+        "mean": 188,
+        "min": 188,
+        "variance": 0
+      },
+      {
+        "max": 188,
+        "mean": 188,
+        "min": 188,
+        "variance": 0
+      },
+      {
+        "max": 188,
+        "mean": 188,
+        "min": 188,
+        "variance": 0
+      }
+    ]
+  },
+  "answers": {
+    "Q1_R_caps_advertised_headroom_in_b_path": {
+      "answer": "NO. -R is ignored in the -b path (no -H): runs a/b/c (-R 2.5/1.5/6) are byte-identical and carry identical metadata. The advertised headroom is derived by Core Image from the actual HDR/base ratio, not from -R.",
+      "measured": {
+        "out-b-r25": {
+          "R": 2.5,
+          "alternateHeadroomStops": 1.994353,
+          "contentHeadroomLinear": 3.984374,
+          "decodedPeakLinearP3": 4.002965927124023
+        },
+        "out-b-r15": {
+          "R": 1.5,
+          "alternateHeadroomStops": 1.994353,
+          "contentHeadroomLinear": 3.984374,
+          "decodedPeakLinearP3": 4.002965927124023
+        },
+        "out-b-r6": {
+          "R": 6.0,
+          "alternateHeadroomStops": 1.994353,
+          "contentHeadroomLinear": 3.984374,
+          "decodedPeakLinearP3": 4.002965927124023
+        }
+      },
+      "identity": "2^AlternateHeadroom == contentHeadroom == 3.984374; AlternateHeadroom(1.994353) == log2(baseLinearPeak 0.5 x 2^GainMapMax 2.994354) == log2(3.984374)",
+      "relationToAuthoredPeak": "authored peak 4.0 linear (measured 3.998057); log2(3.998057)=1.999300; advertised 1.994353 = log2(3.984374); difference -0.004947 stop from 8-bit gain-map quantisation (GainMapMax 2.994354 vs exact 3.0)",
+      "contradicts": "docs/03 \u00a73 claim \"with -b the tool skips its own headroom analysis, so -R is the only headroom control\""
+    },
+    "Q2_supplied_base_preserved_exactly": {
+      "answer": "YES. For all -b runs (incl. -H) the decoded HEIC SDR base is pixel-identical to base.tif rendered to 8-bit Display P3: meanAbsDiff=0, maxAbsDiff=0, 0/786432 pixels differ per channel; the uniform base decodes to 188/188/188 everywhere, spatial variance 0.",
+      "measured": {
+        "decodedBase8bitP3Mean": 188.0,
+        "decodedBase8bitP3Variance": 0.0,
+        "meanAbsDiff": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maxAbsDiff": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pixelsDiffering": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "Q3_alpha_and_base_bit_depth": {
+      "answer": "With -b (and -b -H): NO alpha channel; base bit depth 8 (HEVC YCbCr 4:2:0, 8 bpc, 32 bpp CGImage noneSkipLast/noneSkipFirst). Without -b the tool output HAS an alpha channel (CGImageAlphaInfo.last, HEIF alpha channel: yes) and its DecodeToHDR result is 16 bpc / 64 bpp.",
+      "measured": {
+        "out-b-*": {
+          "hasAlpha": false,
+          "baseBitDepth": 8,
+          "alphaInfoRawPlain": 5
+        },
+        "out-b-r25-H": {
+          "hasAlpha": false,
+          "baseBitDepth": 8,
+          "alphaInfoRawPlain": 5
+        },
+        "out-nob-r25": {
+          "hasAlpha": true,
+          "baseBitDepth": 8,
+          "alphaInfoRawPlain": 3,
+          "decodeToHDRbitsPerComponent": 16,
+          "decodeToHDRbitsPerPixel": 64
+        }
+      }
+    },
+    "Q4_brands_and_dialect": {
+      "answer": "ISO 21496-1 tmap dialect, not an Apple auxiliary item. ftyp major brand \"heic\"; compatible brands mif1, tmap, miaf, MiHB, heic (no-b control adds MiHE). The meta box contains an infe item_type \"tmap\" derived item; dimg references link it to the base grid item (id 5) and the gain-map item (id 10 full-res / id 7 half-res). kCGImageAuxiliaryDataTypeHDRGainMap returns nil for every run; the ISO gain map aux is present for every run.",
+      "measured": {
+        "majorBrand": "heic",
+        "compatibleBrands_b": [
+          "mif1",
+          "tmap",
+          "miaf",
+          "MiHB",
+          "heic"
+        ],
+        "compatibleBrands_nob": [
+          "mif1",
+          "tmap",
+          "MiHE",
+          "miaf",
+          "MiHB",
+          "heic"
+        ],
+        "isoTmapItemPresent": true,
+        "appleAuxItemPresent": false,
+        "ftypBytes": "00000024 66747970 68656963 00000000 6d696631 746d6170 6d696166 4d694842 68656963"
+      }
+    },
+    "Q5_ICC_vs_nclx": {
+      "answer": "Asymmetric. The base image item carries an ICC \"prof\" colr box (536-byte Apple Display P3 profile; heif-info: color profile prof; plus an additional nclx box with unspecified primaries/transfer, BT.601 matrix, full range). The ISO gain-map item is signalled only by nclx: primaries 12 (SMPTE EG 432-1 = Display P3), transfer 16 (SMPTE ST 2084 PQ), matrix 6, full range in the -b path; transfer 13 (sRGB/sYCC) in the -H path. ImageIO reports the aux colour space as \"ICCBased Display P3 + SMPTE ST 2084 PQ\" (-b) / \"ICCBased Display P3\" (-H).",
+      "measured": {
+        "baseItemColour": "colr prof (ICC Display P3) + nclx primaries=2 transfer=2 matrix=6 fullRange=1",
+        "gainMapItemColour_b": "nclx primaries=12 transfer=16 matrix=6 fullRange=1 (P3 + PQ)",
+        "gainMapItemColour_H": "nclx primaries=12 transfer=13 matrix=6 fullRange=1 (P3 + sRGB/sYCC)",
+        "iccProfileDescription": "Display P3"
+      }
+    },
+    "Q6_DecodeToHDR": {
+      "answer": "DecodeToHDR (kCGImageSourceDecodeRequest = kCGImageSourceDecodeToHDR) succeeds on all five outputs. -b: 10 bpc / 32 bpp, contentHeadroom 3.984374 (=1.994353 stops), calculatedContentHeadroom 4.002930, decoded peak 4.002966 linear vs authored 3.998057. no-b: contentHeadroom 3.984374, calculated 3.984375, peak 3.984408, 16 bpc due to alpha. -H: contentHeadroom 4.926114 (=2.300450 stops) but calculatedContentHeadroom 2.013672 and actual decoded peak only 2.014133 -> metadata over-promises headroom by 2.45x and the authored 4.0 peak is clipped.",
+      "measured": {
+        "out-b-r25": {
+          "contentHeadroomLinear": 3.984374,
+          "contentHeadroomStops": 1.994353,
+          "calculatedContentHeadroomLinear": 4.00293,
+          "decodedPeakLinearP3": 4.002965927124023
+        },
+        "out-b-r15": {
+          "contentHeadroomLinear": 3.984374,
+          "contentHeadroomStops": 1.994353,
+          "calculatedContentHeadroomLinear": 4.00293,
+          "decodedPeakLinearP3": 4.002965927124023
+        },
+        "out-b-r6": {
+          "contentHeadroomLinear": 3.984374,
+          "contentHeadroomStops": 1.994353,
+          "calculatedContentHeadroomLinear": 4.00293,
+          "decodedPeakLinearP3": 4.002965927124023
+        },
+        "out-nob-r25": {
+          "contentHeadroomLinear": 3.984374,
+          "contentHeadroomStops": 1.994353,
+          "calculatedContentHeadroomLinear": 3.984375,
+          "decodedPeakLinearP3": 3.984407663345337
+        },
+        "out-b-r25-H": {
+          "contentHeadroomLinear": 4.926114,
+          "contentHeadroomStops": 2.30045,
+          "calculatedContentHeadroomLinear": 2.013672,
+          "decodedPeakLinearP3": 2.0141332149505615
+        }
+      }
+    },
+    "Q7_file_sizes_and_H_effect": {
+      "answer": "-b full-res RGB map: 4203 B. -b -H: 3055 B (-27.3%). no-b control: 5817 B. -H effect: gain map 1024x768 -> 512x384 (quarter pixel count), base preserved exactly (0 diff), but it switches the writer path: map nclx transfer PQ -> sRGB/sYCC, adds clli (MaxCLL=203, MaxFALL=64), shrinks Exif item 102 -> 60 bytes, hardcodes AlternateHeadroom=2.300450 and clips the authored 4.0 peak to ~2.014 linear. So -H is a size win but breaks both headroom metadata and peak fidelity for this pair.",
+      "measured": {
+        "out-b-r25": {
+          "bytes": 4203,
+          "gainMapDimensions": {
+            "width": 1024,
+            "height": 768
+          },
+          "alternateHeadroomStops": 1.994353,
+          "decodedPeakLinearP3": 4.002966
+        },
+        "out-b-r15": {
+          "bytes": 4203,
+          "gainMapDimensions": {
+            "width": 1024,
+            "height": 768
+          },
+          "alternateHeadroomStops": 1.994353,
+          "decodedPeakLinearP3": 4.002966
+        },
+        "out-b-r6": {
+          "bytes": 4203,
+          "gainMapDimensions": {
+            "width": 1024,
+            "height": 768
+          },
+          "alternateHeadroomStops": 1.994353,
+          "decodedPeakLinearP3": 4.002966
+        },
+        "out-nob-r25": {
+          "bytes": 5817,
+          "gainMapDimensions": {
+            "width": 1024,
+            "height": 768
+          },
+          "alternateHeadroomStops": 1.994353,
+          "decodedPeakLinearP3": 3.984408
+        },
+        "out-b-r25-H": {
+          "bytes": 3055,
+          "gainMapDimensions": {
+            "width": 512,
+            "height": 384
+          },
+          "alternateHeadroomStops": 2.30045,
+          "decodedPeakLinearP3": 2.014133
+        }
+      }
+    }
+  },
+  "runs": [
+    {
+      "name": "out-b-r25",
+      "command": "toGainMapHDR hdr.tif out-b-r25 -b base.tif -R 2.5 -d 8 -q 0.85 -c p3",
+      "headroomArg": "2.5",
+      "usesSuppliedBase": true,
+      "halfSizeMap": false,
+      "file": {
+        "relativePath": "out-b-r25/hdr.heic",
+        "bytes": 4203,
+        "sha256": "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e",
+        "ftyp": {
+          "boxSize": 36,
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand": "heic",
+          "minorVersion": 0
+        }
+      },
+      "container": {
+        "heifInfo": {
+          "majorBrand": "heic",
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "primaryItem": {
+            "width": 1024,
+            "height": 768,
+            "id": 5,
+            "tiles": "2x2",
+            "tileSize": "512x512",
+            "colorspace": "YCbCr, 4:2:0",
+            "bitDepth": 8,
+            "colorProfile": "prof",
+            "alphaChannel": "no"
+          }
+        },
+        "boxDump": {
+          "hasTmapItem": true,
+          "dimgReferences": [
+            {
+              "from": 5,
+              "to": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "from": 10,
+              "to": [
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "from": 11,
+              "to": [
+                5,
+                10
+              ]
+            }
+          ],
+          "nclxColourBoxes": [
+            {
+              "primaries": 2,
+              "transfer": 2,
+              "matrix": 6
+            },
+            {
+              "primaries": 12,
+              "transfer": 16,
+              "matrix": 6
+            }
+          ],
+          "hasICCProfileBox": true,
+          "itemTypes": [
+            "Exif",
+            "grid",
+            "hvc1",
+            "tmap"
+          ]
+        },
+        "iccProfileDescription": "Display P3"
+      },
+      "plainSDRDecode": {
+        "alphaInfoRaw": 5,
+        "auxiliaryDataProperties": "none",
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "calculatedContentHeadroom": 0.501953125,
+        "colorSpaceName": "kCGColorSpaceDisplayP3",
+        "contentHeadroom": 1,
+        "depthProperty": 8,
+        "hasAlpha": false,
+        "height": 768,
+        "profileName": "Display P3",
+        "width": 1024
+      },
+      "isoGainMapAux": {
+        "present": true,
+        "dataDescription": {
+          "BytesPerRow": 1024,
+          "Height": 768,
+          "PixelFormat": 875704422,
+          "PixelFormatFourCC": "420f",
+          "Width": 1024
+        },
+        "dataColorSpaceRaw": "<CGColorSpace 0x7c99514700> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "hdrToneMap": {
+          "alternateHeadroom": 1.994353,
+          "baseColorIsWorkingColor": "True",
+          "baseHeadroom": 0,
+          "channels": [
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "appleGainMapAuxPresent": false,
+      "decodeToHDR": {
+        "success": true,
+        "width": 1024,
+        "height": 768,
+        "bitsPerComponent": 10,
+        "bitsPerPixel": 32,
+        "hasAlpha": false,
+        "contentHeadroomLinear": 3.9843740463256836,
+        "contentHeadroomStops": 1.994353,
+        "calculatedContentHeadroomLinear": 4.0029296875,
+        "decodedPeakLinearP3": 4.002965927124023,
+        "vsAuthoredHDR": {
+          "maxAbsDiff": 0.06096911430358887,
+          "meanAbsDiff": 0.013791936894752629
+        },
+        "profileRow": [
+          {
+            "absDiff": 0.01411408744752407,
+            "authoredLinearP3": 0.021943358704447746,
+            "decodedLinearP3": 0.03605744615197182,
+            "x": 0
+          },
+          {
+            "absDiff": 0.001505136489868164,
+            "authoredLinearP3": 1.016943335533142,
+            "decodedLinearP3": 1.0184484720230103,
+            "x": 256
+          },
+          {
+            "absDiff": 0.020633935928344727,
+            "authoredLinearP3": 2.0119433403015137,
+            "decodedLinearP3": 2.0325772762298584,
+            "x": 512
+          },
+          {
+            "absDiff": 0.021224260330200195,
+            "authoredLinearP3": 3.006943464279175,
+            "decodedLinearP3": 3.028167724609375,
+            "x": 768
+          },
+          {
+            "absDiff": 0.0049092769622802734,
+            "authoredLinearP3": 3.998056650161743,
+            "decodedLinearP3": 4.002965927124023,
+            "x": 1023
+          }
+        ]
+      },
+      "decodedSDRBaseStats8bitP3": [
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        }
+      ],
+      "basePreservationVsSuppliedBase": {
+        "applicable": true,
+        "diff8bitP3": [
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          }
+        ]
+      },
+      "derived": {
+        "alternateHeadroomStops": 1.994353,
+        "alternateHeadroomLinear": 3.984374,
+        "metadataHeadroomMinusDecodedPeak": -0.018592
+      }
+    },
+    {
+      "name": "out-b-r15",
+      "command": "toGainMapHDR hdr.tif out-b-r15 -b base.tif -R 1.5 -d 8 -q 0.85 -c p3",
+      "headroomArg": "1.5",
+      "usesSuppliedBase": true,
+      "halfSizeMap": false,
+      "file": {
+        "relativePath": "out-b-r15/hdr.heic",
+        "bytes": 4203,
+        "sha256": "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e",
+        "ftyp": {
+          "boxSize": 36,
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand": "heic",
+          "minorVersion": 0
+        }
+      },
+      "container": {
+        "heifInfo": {
+          "majorBrand": "heic",
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "primaryItem": {
+            "width": 1024,
+            "height": 768,
+            "id": 5,
+            "tiles": "2x2",
+            "tileSize": "512x512",
+            "colorspace": "YCbCr, 4:2:0",
+            "bitDepth": 8,
+            "colorProfile": "prof",
+            "alphaChannel": "no"
+          }
+        },
+        "boxDump": {
+          "hasTmapItem": true,
+          "dimgReferences": [
+            {
+              "from": 5,
+              "to": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "from": 10,
+              "to": [
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "from": 11,
+              "to": [
+                5,
+                10
+              ]
+            }
+          ],
+          "nclxColourBoxes": [
+            {
+              "primaries": 2,
+              "transfer": 2,
+              "matrix": 6
+            },
+            {
+              "primaries": 12,
+              "transfer": 16,
+              "matrix": 6
+            }
+          ],
+          "hasICCProfileBox": true,
+          "itemTypes": [
+            "Exif",
+            "grid",
+            "hvc1",
+            "tmap"
+          ]
+        },
+        "iccProfileDescription": "Display P3"
+      },
+      "plainSDRDecode": {
+        "alphaInfoRaw": 5,
+        "auxiliaryDataProperties": "none",
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "calculatedContentHeadroom": 0.501953125,
+        "colorSpaceName": "kCGColorSpaceDisplayP3",
+        "contentHeadroom": 1,
+        "depthProperty": 8,
+        "hasAlpha": false,
+        "height": 768,
+        "profileName": "Display P3",
+        "width": 1024
+      },
+      "isoGainMapAux": {
+        "present": true,
+        "dataDescription": {
+          "BytesPerRow": 1024,
+          "Height": 768,
+          "PixelFormat": 875704422,
+          "PixelFormatFourCC": "420f",
+          "Width": 1024
+        },
+        "dataColorSpaceRaw": "<CGColorSpace 0x7c99514700> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "hdrToneMap": {
+          "alternateHeadroom": 1.994353,
+          "baseColorIsWorkingColor": "True",
+          "baseHeadroom": 0,
+          "channels": [
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "appleGainMapAuxPresent": false,
+      "decodeToHDR": {
+        "success": true,
+        "width": 1024,
+        "height": 768,
+        "bitsPerComponent": 10,
+        "bitsPerPixel": 32,
+        "hasAlpha": false,
+        "contentHeadroomLinear": 3.9843740463256836,
+        "contentHeadroomStops": 1.994353,
+        "calculatedContentHeadroomLinear": 4.0029296875,
+        "decodedPeakLinearP3": 4.002965927124023,
+        "vsAuthoredHDR": {
+          "maxAbsDiff": 0.06096911430358887,
+          "meanAbsDiff": 0.013791902122951191
+        },
+        "profileRow": [
+          {
+            "absDiff": 0.01411408744752407,
+            "authoredLinearP3": 0.021943358704447746,
+            "decodedLinearP3": 0.03605744615197182,
+            "x": 0
+          },
+          {
+            "absDiff": 0.001505136489868164,
+            "authoredLinearP3": 1.016943335533142,
+            "decodedLinearP3": 1.0184484720230103,
+            "x": 256
+          },
+          {
+            "absDiff": 0.020633935928344727,
+            "authoredLinearP3": 2.0119433403015137,
+            "decodedLinearP3": 2.0325772762298584,
+            "x": 512
+          },
+          {
+            "absDiff": 0.021224021911621094,
+            "authoredLinearP3": 3.006943464279175,
+            "decodedLinearP3": 3.028167486190796,
+            "x": 768
+          },
+          {
+            "absDiff": 0.0049092769622802734,
+            "authoredLinearP3": 3.998056650161743,
+            "decodedLinearP3": 4.002965927124023,
+            "x": 1023
+          }
+        ]
+      },
+      "decodedSDRBaseStats8bitP3": [
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        }
+      ],
+      "basePreservationVsSuppliedBase": {
+        "applicable": true,
+        "diff8bitP3": [
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          }
+        ]
+      },
+      "derived": {
+        "alternateHeadroomStops": 1.994353,
+        "alternateHeadroomLinear": 3.984374,
+        "metadataHeadroomMinusDecodedPeak": -0.018592
+      }
+    },
+    {
+      "name": "out-b-r6",
+      "command": "toGainMapHDR hdr.tif out-b-r6 -b base.tif -R 6 -d 8 -q 0.85 -c p3",
+      "headroomArg": "6",
+      "usesSuppliedBase": true,
+      "halfSizeMap": false,
+      "file": {
+        "relativePath": "out-b-r6/hdr.heic",
+        "bytes": 4203,
+        "sha256": "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e",
+        "ftyp": {
+          "boxSize": 36,
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand": "heic",
+          "minorVersion": 0
+        }
+      },
+      "container": {
+        "heifInfo": {
+          "majorBrand": "heic",
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "primaryItem": {
+            "width": 1024,
+            "height": 768,
+            "id": 5,
+            "tiles": "2x2",
+            "tileSize": "512x512",
+            "colorspace": "YCbCr, 4:2:0",
+            "bitDepth": 8,
+            "colorProfile": "prof",
+            "alphaChannel": "no"
+          }
+        },
+        "boxDump": {
+          "hasTmapItem": true,
+          "dimgReferences": [
+            {
+              "from": 5,
+              "to": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "from": 10,
+              "to": [
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "from": 11,
+              "to": [
+                5,
+                10
+              ]
+            }
+          ],
+          "nclxColourBoxes": [
+            {
+              "primaries": 2,
+              "transfer": 2,
+              "matrix": 6
+            },
+            {
+              "primaries": 12,
+              "transfer": 16,
+              "matrix": 6
+            }
+          ],
+          "hasICCProfileBox": true,
+          "itemTypes": [
+            "Exif",
+            "grid",
+            "hvc1",
+            "tmap"
+          ]
+        },
+        "iccProfileDescription": "Display P3"
+      },
+      "plainSDRDecode": {
+        "alphaInfoRaw": 5,
+        "auxiliaryDataProperties": "none",
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "calculatedContentHeadroom": 0.501953125,
+        "colorSpaceName": "kCGColorSpaceDisplayP3",
+        "contentHeadroom": 1,
+        "depthProperty": 8,
+        "hasAlpha": false,
+        "height": 768,
+        "profileName": "Display P3",
+        "width": 1024
+      },
+      "isoGainMapAux": {
+        "present": true,
+        "dataDescription": {
+          "BytesPerRow": 1024,
+          "Height": 768,
+          "PixelFormat": 875704422,
+          "PixelFormatFourCC": "420f",
+          "Width": 1024
+        },
+        "dataColorSpaceRaw": "<CGColorSpace 0x7c99514700> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "hdrToneMap": {
+          "alternateHeadroom": 1.994353,
+          "baseColorIsWorkingColor": "True",
+          "baseHeadroom": 0,
+          "channels": [
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 2.994354,
+              "GainMapMin": -3.794207,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "appleGainMapAuxPresent": false,
+      "decodeToHDR": {
+        "success": true,
+        "width": 1024,
+        "height": 768,
+        "bitsPerComponent": 10,
+        "bitsPerPixel": 32,
+        "hasAlpha": false,
+        "contentHeadroomLinear": 3.9843740463256836,
+        "contentHeadroomStops": 1.994353,
+        "calculatedContentHeadroomLinear": 4.0029296875,
+        "decodedPeakLinearP3": 4.002965927124023,
+        "vsAuthoredHDR": {
+          "maxAbsDiff": 0.06096911430358887,
+          "meanAbsDiff": 0.013791902122951191
+        },
+        "profileRow": [
+          {
+            "absDiff": 0.01411408744752407,
+            "authoredLinearP3": 0.021943358704447746,
+            "decodedLinearP3": 0.03605744615197182,
+            "x": 0
+          },
+          {
+            "absDiff": 0.001505136489868164,
+            "authoredLinearP3": 1.016943335533142,
+            "decodedLinearP3": 1.0184484720230103,
+            "x": 256
+          },
+          {
+            "absDiff": 0.020633935928344727,
+            "authoredLinearP3": 2.0119433403015137,
+            "decodedLinearP3": 2.0325772762298584,
+            "x": 512
+          },
+          {
+            "absDiff": 0.021224021911621094,
+            "authoredLinearP3": 3.006943464279175,
+            "decodedLinearP3": 3.028167486190796,
+            "x": 768
+          },
+          {
+            "absDiff": 0.0049092769622802734,
+            "authoredLinearP3": 3.998056650161743,
+            "decodedLinearP3": 4.002965927124023,
+            "x": 1023
+          }
+        ]
+      },
+      "decodedSDRBaseStats8bitP3": [
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        }
+      ],
+      "basePreservationVsSuppliedBase": {
+        "applicable": true,
+        "diff8bitP3": [
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          }
+        ]
+      },
+      "derived": {
+        "alternateHeadroomStops": 1.994353,
+        "alternateHeadroomLinear": 3.984374,
+        "metadataHeadroomMinusDecodedPeak": -0.018592
+      }
+    },
+    {
+      "name": "out-nob-r25",
+      "command": "toGainMapHDR hdr.tif out-nob-r25 -R 2.5 -d 8 -q 0.85 -c p3",
+      "headroomArg": "2.5",
+      "usesSuppliedBase": false,
+      "halfSizeMap": false,
+      "file": {
+        "relativePath": "out-nob-r25/hdr.heic",
+        "bytes": 5817,
+        "sha256": "58e0113805cbc89fbc4fab0f9ecc1a7bca772e9a649bee421413346e2805149f",
+        "ftyp": {
+          "boxSize": 40,
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "MiHE",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand": "heic",
+          "minorVersion": 0
+        }
+      },
+      "container": {
+        "heifInfo": {
+          "majorBrand": "heic",
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "MiHE",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "primaryItem": {
+            "width": 1024,
+            "height": 768,
+            "id": 5,
+            "tiles": "2x2",
+            "tileSize": "512x512",
+            "colorspace": "YCbCr, 4:2:0",
+            "bitDepth": 8,
+            "colorProfile": "prof",
+            "alphaChannel": "yes"
+          }
+        },
+        "boxDump": {
+          "hasTmapItem": true,
+          "dimgReferences": [
+            {
+              "from": 5,
+              "to": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "from": 10,
+              "to": [
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "from": 15,
+              "to": [
+                11,
+                12,
+                13,
+                14
+              ]
+            },
+            {
+              "from": 16,
+              "to": [
+                5,
+                15
+              ]
+            }
+          ],
+          "nclxColourBoxes": [
+            {
+              "primaries": 2,
+              "transfer": 2,
+              "matrix": 6
+            },
+            {
+              "primaries": 12,
+              "transfer": 16,
+              "matrix": 6
+            }
+          ],
+          "hasICCProfileBox": true,
+          "itemTypes": [
+            "Exif",
+            "grid",
+            "hvc1",
+            "tmap"
+          ]
+        },
+        "iccProfileDescription": "Display P3"
+      },
+      "plainSDRDecode": {
+        "alphaInfoRaw": 3,
+        "auxiliaryDataProperties": "none",
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "calculatedContentHeadroom": 1,
+        "colorSpaceName": "kCGColorSpaceDisplayP3",
+        "contentHeadroom": 1,
+        "depthProperty": 8,
+        "hasAlpha": true,
+        "height": 768,
+        "profileName": "Display P3",
+        "width": 1024
+      },
+      "isoGainMapAux": {
+        "present": true,
+        "dataDescription": {
+          "BytesPerRow": 1024,
+          "Height": 768,
+          "PixelFormat": 875704422,
+          "PixelFormatFourCC": "420f",
+          "Width": 1024
+        },
+        "dataColorSpaceRaw": "<CGColorSpace 0x7c99514700> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "hdrToneMap": {
+          "alternateHeadroom": 1.994353,
+          "baseColorIsWorkingColor": "True",
+          "baseHeadroom": 0,
+          "channels": [
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 1.994353,
+              "GainMapMin": 0.267957,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 1.994353,
+              "GainMapMin": 0.267957,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 1.994353,
+              "GainMapMin": 0.267957,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "appleGainMapAuxPresent": false,
+      "decodeToHDR": {
+        "success": true,
+        "width": 1024,
+        "height": 768,
+        "bitsPerComponent": 16,
+        "bitsPerPixel": 64,
+        "hasAlpha": true,
+        "contentHeadroomLinear": 3.9843740463256836,
+        "contentHeadroomStops": 1.994353,
+        "calculatedContentHeadroomLinear": 3.984375,
+        "decodedPeakLinearP3": 3.984407663345337,
+        "vsAuthoredHDR": {
+          "maxAbsDiff": 0.014234304428100586,
+          "meanAbsDiff": 0.0035603505818168437
+        },
+        "profileRow": [
+          {
+            "absDiff": 0.00033611617982387543,
+            "authoredLinearP3": 0.021943358704447746,
+            "decodedLinearP3": 0.02227947488427162,
+            "x": 0
+          },
+          {
+            "absDiff": 0.0005327463150024414,
+            "authoredLinearP3": 1.016943335533142,
+            "decodedLinearP3": 1.0164105892181396,
+            "x": 256
+          },
+          {
+            "absDiff": 0.009578227996826172,
+            "authoredLinearP3": 2.0119433403015137,
+            "decodedLinearP3": 2.02152156829834,
+            "x": 512
+          },
+          {
+            "absDiff": 0.0004515647888183594,
+            "authoredLinearP3": 3.006943464279175,
+            "decodedLinearP3": 3.0064918994903564,
+            "x": 768
+          },
+          {
+            "absDiff": 0.01364898681640625,
+            "authoredLinearP3": 3.998056650161743,
+            "decodedLinearP3": 3.984407663345337,
+            "x": 1023
+          }
+        ]
+      },
+      "decodedSDRBaseStats8bitP3": [
+        {
+          "max": 255,
+          "mean": 226.21951293945312,
+          "min": 37,
+          "variance": 2205.43223195678
+        },
+        {
+          "max": 255,
+          "mean": 226.21951293945312,
+          "min": 37,
+          "variance": 2205.43223195678
+        },
+        {
+          "max": 255,
+          "mean": 226.21951293945312,
+          "min": 37,
+          "variance": 2205.43223195678
+        }
+      ],
+      "basePreservationVsSuppliedBase": {
+        "applicable": false,
+        "reason": "no -b: tool generated and tone-mapped its own SDR base"
+      },
+      "derived": {
+        "alternateHeadroomStops": 1.994353,
+        "alternateHeadroomLinear": 3.984374,
+        "metadataHeadroomMinusDecodedPeak": -3.4e-05
+      }
+    },
+    {
+      "name": "out-b-r25-H",
+      "command": "toGainMapHDR hdr.tif out-b-r25-H -b base.tif -R 2.5 -d 8 -q 0.85 -c p3 -H",
+      "headroomArg": "2.5",
+      "usesSuppliedBase": true,
+      "halfSizeMap": true,
+      "file": {
+        "relativePath": "out-b-r25-H/hdr.heic",
+        "bytes": 3055,
+        "sha256": "adbb1a14d7ec557c740ee9ad1ab868f15b7dd1f3b21bacb57d0d5f0c64ffb6c5",
+        "ftyp": {
+          "boxSize": 36,
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand": "heic",
+          "minorVersion": 0
+        }
+      },
+      "container": {
+        "heifInfo": {
+          "majorBrand": "heic",
+          "compatibleBrands": [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "primaryItem": {
+            "width": 1024,
+            "height": 768,
+            "id": 5,
+            "tiles": "2x2",
+            "tileSize": "512x512",
+            "colorspace": "YCbCr, 4:2:0",
+            "bitDepth": 8,
+            "colorProfile": "prof",
+            "alphaChannel": "no",
+            "contentLightLevel": "MaxCLL=203 MaxFALL=64"
+          }
+        },
+        "boxDump": {
+          "hasTmapItem": true,
+          "dimgReferences": [
+            {
+              "from": 5,
+              "to": [
+                1,
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "from": 8,
+              "to": [
+                5,
+                7
+              ]
+            }
+          ],
+          "nclxColourBoxes": [
+            {
+              "primaries": 2,
+              "transfer": 2,
+              "matrix": 6
+            },
+            {
+              "primaries": 12,
+              "transfer": 13,
+              "matrix": 6
+            }
+          ],
+          "hasICCProfileBox": true,
+          "itemTypes": [
+            "Exif",
+            "grid",
+            "hvc1",
+            "tmap"
+          ]
+        },
+        "iccProfileDescription": "Display P3"
+      },
+      "plainSDRDecode": {
+        "alphaInfoRaw": 5,
+        "auxiliaryDataProperties": "none",
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "calculatedContentHeadroom": 0.501953125,
+        "colorSpaceName": "kCGColorSpaceDisplayP3",
+        "contentHeadroom": 1,
+        "depthProperty": 8,
+        "hasAlpha": false,
+        "height": 768,
+        "profileName": "Display P3",
+        "width": 1024
+      },
+      "isoGainMapAux": {
+        "present": true,
+        "dataDescription": {
+          "BytesPerRow": 512,
+          "Height": 384,
+          "PixelFormat": 875704422,
+          "PixelFormatFourCC": "420f",
+          "Width": 512
+        },
+        "dataColorSpaceRaw": "<CGColorSpace 0x7c9ac15110> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3)",
+        "hdrToneMap": {
+          "alternateHeadroom": 2.30045,
+          "baseColorIsWorkingColor": "True",
+          "baseHeadroom": 0,
+          "channels": [
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 1.999295,
+              "GainMapMin": 0,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 1.999295,
+              "GainMapMin": 0,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset": 1e-05,
+              "BaseOffset": 1e-05,
+              "gainMapMax": 1.999295,
+              "GainMapMin": 0,
+              "Gamma": 1,
+              "index": "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "appleGainMapAuxPresent": false,
+      "decodeToHDR": {
+        "success": true,
+        "width": 1024,
+        "height": 768,
+        "bitsPerComponent": 10,
+        "bitsPerPixel": 32,
+        "hasAlpha": false,
+        "contentHeadroomLinear": 4.926114082336426,
+        "contentHeadroomStops": 2.30045,
+        "calculatedContentHeadroomLinear": 2.013671875,
+        "decodedPeakLinearP3": 2.0141332149505615,
+        "vsAuthoredHDR": {
+          "maxAbsDiff": 2.2576146125793457,
+          "meanAbsDiff": 0.5280916782570179
+        },
+        "profileRow": [
+          {
+            "absDiff": 0.48149469681084156,
+            "authoredLinearP3": 0.021943358704447746,
+            "decodedLinearP3": 0.5034380555152893,
+            "x": 0
+          },
+          {
+            "absDiff": 0.001505136489868164,
+            "authoredLinearP3": 1.016943335533142,
+            "decodedLinearP3": 1.0184484720230103,
+            "x": 256
+          },
+          {
+            "absDiff": 0.0021898746490478516,
+            "authoredLinearP3": 2.0119433403015137,
+            "decodedLinearP3": 2.0141332149505615,
+            "x": 512
+          },
+          {
+            "absDiff": 0.9928102493286133,
+            "authoredLinearP3": 3.006943464279175,
+            "decodedLinearP3": 2.0141332149505615,
+            "x": 768
+          },
+          {
+            "absDiff": 2.142620325088501,
+            "authoredLinearP3": 3.998056650161743,
+            "decodedLinearP3": 1.8554363250732422,
+            "x": 1023
+          }
+        ]
+      },
+      "decodedSDRBaseStats8bitP3": [
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        },
+        {
+          "max": 188,
+          "mean": 188,
+          "min": 188,
+          "variance": 0
+        }
+      ],
+      "basePreservationVsSuppliedBase": {
+        "applicable": true,
+        "diff8bitP3": [
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          },
+          {
+            "fractionDiffering": 0,
+            "maxAbsDiff": 0,
+            "meanAbsDiff": 0,
+            "pixelsDiffering": 0
+          }
+        ]
+      },
+      "derived": {
+        "alternateHeadroomStops": 2.30045,
+        "alternateHeadroomLinear": 4.926114,
+        "metadataHeadroomMinusDecodedPeak": 2.911981
+      }
+    }
+  ],
+  "evidence": {
+    "probeJSON": "logs/probe.json",
+    "probeText": "logs/probe.txt",
+    "encoderLogs": "logs/out-*.log",
+    "perFileToolOutputs": "logs/out-*.{heif-info.txt,heif-info-dump.txt,exiftool.txt,xxd.txt}"
+  },
+  "derivedChecks": {
+    "R_arg_ignored_in_b_path": true,
+    "alternateHeadroom_equals_log2_contentHeadroom_b": 1.994353,
+    "authoredPeakStops": 1.999299,
+    "H_metadataHeadroomOverPromise_factor": 2.4463,
+    "H_decodedPeakOverAuthoredPeak": 0.5038
+  }
+}

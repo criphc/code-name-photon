@@ -1,0 +1,267 @@
+{
+  "aux" : {
+    "hdrGainMap" : {
+      "label" : "hdrGainMap",
+      "present" : false,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeHDRGainMap"
+    },
+    "hdrGainMapAuxPresent" : false,
+    "hdrGainMapLinearHeadroom" : null,
+    "isoAuxLinearHeadroom" : null,
+    "isoAuxPresent" : false,
+    "isoGainMap" : {
+      "label" : "isoGainMap",
+      "present" : false,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeISOGainMap"
+    }
+  },
+  "baseCheck" : {
+    "available" : false,
+    "reason" : "no --base supplied"
+  },
+  "checks" : {
+    "dimsMatch" : {
+      "actualHeight" : 200,
+      "actualWidth" : 320,
+      "detail" : "HEIC SDR decode 320x200 vs primary image properties 320x200",
+      "expectedHeight" : 200,
+      "expectedSource" : "primary image properties",
+      "expectedWidth" : 320,
+      "pass" : true
+    },
+    "hdrDecodeSucceeded" : {
+      "detail" : "kCGImageSourceDecodeToHDR succeeded (320x200, 8bpc, contentHeadroom=1.0000) [returned SDR content: no gain map / headroom <= 1.0]",
+      "isHDRContent" : false,
+      "pass" : true
+    },
+    "heifContainer" : {
+      "detail" : "ISO BMFF container with HEIF brand(s)",
+      "pass" : true
+    },
+    "isoAuxPresent" : {
+      "detail" : "kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)",
+      "pass" : false
+    },
+    "noAlpha" : {
+      "detail" : "SDR decode hasAlpha=false (noneSkipLast), HDR decode hasAlpha=false (noneSkipLast)",
+      "hdrHasAlpha" : false,
+      "pass" : true,
+      "sdrHasAlpha" : false
+    },
+    "sdrFallbackPresent" : {
+      "detail" : "plain CGImageSourceCreateImageAtIndex decoded 320x200",
+      "pass" : true
+    }
+  },
+  "container" : {
+    "ftyp" : {
+      "compatibleBrands" : [
+        "mif1",
+        "MiPr",
+        "miaf",
+        "MiHB",
+        "heic"
+      ],
+      "majorBrand" : "heic",
+      "minorVersion" : 0
+    },
+    "infeCount" : 1,
+    "inputIsHEIF" : true,
+    "isISOBaseMedia" : true,
+    "itemCount" : 1,
+    "items" : [
+      {
+        "itemID" : 1,
+        "itemType" : "hvc1"
+      }
+    ],
+    "itemTypeCounts" : {
+      "hvc1" : 1
+    },
+    "metaChildTypes" : [
+      "hdlr",
+      "dinf",
+      "pitm",
+      "iinf",
+      "iprp",
+      "iloc"
+    ],
+    "primaryItemID" : 1,
+    "tmapBrandPresent" : false,
+    "tmapItemPresent" : false,
+    "topLevelBoxCount" : 3,
+    "topLevelBoxes" : [
+      {
+        "size" : 36,
+        "type" : "ftyp"
+      },
+      {
+        "size" : 918,
+        "type" : "meta"
+      },
+      {
+        "size" : 2438,
+        "type" : "mdat"
+      }
+    ]
+  },
+  "file" : {
+    "absolutePath" : "/Users/criphc/Sites/llm-photon/work/m0/verify/out/sdr-p3.heic",
+    "imageCount" : 1,
+    "imageIOType" : "public.heic",
+    "path" : "/Users/criphc/Sites/llm-photon/work/m0/verify/out/sdr-p3.heic",
+    "primaryImageIndex" : 0,
+    "sha256" : "a2b12238446d4d411bb9ac343f6507fc4b49a03f31b2f644b1d153dd0ba8a11c",
+    "sizeBytes" : 3392
+  },
+  "hdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 0.9482421875,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0.31527093052864075,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "decodeOptions" : {
+      "kCGImageSourceDecodeRequest" : "kCGImageSourceDecodeToHDR"
+    },
+    "hasAlpha" : false,
+    "height" : 200,
+    "isFloat" : false,
+    "isHDRContent" : false,
+    "measured" : {
+      "cap" : null,
+      "contentHeadroomUsedAsCap" : 1,
+      "fractionAboveCap" : null,
+      "fractionAboveContentHeadroom" : 0.00046354166666666668,
+      "fractionAboveOne" : 0.00046354166666666668,
+      "mean" : 0.39607478281463043,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 200-row strips",
+      "min" : -0.029461506754159927,
+      "nanCount" : 0,
+      "peak" : 1.1392805576324463,
+      "peakOverSdrPeak" : 1,
+      "pixelCount" : 64000,
+      "renderHeight" : 200,
+      "renderWidth" : 320,
+      "sampleCount" : 192000
+    },
+    "success" : true,
+    "width" : 320
+  },
+  "imageMetadata" : {
+    "headroomTags" : [
+
+    ],
+    "kind" : "CGImageMetadata",
+    "present" : true,
+    "tags" : [
+      {
+        "kind" : "scalar",
+        "name" : "Orientation",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Orientation",
+        "prefix" : "tiff",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileWidth",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileWidth",
+        "prefix" : "tiff",
+        "value" : "320"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileLength",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileLength",
+        "prefix" : "tiff",
+        "value" : "200"
+      }
+    ],
+    "totalTags" : 3,
+    "truncated" : false
+  },
+  "overall" : {
+    "checkCount" : 6,
+    "failures" : [
+      "isoAuxPresent: kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)"
+    ],
+    "pass" : false,
+    "passedCount" : 5,
+    "skippedChecks" : [
+      "basePreserved (no --base supplied)",
+      "headroomWithin5pct (no --expect-headroom supplied)"
+    ]
+  },
+  "primaryImage" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "colorModel" : "RGB",
+    "decodedHeight" : 200,
+    "decodedWidth" : 320,
+    "depth" : 8,
+    "hasAlpha" : false,
+    "height" : 200,
+    "isFloat" : false,
+    "isFloatDecoded" : false,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 320
+  },
+  "properties" : {
+    "colorModel" : "RGB",
+    "depth" : 8,
+    "height" : 200,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 320
+  },
+  "sdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 0.9482421875,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "hasAlpha" : false,
+    "height" : 200,
+    "isFloat" : false,
+    "measured" : {
+      "cap" : null,
+      "fractionAboveCap" : null,
+      "fractionAboveOne" : 0.00046354166666666668,
+      "mean" : 0.39607478281463043,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 200-row strips",
+      "min" : -0.029461506754159927,
+      "nanCount" : 0,
+      "peak" : 1.1392805576324463,
+      "pixelCount" : 64000,
+      "renderHeight" : 200,
+      "renderWidth" : 320,
+      "sampleCount" : 192000
+    },
+    "width" : 320
+  },
+  "tool" : {
+    "arguments" : {
+      "base" : null,
+      "expectHeadroom" : null,
+      "input" : "/Users/criphc/Sites/llm-photon/work/m0/verify/out/sdr-p3.heic",
+      "out" : "/Users/criphc/Sites/llm-photon/work/m0/verify/reports/negative-sdr-p3.json"
+    },
+    "generatedAt" : "2026-11-02T13:13:24Z",
+    "hostOS" : "Version 27.2 (Build 26B123)",
+    "name" : "verify-heic",
+    "version" : "0.1.0"
+  }
+}

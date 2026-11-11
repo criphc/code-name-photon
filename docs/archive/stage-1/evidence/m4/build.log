@@ -1,0 +1,19 @@
+swift build -c release --disable-sandbox --scratch-path .build-release
+warning: /Users/criphc/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/criphc/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+warning: /Users/criphc/Library/Caches/org.swift.swiftpm is not accessible or not writable, disabling user-level cache features.
+warning: 'app': failed storing manifest for 'app' in cache: attempt to write a readonly database
+warning: 'contract': failed storing manifest for 'contract' in cache: attempt to write a readonly database
+Building for production...
+[Pre-planning 1 / 183]
+[Planning deferred tasks]
+[1 / 1]
+[5 / 15] PhotonCore
+[6 / 16] PhotonCore
+[14 / 17] PhotonServer
+[15 / 18] PhotonServer
+[20 / 23] photon-product
+[21 / 24] photon-product
+[23 / 24] photon-product
+[24 / 24] photon-product
+Build complete! (10.04 sec)

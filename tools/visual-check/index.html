@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>visual-check — HDR delivery viewer</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #000; color: #e8e8e8; font: 16px/1.5 -apple-system, BlinkMacSystemFont, sans-serif; }
+  main { max-width: 1400px; margin: 0 auto; padding: 16px 16px 64px; }
+  h1 { font-size: 22px; margin: 8px 0 4px; }
+  h2 { font-size: 18px; margin: 34px 0 6px; padding-top: 18px; border-top: 1px solid #333; }
+  p { margin: 8px 0; color: #bbb; }
+  .meta { font-size: 13px; color: #777; font-variant-numeric: tabular-nums; }
+  .lede { font-size: 14px; color: #999; max-width: 90ch; }
+  .warn { background: #2a1d00; border: 1px solid #6b4c00; padding: 12px 14px; border-radius: 8px; color: #ffd48a; margin: 14px 0; }
+  .notice { padding: 20px; border: 1px dashed #555; border-radius: 8px; color: #ccc; margin: 18px 0; background: #0d0d0d; }
+  .notice ul { margin: 8px 0 0; }
+  .fail { padding: 24px; border: 1px dashed #a33; border-radius: 8px; color: #ff9a9a; background: #140808; }
+  img { width: 100%; height: auto; display: block; background: #111; border-radius: 6px; }
+  figure { margin: 0 0 22px; }
+  figcaption { font-size: 13px; color: #888; margin-top: 6px; }
+  code { background: #1a1a1a; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  a { color: #7cc4ff; }
+  ul { color: #bbb; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-weight: 700; font-size: 14px; letter-spacing: 0.02em; }
+  .badge.pass { background: #123d1c; color: #7dff9b; border: 1px solid #2c7a3d; }
+  .badge.fail { background: #3d1212; color: #ff8f8f; border: 1px solid #7a2c2c; }
+  .badge.unknown { background: #222; color: #bbb; border: 1px solid #555; }
+  table.checks { width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 14px; }
+  table.checks th, table.checks td { text-align: left; padding: 5px 8px; border-bottom: 1px solid #222; vertical-align: top; }
+  table.checks th { color: #999; font-weight: 600; }
+  table.checks td.status { white-space: nowrap; font-weight: 700; }
+  table.checks td.status.pass { color: #7dff9b; }
+  table.checks td.status.fail { color: #ff8f8f; }
+  table.checks td.status.skip { color: #999; }
+  table.checks td.detail { color: #888; font-size: 12px; }
+  .numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 14px 0; }
+  .card { background: #0d0d0d; border: 1px solid #2a2a2a; border-radius: 8px; padding: 12px 14px; }
+  .card h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #8a8a8a; margin: 0 0 8px; font-weight: 600; }
+  .card dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: 14px; }
+  .card dt { color: #888; }
+  .card dd { margin: 0; color: #eee; font-variant-numeric: tabular-nums; text-align: right; }
+  .foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid #222; font-size: 13px; color: #777; }
+</style>
+</head>
+<body>
+<main>
+  <h1>HDR Highlight Finisher — M5 visual check</h1>
+  <p class="meta" id="server">loading manifest…</p>
+  <p class="meta" id="env">reading environment…</p>
+
+  <div class="warn">
+    <strong>How to judge.</strong> Lit room, ~50&nbsp;% brightness, True Tone / Night Shift off.
+    The HDR file should make the sun glints and specular highlights
+    <em>brighter than white</em>, while sky, road and everything else stay identical to the SDR
+    reference. If the two look exactly the same &rarr; <strong>fail</strong>. If the whole picture is
+    brighter or washed out &rarr; <strong>fail</strong>. Ask &ldquo;which one looks like the print?&rdquo;,
+    never &ldquo;which one is HDR?&rdquo;.
+  </div>
+
+  <div id="empty" class="notice" hidden>
+    <strong>No viewable files in this folder.</strong>
+    <p>This page is folder-driven: it fetches <code>/manifest.json</code> and renders whatever is in
+    the served <code>--root</code> folder. Put the delivery there using this convention:</p>
+    <ul>
+      <li><code>{stem}-hdr-{profile}.heic</code> (e.g. <code>10-half-rgb</code>; legacy <code>{stem}-hdr.heic</code> also recognised) — the delivered gain-map HEIC (must render HDR in Photos/Safari)</li>
+      <li><code>{stem}-sdr.heic</code> — the map-stripped fallback copy (must look like the Capture One export)</li>
+      <li>other <code>.heic</code>/<code>.heif</code>/<code>.jpg</code>/<code>.jpeg</code>/<code>.png</code> — look references, not pixel-for-pixel targets</li>
+      <li><code>{stem}.report.json</code> — optional delivery report (verdict, checks, measured numbers)</li>
+      <li><code>{stem}.recipe.json</code> — optional recipe that produced the delivery</li>
+    </ul>
+    <p>Then start the server pointed at that folder:</p>
+    <p><code>python3 tools/visual-check/serve.py --root DIR</code></p>
+  </div>
+
+  <section id="sec-hdr" hidden>
+    <h2>1 — Delivered HDR</h2>
+    <p class="lede">These are the files Photos and Safari must render with the intended HDR: only the
+    authored highlights go brighter than white. A viewer that shows the same image as section 2 is
+    rendering the SDR base (or the gain map was not applied).</p>
+    <div class="figures" id="hdr-figures"></div>
+  </section>
+
+  <section id="sec-sdr" hidden>
+    <h2>2 — SDR fallback</h2>
+    <p class="lede">The map-stripped copy: this is what non-HDR viewers see and it must look like the
+    Capture One export. Compare section 1 against this — only the authored highlights should differ.</p>
+    <div class="figures" id="sdr-figures"></div>
+  </section>
+
+  <section id="sec-reference" hidden>
+    <h2>3 — Look references</h2>
+    <p class="lede">&ldquo;Which looks like the print?&rdquo; targets, not files to match pixel-for-pixel.
+    Judge the highlight roll-off and naturalness of the delivered file against these references; do not
+    copy their overall colour or contrast.</p>
+    <div class="figures" id="reference-figures"></div>
+  </section>
+
+  <section id="sec-report" hidden>
+    <h2>4 — Delivery report</h2>
+    <div id="report-verdict"></div>
+    <div id="report-numbers" class="numbers"></div>
+    <div id="report-checks"></div>
+  </section>
+
+  <p class="meta" id="recipe-line" hidden></p>
+
+  <p class="foot">
+    This page is a viewer, not a measurement: HDR rendering depends on Safari, iPadOS, the display and
+    its HDR settings. Objective facts come from <code>tools/verify-heic</code> and the delivery report.
+    Never use <code>sips</code> to judge HDR — it silently strips the gain map.
+  </p>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+  var manifestUrl = '/manifest.json';
+
+  function esc(value) {
+    return String(value == null ? '' : value)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function fmtBytes(bytes) {
+    if (typeof bytes !== 'number' || !isFinite(bytes)) { return '—'; }
+    if (bytes < 1024) { return bytes + ' B'; }
+    var units = ['KB', 'MB', 'GB'];
+    var value = bytes / 1024;
+    var unit = 0;
+    while (value >= 1024 && unit < units.length - 1) { value /= 1024; unit += 1; }
+    return value.toFixed(value >= 100 ? 0 : value >= 10 ? 1 : 2) + ' ' + units[unit] +
+      ' (' + bytes.toLocaleString() + ' B)';
+  }
+
+  function fmtNumber(value, digits) {
+    if (typeof value !== 'number' || !isFinite(value)) { return '—'; }
+    return value.toFixed(digits == null ? 3 : digits);
+  }
+
+  function fmtSeconds(value) {
+    if (typeof value !== 'number' || !isFinite(value)) { return String(value); }
+    return value.toFixed(value >= 10 ? 1 : 3) + ' s';
+  }
+
+  function renderEnvironment() {
+    var facts = [];
+    facts.push('user agent: ' + navigator.userAgent);
+    var dynamicRange = 'unknown';
+    try {
+      dynamicRange = window.matchMedia('(dynamic-range: high)').matches
+        ? 'high — the browser claims HDR capability (not a promise for this file)'
+        : 'standard — this browser does not claim HDR capability';
+    } catch (error) {
+      dynamicRange = 'not queryable';
+    }
+    facts.push('dynamic-range: ' + dynamicRange);
+    if (typeof screen !== 'undefined') {
+      facts.push('screen: ' + screen.width + '×' + screen.height +
+        ' @ dpr ' + (window.devicePixelRatio || '?'));
+    }
+    $('env').textContent = facts.join(' · ');
+  }
+
+  function showError(message) {
+    var box = document.createElement('div');
+    box.className = 'fail';
+    box.textContent = message;
+    var server = $('server');
+    server.textContent = 'manifest error';
+    server.parentNode.insertBefore(box, server.nextSibling);
+  }
+
+  function makeFigure(entry, caption) {
+    var figure = document.createElement('figure');
+    var img = document.createElement('img');
+    img.src = entry.url;
+    img.alt = entry.name;
+    img.loading = 'lazy';
+    img.addEventListener('error', function () {
+      var box = document.createElement('div');
+      box.className = 'fail';
+      box.textContent = 'Could not render ' + entry.name +
+        ' — this viewer does not decode that file as an image.';
+      img.replaceWith(box);
+    });
+    var figcaption = document.createElement('figcaption');
+    figcaption.innerHTML = '<strong>' + esc(entry.name) + '</strong> · ' + esc(fmtBytes(entry.bytes)) +
+      ' · <a href="' + esc(entry.url) + '" target="_blank" rel="noopener">open</a>';
+    if (caption) {
+      figcaption.appendChild(document.createElement('br'));
+      figcaption.appendChild(document.createTextNode(caption));
+    }
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+    return figure;
+  }
+
+  function renderKind(kind, targetId, sectionId, captionFor) {
+    var manifest = window.__manifest;
+    var entries = manifest.entries.filter(function (entry) { return entry.kind === kind; });
+    var target = $(targetId);
+    target.textContent = '';
+    if (!entries.length) {
+      var none = document.createElement('p');
+      none.className = 'lede';
+      none.textContent = 'None in this folder.';
+      target.appendChild(none);
+      $(sectionId).hidden = false;
+      return entries.length;
+    }
+    entries.forEach(function (entry) {
+      target.appendChild(makeFigure(entry, captionFor ? captionFor(entry) : ''));
+    });
+    $(sectionId).hidden = false;
+    return entries.length;
+  }
+
+  function card(title, rows) {
+    var box = document.createElement('div');
+    box.className = 'card';
+    var heading = document.createElement('h3');
+    heading.textContent = title;
+    var list = document.createElement('dl');
+    rows.forEach(function (row) {
+      var dt = document.createElement('dt');
+      dt.textContent = row[0];
+      var dd = document.createElement('dd');
+      dd.textContent = row[1];
+      list.appendChild(dt);
+      list.appendChild(dd);
+    });
+    box.appendChild(heading);
+    box.appendChild(list);
+    return box;
+  }
+
+  function renderReport(report) {
+    var section = $('sec-report');
+    section.hidden = false;
+    var pass = report.pass;
+    var verdict = report.verdict || 'UNKNOWN';
+    var badgeClass = pass === true || verdict === 'PASS' ? 'pass'
+      : pass === false || verdict === 'FAIL' ? 'fail' : 'unknown';
+    var verdictBox = $('report-verdict');
+    verdictBox.innerHTML = '<p><span class="badge ' + badgeClass + '">' + esc(verdict) +
+      '</span> · ' + esc(report.name) + ' · ' + esc(fmtBytes(report.bytes)) +
+      ' · <a href="' + esc(report.url) + '" target="_blank" rel="noopener">report JSON</a>' +
+      (report.schema != null ? ' · schema ' + esc(report.schema) : '') + '</p>';
+
+    var manifest = window.__manifest;
+    var numbers = $('report-numbers');
+    numbers.textContent = '';
+
+    var headroom = report.headroom || {};
+    var headroomRows = [];
+    if (typeof headroom.advertised === 'number') {
+      var stops = Math.log(headroom.advertised) / Math.LN2;
+      headroomRows.push(['advertised', fmtNumber(headroom.advertised, 4) + '×']);
+      headroomRows.push(['linear stops', fmtNumber(stops, 3) + ' EV']);
+      if (headroom.source) { headroomRows.push(['from', headroom.source]); }
+    }
+    if (typeof report.authoredPeak === 'number') {
+      headroomRows.push(['authored peak', fmtNumber(report.authoredPeak, 4) + '×']);
+    }
+    if (headroomRows.length) { numbers.appendChild(card('Headroom', headroomRows)); }
+
+    if (report.baseDeltaE) {
+      var deltaRows = [];
+      if (typeof report.baseDeltaE.mean === 'number') {
+        deltaRows.push(['mean', fmtNumber(report.baseDeltaE.mean, 3)]);
+      }
+      if (typeof report.baseDeltaE.p95 === 'number') {
+        deltaRows.push(['p95', fmtNumber(report.baseDeltaE.p95, 3)]);
+      }
+      if (deltaRows.length) { numbers.appendChild(card('Base ΔE2000', deltaRows)); }
+    }
+
+    var sizeRows = [];
+    ['hdr', 'sdr'].forEach(function (kind) {
+      manifest.entries.filter(function (entry) { return entry.kind === kind; })
+        .forEach(function (entry) {
+          sizeRows.push([kind.toUpperCase() + ' file', fmtBytes(entry.bytes)]);
+        });
+    });
+    if (report.sizes) {
+      Object.keys(report.sizes).forEach(function (key) {
+        sizeRows.push([key, typeof report.sizes[key] === 'number'
+          ? fmtBytes(report.sizes[key]) : String(report.sizes[key])]);
+      });
+    }
+    if (sizeRows.length) { numbers.appendChild(card('Sizes', sizeRows)); }
+
+    if (report.timings) {
+      var timingRows = Object.keys(report.timings).map(function (key) {
+        return [key, fmtSeconds(report.timings[key])];
+      });
+      if (timingRows.length) { numbers.appendChild(card('Timings', timingRows)); }
+    }
+
+    var metaRows = [];
+    if (report.renderKey) { metaRows.push(['renderKey', report.renderKey]); }
+    if (report.sha256) { metaRows.push(['HEIC sha256', report.sha256]); }
+    if (metaRows.length) { numbers.appendChild(card('Provenance', metaRows)); }
+
+    var checks = report.checks || [];
+    var checksBox = $('report-checks');
+    checksBox.textContent = '';
+    if (!checks.length) { return; }
+    var table = document.createElement('table');
+    table.className = 'checks';
+    var head = document.createElement('tr');
+    ['check', 'status', 'detail'].forEach(function (label) {
+      var th = document.createElement('th');
+      th.textContent = label;
+      head.appendChild(th);
+    });
+    table.appendChild(head);
+    checks.forEach(function (check) {
+      var row = document.createElement('tr');
+      var name = document.createElement('td');
+      name.textContent = check.name;
+      var status = document.createElement('td');
+      var statusClass = check.status === 'PASS' ? 'pass' : check.status === 'FAIL' ? 'fail' : 'skip';
+      status.className = 'status ' + statusClass;
+      status.textContent = check.status;
+      var detail = document.createElement('td');
+      detail.className = 'detail';
+      detail.textContent = check.detail || '';
+      row.appendChild(name);
+      row.appendChild(status);
+      row.appendChild(detail);
+      table.appendChild(row);
+    });
+    checksBox.appendChild(table);
+  }
+
+  function renderRecipe(recipe) {
+    var line = $('recipe-line');
+    line.hidden = false;
+    line.innerHTML = 'Recipe used: <a href="' + esc(recipe.url) + '" target="_blank" rel="noopener">' +
+      esc(recipe.name) + '</a>';
+  }
+
+  function render(manifest) {
+    window.__manifest = manifest;
+    var server = manifest.server || {};
+    $('server').innerHTML = esc(server.name || 'visual-check') + ' ' + esc(server.version || '') +
+      ' · folder ' + esc(manifest.root) + ' · manifest generated ' + esc(manifest.generatedAt) +
+      ' · <a href="/">reload</a>';
+
+    var entries = manifest.entries || [];
+    if (!entries.length) {
+      $('empty').hidden = false;
+      if (manifest.report) { renderReport(manifest.report); }
+      if (manifest.recipe) { renderRecipe(manifest.recipe); }
+      return;
+    }
+
+    renderKind('hdr', 'hdr-figures', 'sec-hdr', function () {
+      return 'delivered gain-map HEIC — Photos and Safari 26+ must render the HDR here.';
+    });
+    renderKind('sdr', 'sdr-figures', 'sec-sdr', function () {
+      return 'map-stripped fallback — must look like the Capture One export.';
+    });
+    renderKind('reference', 'reference-figures', 'sec-reference', function () {
+      return 'look reference — a target for “which looks like the print?”, not a pixel match.';
+    });
+
+    if (manifest.report) {
+      renderReport(manifest.report);
+    }
+    if (manifest.recipe) {
+      renderRecipe(manifest.recipe);
+    }
+  }
+
+  function load() {
+    renderEnvironment();
+    fetch(manifestUrl, { cache: 'no-store' })
+      .then(function (response) {
+        if (!response.ok) { throw new Error('HTTP ' + response.status); }
+        return response.json();
+      })
+      .then(render)
+      .catch(function (error) {
+        showError('Could not load ' + manifestUrl + ': ' + error.message +
+          ' — is serve.py still running and is this page served by it?');
+      });
+  }
+
+  load();
+}());
+</script>
+</body>
+</html>

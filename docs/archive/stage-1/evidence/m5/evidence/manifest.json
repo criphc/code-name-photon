@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-11-03T05:42:54Z",
+  "server": {
+    "name": "visual-check",
+    "version": "0.1.0"
+  },
+  "root": "viewer",
+  "entries": [
+    {
+      "name": "IMG_7097.HEIC",
+      "url": "/files/IMG_7097.HEIC",
+      "kind": "reference",
+      "bytes": 2496675,
+      "mtime": "2026-11-03T05:42:53Z"
+    },
+    {
+      "name": "IMG_7473.JPG",
+      "url": "/files/IMG_7473.JPG",
+      "kind": "reference",
+      "bytes": 3567237,
+      "mtime": "2026-11-03T05:42:53Z"
+    },
+    {
+      "name": "R0003777-P3-hdr.heic",
+      "url": "/files/R0003777-P3-hdr.heic",
+      "kind": "hdr",
+      "bytes": 5798146,
+      "mtime": "2026-11-03T05:42:53Z"
+    },
+    {
+      "name": "R0003777-P3-sdr.heic",
+      "url": "/files/R0003777-P3-sdr.heic",
+      "kind": "sdr",
+      "bytes": 1946906,
+      "mtime": "2026-11-03T05:42:53Z"
+    }
+  ],
+  "report": {
+    "name": "R0003777-P3.report.json",
+    "url": "/files/R0003777-P3.report.json",
+    "bytes": 13650,
+    "mtime": "2026-11-03T05:42:53Z",
+    "schema": 0,
+    "verdict": "PASS",
+    "pass": true,
+    "checks": [
+      {
+        "name": "container",
+        "status": "PASS",
+        "detail": "ISO-BMFF/HEIF container with compatible brand tmap and the ISO gain-map auxiliary present."
+      },
+      {
+        "name": "identity",
+        "status": "PASS",
+        "detail": "decoded 6000x4000 matches the source and the recipe, and the source sha256 matches the recipe identity."
+      },
+      {
+        "name": "alpha",
+        "status": "PASS",
+        "detail": "SDR alphaInfo noneSkipLast and HDR alphaInfo noneSkipFirst: neither decode carries alpha."
+      },
+      {
+        "name": "headroom",
+        "status": "PASS",
+        "detail": "contentHeadroom 2.499999761581421 is within 5.00 % of the expected 2.5 (relative error 0.00 %); calculatedContentHeadroom 2.7451171875 reported as cross-check."
+      },
+      {
+        "name": "clipping",
+        "status": "PASS",
+        "detail": "authored peak 2.5 (1.321928 stops) clamps to the 2.5 cap while 25.6448 % of pixels are above 1.0 and 0.7517 % sit at the cap."
+      },
+      {
+        "name": "baseDeltaE",
+        "status": "PASS",
+        "detail": "decoded SDR base vs the Capture One base: ΔE2000 mean 1.4406 (<= 2.5), p95 4.1200 (<= 6.0); max 28.34, 8-bit mean 1.475 LSB — the docs/03 §5 render target (mean < 1 / p95 < 2) applies to the bit-exact 16-bit base, not to a decoded 8-bit 4:2:0 HEVC container whose measured codec loss on the M0 trial image is mean 1.44 / p95 4.12 (deviation recorded in work/m4/probe/calibration.md)."
+      },
+      {
+        "name": "fallback",
+        "status": "PASS",
+        "detail": "map-stripped copy 1946906 B (sha256 d639359abd87) is a HEIF without an ISO gain map and matches the delivered SDR primary: mean 0.627 LSB, p99 3 LSB, ΔE2000 mean 0.5268."
+      },
+      {
+        "name": "previewAgreement",
+        "status": "PASS",
+        "detail": "preview-scale render vs the delivered HDR decode downscaled to 2560x1707: ΔE2000 mean 1.1902, p95 3.3700, p99 5.4200, 1.373 % of pixels above ΔE 5 (expected at highlight edges only)."
+      }
+    ],
+    "renderKey": "0bb774682c9d178c852f085b3badf2813397485c422dc50e79efc3e0be5fb747",
+    "sha256": "826e27599cbbd6308d7695940dd3ec463a39ea5c8814024008bd6f36efb8df69",
+    "headroom": {
+      "advertised": 2.499999761581421,
+      "source": "contentHeadroom"
+    },
+    "authoredPeak": 2.5,
+    "baseDeltaE": {
+      "mean": 1.4406046136056738,
+      "p95": 4.12
+    },
+    "sizes": {
+      "hdrBytes": 5798146,
+      "sdrBytes": 1946906,
+      "recipeBytes": 543
+    },
+    "timings": {
+      "decodeSeconds": 0.28667497634887695,
+      "encodeSeconds": 1.3610800504684448,
+      "previewSeconds": 0.3679680824279785,
+      "renderSeconds": 0.19674301147460938,
+      "totalSeconds": 20.68299102783203,
+      "verifySeconds": 15.844279050827026
+    }
+  },
+  "recipe": {
+    "name": "R0003777-P3.recipe.json",
+    "url": "/files/R0003777-P3.recipe.json",
+    "bytes": 543,
+    "mtime": "2026-11-03T05:42:53Z",
+    "json": {
+      "base": {
+        "profile": "DisplayP3",
+        "tone_map": "c1_match_v1"
+      },
+      "created": "2026-11-03T11:45:38+08:00",
+      "encoder": {
+        "depth": 8,
+        "map": "iso-rgb",
+        "quality": 0.85,
+        "subsample": false,
+        "tool": "toGainMapHDR"
+      },
+      "hdr": {
+        "headroom_cap": 2.5,
+        "lift_stops": 2.015059471130371,
+        "start": 0.19711047410964966,
+        "transition": 1
+      },
+      "schema": 0,
+      "source": {
+        "height": 4000,
+        "path": "/Users/criphc/Sites/llm-photon/samples/sources/R0003777-P3.tif",
+        "sha256": "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+        "width": 6000
+      },
+      "versions": {
+        "encoder": "5dba4e2",
+        "recipe": 0,
+        "tone_map": 1
+      }
+    }
+  }
+}

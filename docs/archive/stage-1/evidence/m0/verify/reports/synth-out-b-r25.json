@@ -1,0 +1,759 @@
+{
+  "aux" : {
+    "hdrGainMap" : {
+      "label" : "hdrGainMap",
+      "present" : false,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeHDRGainMap"
+    },
+    "hdrGainMapAuxPresent" : false,
+    "hdrGainMapLinearHeadroom" : null,
+    "isoAuxLinearHeadroom" : 3.9843737935016068,
+    "isoAuxPresent" : true,
+    "isoGainMap" : {
+      "auxBytesPerRow" : 1024,
+      "auxHeight" : 768,
+      "auxWidth" : 1024,
+      "colorSpace" : {
+        "description" : "<CGColorSpace 0x7934c011f0> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "name" : "kCGColorSpaceDisplayP3_PQ"
+      },
+      "dataBytes" : null,
+      "dataDescription" : {
+        "BytesPerRow" : 1024,
+        "Height" : 768,
+        "PixelFormat" : 875704422,
+        "Width" : 1024
+      },
+      "dataOmittedByImageIO" : true,
+      "infoKeys" : [
+        "kCGImageAuxiliaryDataInfoColorSpace",
+        "kCGImageAuxiliaryDataInfoDataDescription",
+        "kCGImageAuxiliaryDataInfoMetadata"
+      ],
+      "label" : "isoGainMap",
+      "metadata" : {
+        "gainMap" : {
+          "AlternateHeadroom" : "1.994353",
+          "alternateHeadroomLinear" : 3.9843737935016068,
+          "alternateHeadroomLog2" : 1.994353,
+          "BaseColorIsWorkingColor" : "True",
+          "BaseHeadroom" : "0.000000",
+          "baseHeadroomLinear" : 1,
+          "baseHeadroomLog2" : 0,
+          "channelCount" : 3,
+          "channels" : [
+            {
+              "AlternateOffset" : "0.000010",
+              "BaseOffset" : "0.000010",
+              "GainMapMax" : "2.994354",
+              "GainMapMin" : "-3.794207",
+              "Gamma" : "1.000000"
+            },
+            {
+              "AlternateOffset" : "0.000010",
+              "BaseOffset" : "0.000010",
+              "GainMapMax" : "2.994354",
+              "GainMapMin" : "-3.794207",
+              "Gamma" : "1.000000"
+            },
+            {
+              "AlternateOffset" : "0.000010",
+              "BaseOffset" : "0.000010",
+              "GainMapMax" : "2.994354",
+              "GainMapMin" : "-3.794207",
+              "Gamma" : "1.000000"
+            }
+          ],
+          "gainMapMax" : 2.994354,
+          "gainMapMin" : -3.7942070000000001,
+          "gamma" : 1,
+          "Version" : "1"
+        },
+        "kind" : "CGImageMetadata",
+        "present" : true,
+        "tags" : [
+          {
+            "kind" : "scalar",
+            "name" : "Version",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:Version",
+            "prefix" : "HDRToneMap",
+            "value" : "1"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseHeadroom",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:BaseHeadroom",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateHeadroom",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:AlternateHeadroom",
+            "prefix" : "HDRToneMap",
+            "value" : "1.994353"
+          },
+          {
+            "count" : 3,
+            "kind" : "array",
+            "name" : "ChannelMetadata",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[0]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "2.994354"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-3.794207"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[1]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "2.994354"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[1]/HDRToneMap:[1].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-3.794207"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[2]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "2.994354"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[2]/HDRToneMap:[2].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-3.794207"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseColorIsWorkingColor",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:BaseColorIsWorkingColor",
+            "prefix" : "HDRToneMap",
+            "value" : "True"
+          }
+        ],
+        "totalTags" : 23,
+        "truncated" : false
+      },
+      "pixelFormat" : {
+        "fourCC" : "420f",
+        "hex" : "0x34323066",
+        "raw" : 875704422
+      },
+      "present" : true,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeISOGainMap"
+    }
+  },
+  "baseCheck" : {
+    "available" : true,
+    "baseHeight" : 768,
+    "baseImage" : {
+      "alphaInfo" : "none",
+      "alphaInfoRaw" : 0,
+      "bitsPerComponent" : 16,
+      "bitsPerPixel" : 48,
+      "calculatedContentHeadroom" : 0.49998563528060913,
+      "colorSpaceName" : "kCGColorSpaceDisplayP3",
+      "contentAverageLightLevel" : 0,
+      "contentHeadroom" : 1,
+      "decoded" : true,
+      "hasAlpha" : false,
+      "height" : 768,
+      "isFloat" : false,
+      "width" : 1024
+    },
+    "baseMode" : "uniform",
+    "basePath" : "work/m0/synthetic/base.tif",
+    "baseProperties" : {
+      "colorModel" : "RGB",
+      "depth" : 16,
+      "height" : 768,
+      "orientation" : 1,
+      "profileName" : "Display P3",
+      "width" : 1024
+    },
+    "baseSource" : {
+      "absolutePath" : "/Users/criphc/Sites/llm-photon/work/m0/synthetic/base.tif",
+      "imageCount" : 1,
+      "imageIOType" : "public.tiff",
+      "path" : "work/m0/synthetic/base.tif",
+      "properties" : {
+        "colorModel" : "RGB",
+        "depth" : 16,
+        "height" : 768,
+        "orientation" : 1,
+        "profileName" : "Display P3",
+        "width" : 1024
+      }
+    },
+    "baseThresholds" : {
+      "baseMode" : "uniform",
+      "decodedBaseVarianceMax" : 0,
+      "diagnosticsOnly" : [
+        "p99",
+        "p99_9"
+      ],
+      "maxAbsDiffMax" : 0,
+      "meanAbsDiffMax" : 0,
+      "passRule" : "meanAbsDiff == 0 && maxAbsDiff == 0 && decodedBaseVariance == 0"
+    },
+    "baseUniform" : true,
+    "baseVariance" : {
+      "mean" : 188,
+      "overall" : 0,
+      "overallNormalized" : 0
+    },
+    "baseWidth" : 1024,
+    "decodedBaseVariance" : {
+      "mean" : 188,
+      "overall" : 0,
+      "overallNormalized" : 0,
+      "perChannel" : {
+        "b" : 0,
+        "g" : 0,
+        "r" : 0
+      }
+    },
+    "diffHistogram" : {
+      ">2" : 0,
+      "0" : 2359296,
+      "1" : 0,
+      "2" : 0
+    },
+    "dimsMatch" : true,
+    "fractionAboveTwo" : 0,
+    "fractionNonZero" : 0,
+    "maxAbsDiff" : 0,
+    "meanAbsDiff" : 0,
+    "meanSignedDiff" : 0,
+    "percentiles" : {
+      "max" : 0,
+      "p50" : 0,
+      "p90" : 0,
+      "p99" : 0,
+      "p99_9" : 0
+    },
+    "perChannel" : {
+      "b" : {
+        "fractionNonZero" : 0,
+        "maxAbsDiff" : 0,
+        "meanAbsDiff" : 0,
+        "meanSignedDiff" : 0
+      },
+      "g" : {
+        "fractionNonZero" : 0,
+        "maxAbsDiff" : 0,
+        "meanAbsDiff" : 0,
+        "meanSignedDiff" : 0
+      },
+      "r" : {
+        "fractionNonZero" : 0,
+        "maxAbsDiff" : 0,
+        "meanAbsDiff" : 0,
+        "meanSignedDiff" : 0
+      }
+    },
+    "rendering" : "both images rendered to 8-bit Display P3 (RGBA8) via CIContext"
+  },
+  "checks" : {
+    "basePreserved" : {
+      "absDiffP50" : 0,
+      "absDiffP90" : 0,
+      "absDiffP99" : 0,
+      "absDiffP99_9" : 0,
+      "baseMode" : "uniform",
+      "baseThresholds" : {
+        "baseMode" : "uniform",
+        "decodedBaseVarianceMax" : 0,
+        "diagnosticsOnly" : [
+          "p99",
+          "p99_9"
+        ],
+        "maxAbsDiffMax" : 0,
+        "meanAbsDiffMax" : 0,
+        "passRule" : "meanAbsDiff == 0 && maxAbsDiff == 0 && decodedBaseVariance == 0"
+      },
+      "baseUniform" : true,
+      "decodedBaseVariance" : 0,
+      "detail" : "uniform base: meanAbsDiff=0.0000 (==0), maxAbsDiff=0 (==0), decodedBaseVariance=0.0000 (==0); p99=0, p99.9=0 (diagnostics)",
+      "fractionAboveTwo" : false,
+      "fractionNonZero" : 0,
+      "maxAbsDiff" : 0,
+      "meanAbsDiff" : 0,
+      "meanSignedDiff" : 0,
+      "pass" : true,
+      "thresholds" : {
+        "baseMode" : "uniform",
+        "decodedBaseVarianceMax" : 0,
+        "diagnosticsOnly" : [
+          "p99",
+          "p99_9"
+        ],
+        "maxAbsDiffMax" : 0,
+        "meanAbsDiffMax" : 0,
+        "passRule" : "meanAbsDiff == 0 && maxAbsDiff == 0 && decodedBaseVariance == 0"
+      }
+    },
+    "dimsMatch" : {
+      "actualHeight" : 768,
+      "actualWidth" : 1024,
+      "detail" : "HEIC SDR decode 1024x768 vs --base image 1024x768",
+      "expectedHeight" : 768,
+      "expectedSource" : "--base image",
+      "expectedWidth" : 1024,
+      "pass" : true
+    },
+    "hdrDecodeSucceeded" : {
+      "detail" : "kCGImageSourceDecodeToHDR succeeded (1024x768, 10bpc, contentHeadroom=3.9844)",
+      "isHDRContent" : true,
+      "pass" : true
+    },
+    "headroomWithin5pct" : {
+      "auxHeadroomLinear" : 3.9843737935016068,
+      "calculatedContentHeadroom" : 4.0029296875,
+      "contentHeadroom" : 3.9843740463256836,
+      "detail" : "expected 4.0000 linear, measured 3.9844 (hdrDecode.contentHeadroom); tolerance 5%",
+      "expected" : 4,
+      "measured" : 3.9843740463256836,
+      "measurementSource" : "hdrDecode.contentHeadroom",
+      "pass" : true,
+      "relativeError" : 0.0039064884185791016,
+      "tolerance" : 0.050000000000000003
+    },
+    "heifContainer" : {
+      "detail" : "ISO BMFF container with HEIF brand(s)",
+      "pass" : true
+    },
+    "isoAuxPresent" : {
+      "detail" : "kCGImageAuxiliaryDataTypeISOGainMap present",
+      "pass" : true
+    },
+    "noAlpha" : {
+      "detail" : "SDR decode hasAlpha=false (noneSkipLast), HDR decode hasAlpha=false (noneSkipFirst)",
+      "hdrHasAlpha" : false,
+      "pass" : true,
+      "sdrHasAlpha" : false
+    },
+    "sdrFallbackPresent" : {
+      "detail" : "plain CGImageSourceCreateImageAtIndex decoded 1024x768",
+      "pass" : true
+    }
+  },
+  "container" : {
+    "ftyp" : {
+      "compatibleBrands" : [
+        "mif1",
+        "tmap",
+        "miaf",
+        "MiHB",
+        "heic"
+      ],
+      "majorBrand" : "heic",
+      "minorVersion" : 0
+    },
+    "infeCount" : 12,
+    "inputIsHEIF" : true,
+    "isISOBaseMedia" : true,
+    "itemCount" : 12,
+    "items" : [
+      {
+        "itemID" : 1,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 2,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 3,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 4,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 5,
+        "itemType" : "grid"
+      },
+      {
+        "itemID" : 6,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 7,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 8,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 9,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 10,
+        "itemType" : "grid"
+      },
+      {
+        "itemID" : 11,
+        "itemType" : "tmap"
+      },
+      {
+        "itemID" : 13,
+        "itemType" : "Exif"
+      }
+    ],
+    "itemTypeCounts" : {
+      "Exif" : 1,
+      "grid" : 2,
+      "hvc1" : 8,
+      "tmap" : 1
+    },
+    "metaChildTypes" : [
+      "hdlr",
+      "dinf",
+      "pitm",
+      "iinf",
+      "iref",
+      "iprp",
+      "grpl",
+      "idat",
+      "iloc"
+    ],
+    "primaryItemID" : 5,
+    "tmapBrandPresent" : true,
+    "tmapItemPresent" : true,
+    "topLevelBoxCount" : 3,
+    "topLevelBoxes" : [
+      {
+        "size" : 36,
+        "type" : "ftyp"
+      },
+      {
+        "size" : 1847,
+        "type" : "meta"
+      },
+      {
+        "size" : 2320,
+        "type" : "mdat"
+      }
+    ]
+  },
+  "file" : {
+    "absolutePath" : "/Users/criphc/Sites/llm-photon/work/m0/synthetic/out-b-r25/hdr.heic",
+    "imageCount" : 1,
+    "imageIOType" : "public.heic",
+    "path" : "work/m0/synthetic/out-b-r25/hdr.heic",
+    "primaryImageIndex" : 0,
+    "sha256" : "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e",
+    "sizeBytes" : 4203
+  },
+  "hdrDecode" : {
+    "alphaInfo" : "noneSkipFirst",
+    "alphaInfoRaw" : 6,
+    "bitsPerComponent" : 10,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 4.0029296875,
+    "colorSpaceName" : null,
+    "contentAverageLightLevel" : 3.8128077983856201,
+    "contentHeadroom" : 3.9843740463256836,
+    "decoded" : true,
+    "decodeOptions" : {
+      "kCGImageSourceDecodeRequest" : "kCGImageSourceDecodeToHDR"
+    },
+    "hasAlpha" : false,
+    "height" : 768,
+    "isFloat" : false,
+    "isHDRContent" : true,
+    "measured" : {
+      "cap" : 4,
+      "contentHeadroomUsedAsCap" : 3.9843740463256836,
+      "fractionAboveCap" : 0.0126953125,
+      "fractionAboveContentHeadroom" : 0.0126953125,
+      "fractionAboveOne" : 0.751953125,
+      "mean" : 2.021787420157529,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : 0.03605743870139122,
+      "nanCount" : 0,
+      "peak" : 4.0029659271240234,
+      "peakOverSdrPeak" : 7.9599793055261712,
+      "pixelCount" : 786432,
+      "renderHeight" : 768,
+      "renderWidth" : 1024,
+      "sampleCount" : 2359296
+    },
+    "success" : true,
+    "width" : 1024
+  },
+  "imageMetadata" : {
+    "headroomTags" : [
+
+    ],
+    "kind" : "CGImageMetadata",
+    "present" : true,
+    "tags" : [
+      {
+        "kind" : "scalar",
+        "name" : "PixelXDimension",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:PixelXDimension",
+        "prefix" : "exif",
+        "value" : "1024"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileWidth",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileWidth",
+        "prefix" : "tiff",
+        "value" : "512"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ResolutionUnit",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:ResolutionUnit",
+        "prefix" : "tiff",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileLength",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileLength",
+        "prefix" : "tiff",
+        "value" : "512"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Orientation",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Orientation",
+        "prefix" : "tiff",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "PhotometricInterpretation",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:PhotometricInterpretation",
+        "prefix" : "tiff",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "PixelYDimension",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:PixelYDimension",
+        "prefix" : "exif",
+        "value" : "768"
+      }
+    ],
+    "totalTags" : 7,
+    "truncated" : false
+  },
+  "overall" : {
+    "checkCount" : 8,
+    "failures" : [
+
+    ],
+    "pass" : true,
+    "passedCount" : 8,
+    "skippedChecks" : [
+
+    ]
+  },
+  "primaryImage" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "colorModel" : "RGB",
+    "decodedHeight" : 768,
+    "decodedWidth" : 1024,
+    "depth" : 8,
+    "hasAlpha" : false,
+    "height" : 768,
+    "isFloat" : false,
+    "isFloatDecoded" : false,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 1024
+  },
+  "properties" : {
+    "colorModel" : "RGB",
+    "depth" : 8,
+    "height" : 768,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 1024
+  },
+  "sdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 0.501953125,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "hasAlpha" : false,
+    "height" : 768,
+    "isFloat" : false,
+    "measured" : {
+      "cap" : null,
+      "fractionAboveCap" : null,
+      "fractionAboveOne" : 0,
+      "mean" : 0.50288635492324829,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : 0.50288629531860352,
+      "nanCount" : 0,
+      "peak" : 0.50288647413253784,
+      "pixelCount" : 786432,
+      "renderHeight" : 768,
+      "renderWidth" : 1024,
+      "sampleCount" : 2359296
+    },
+    "width" : 1024
+  },
+  "tool" : {
+    "arguments" : {
+      "base" : "work/m0/synthetic/base.tif",
+      "expectHeadroom" : 4,
+      "input" : "work/m0/synthetic/out-b-r25/hdr.heic",
+      "out" : "work/m0/verify/reports/synth-out-b-r25.json"
+    },
+    "generatedAt" : "2026-11-02T13:14:02Z",
+    "hostOS" : "Version 27.2 (Build 26B123)",
+    "name" : "verify-heic",
+    "version" : "0.1.0"
+  }
+}

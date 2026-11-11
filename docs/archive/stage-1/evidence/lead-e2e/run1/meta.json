@@ -1,0 +1,90 @@
+{
+  "encoder" : {
+    "depth" : 8,
+    "elapsed_seconds" : 0.45248401165008545,
+    "executable" : "/Users/criphc/Sites/llm-photon/tools/toGainMapHDR/bin/toGainMapHDR",
+    "headroom_cap_arg" : 2.5,
+    "quality" : 0.85,
+    "tool" : "toGainMapHDR",
+    "version" : "5dba4e2"
+  },
+  "outputs" : {
+    "hdr_tif" : {
+      "bytes" : 384032782,
+      "path" : "hdr.tif",
+      "sha256" : "ea3d888c2f04cbf8d059de19ddf32846b15df5f2e832175f3012b3efeb9460cb"
+    },
+    "preview_heic" : {
+      "bytes" : 881253,
+      "path" : "preview.heic",
+      "sha256" : "cdbb747c50b1d289795cb1e963a41e5e9bddfc9572e07df14b75b103eaaaa5c6"
+    },
+    "sdr_tif" : {
+      "bytes" : 144011414,
+      "path" : "sdr.tif",
+      "sha256" : "5378900171aaa2f42fb698ecfe43b841d5032958cffb2bda84efc20d72c40604"
+    }
+  },
+  "recipe" : {
+    "base" : {
+      "profile" : "DisplayP3",
+      "tone_map" : "c1_match_v1"
+    },
+    "created" : "2026-11-03T09:26:09+08:00",
+    "encoder" : {
+      "depth" : 8,
+      "map" : "iso-rgb",
+      "quality" : 0.85,
+      "subsample" : false,
+      "tool" : "toGainMapHDR"
+    },
+    "hdr" : {
+      "headroom_cap" : 2.5,
+      "lift_stops" : 1.4,
+      "start" : 0.62,
+      "transition" : 0.28
+    },
+    "schema" : 0,
+    "source" : {
+      "height" : 4000,
+      "path" : "samples/sources/R0003777-P3.tif",
+      "sha256" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+      "width" : 6000
+    },
+    "versions" : {
+      "encoder" : "5dba4e2",
+      "recipe" : 0,
+      "tone_map" : 1
+    }
+  },
+  "render" : {
+    "authored_peak_linear" : 2.5,
+    "authored_peak_stops" : 1.3219280948873624,
+    "fraction_above_one" : 0.10941866666666668,
+    "fraction_at_cap" : 0.004306083333333334,
+    "headroom_cap_linear" : 2.5,
+    "lift_stops" : 1.4,
+    "start" : 0.62,
+    "tone_map" : "c1_match_v1",
+    "transition" : 0.28,
+    "working_space" : "linear-extended-DisplayP3-float32"
+  },
+  "schema" : 0,
+  "source" : {
+    "bitsPerComponent" : 16,
+    "height" : 4000,
+    "path" : "/Users/criphc/Sites/llm-photon/samples/sources/R0003777-P3.tif",
+    "profileName" : "Display P3",
+    "sha256" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+    "width" : 6000
+  },
+  "timings" : {
+    "decode_seconds" : 0.317065954208374,
+    "encode_seconds" : 0.45248401165008545,
+    "hdr_seconds" : 0.15127801895141602,
+    "metadata_seconds" : 0.29877305030822754,
+    "preview_seconds" : 0.5210479497909546,
+    "sdr_base_seconds" : 0.006387948989868164,
+    "total_seconds" : 4.006266951560974
+  }
+}

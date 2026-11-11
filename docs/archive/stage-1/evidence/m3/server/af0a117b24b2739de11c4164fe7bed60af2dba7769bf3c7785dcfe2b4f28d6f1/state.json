@@ -1,0 +1,13 @@
+{
+  "appVersion" : "0.3.0-m21",
+  "encoderVersion" : "5dba4e2",
+  "height" : 4640,
+  "id" : "af0a117b24b2739de11c4164fe7bed60af2dba7769bf3c7785dcfe2b4f28d6f1",
+  "name" : "IMG_0543-P3.tif",
+  "recipeRenderKey" : "f45f577f99e349132130aa8f5e4273639eded228996e9a963c15991e49720737",
+  "sourcePath" : "/Users/criphc/Sites/llm-photon/samples/sources/IMG_0543-P3.tif",
+  "sourceSHA" : "af0a117b24b2739de11c4164fe7bed60af2dba7769bf3c7785dcfe2b4f28d6f1",
+  "state" : "recipe_received",
+  "updatedAt" : "2026-11-03T03:47:26Z",
+  "width" : 6960
+}

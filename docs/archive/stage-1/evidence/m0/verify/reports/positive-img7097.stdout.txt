@@ -1,0 +1,13 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/samples/reference/IMG_7097.HEIC
+  file        2496675 bytes  sha256=003230bdfb2c15c92f76fbfeb25cdcd9485834d243d7a322d6f3fcc8d9dd23cd
+  container   major=heic brands=[mif1, MiHB, MiHA, heix, MiHE, MiPr, miaf, heic, tmap] items=105
+  base image  4032x3024 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     present 2016x1512 fmt=L008 altHeadroom=5.5356x
+  aux HDRGain present headroom=5.5356x
+  sdrDecode   4032x3024 8bpc contentHeadroom=1.0000 calcHeadroom=1.0000
+  hdrDecode   OK 4032x3024 10bpc contentHeadroom=5.5356 calc=4.2803
+              measured peak=5.6001 mean=0.8892 frac>1=31.07%
+  checks      dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=PASS isoAuxPresent=PASS noAlpha=PASS sdrFallbackPresent=PASS
+  skipped     basePreserved (no --base supplied); headroomWithin5pct (no --expect-headroom supplied)
+  result      PASS
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/positive-img7097.json

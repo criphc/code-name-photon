@@ -1,0 +1,510 @@
+{
+  "artifacts" : {
+    "hdrHEIC" : {
+      "bytes" : 5798146,
+      "file" : "R0003777-P3-hdr.heic",
+      "sha256" : "826e27599cbbd6308d7695940dd3ec463a39ea5c8814024008bd6f36efb8df69"
+    },
+    "recipeJSON" : {
+      "bytes" : 543,
+      "file" : "R0003777-P3.recipe.json",
+      "sha256" : "b4cec8a2540d5fad9cc2487c58378a649312b5108ced368404d0ae5f13cc8261"
+    },
+    "sdrHEIC" : {
+      "bytes" : 1946906,
+      "file" : "R0003777-P3-sdr.heic",
+      "sha256" : "d639359abd87bc9c311d2f7351f79d307e34225269fc21c9236f144f96805b0e"
+    }
+  },
+  "checks" : [
+    {
+      "detail" : "ISO-BMFF/HEIF container with compatible brand tmap and the ISO gain-map auxiliary present.",
+      "measured" : {
+        "compatibleBrands" : {
+          "type" : "text",
+          "value" : "mif1,tmap,miaf,MiHB,heic"
+        },
+        "ftypBoxSize" : {
+          "type" : "integer",
+          "value" : 36
+        },
+        "isHEIF" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "isoGainMapPresent" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "majorBrand" : {
+          "type" : "text",
+          "value" : "heic"
+        },
+        "sdrHeight" : {
+          "type" : "integer",
+          "value" : 4000
+        },
+        "sdrWidth" : {
+          "type" : "integer",
+          "value" : 6000
+        },
+        "tmapBrand" : {
+          "type" : "boolean",
+          "value" : true
+        }
+      },
+      "name" : "container",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "decoded 6000x4000 matches the source and the recipe, and the source sha256 matches the recipe identity.",
+      "measured" : {
+        "decodedHeight" : {
+          "type" : "integer",
+          "value" : 4000
+        },
+        "decodedWidth" : {
+          "type" : "integer",
+          "value" : 6000
+        },
+        "dimsMatchRecipe" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "dimsMatchSource" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "expectedHeight" : {
+          "type" : "integer",
+          "value" : 4000
+        },
+        "expectedWidth" : {
+          "type" : "integer",
+          "value" : 6000
+        },
+        "recipeHeight" : {
+          "type" : "integer",
+          "value" : 4000
+        },
+        "recipeSourceSha256" : {
+          "type" : "text",
+          "value" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116"
+        },
+        "recipeWidth" : {
+          "type" : "integer",
+          "value" : 6000
+        },
+        "sourceSha256" : {
+          "type" : "text",
+          "value" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116"
+        },
+        "sourceSha256Match" : {
+          "type" : "boolean",
+          "value" : true
+        }
+      },
+      "name" : "identity",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "SDR alphaInfo noneSkipLast and HDR alphaInfo noneSkipFirst: neither decode carries alpha.",
+      "measured" : {
+        "hdrAlphaInfo" : {
+          "type" : "text",
+          "value" : "noneSkipFirst"
+        },
+        "hdrHasAlpha" : {
+          "type" : "boolean",
+          "value" : false
+        },
+        "sdrAlphaInfo" : {
+          "type" : "text",
+          "value" : "noneSkipLast"
+        },
+        "sdrBitsPerComponent" : {
+          "type" : "integer",
+          "value" : 8
+        },
+        "sdrHasAlpha" : {
+          "type" : "boolean",
+          "value" : false
+        }
+      },
+      "name" : "alpha",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "contentHeadroom 2.499999761581421 is within 5.00 % of the expected 2.5 (relative error 0.00 %); calculatedContentHeadroom 2.7451171875 reported as cross-check.",
+      "measured" : {
+        "calculatedContentHeadroom" : {
+          "type" : "number",
+          "value" : 2.7451171875
+        },
+        "capEngaged" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "contentHeadroom" : {
+          "type" : "number",
+          "value" : 2.499999761581421
+        },
+        "expectedHeadroom" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "headroomCap" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "measurementSource" : {
+          "type" : "text",
+          "value" : "contentHeadroom"
+        },
+        "relativeError" : {
+          "type" : "number",
+          "value" : 9.536743161842054e-08
+        },
+        "tolerance" : {
+          "type" : "number",
+          "value" : 0.05
+        }
+      },
+      "name" : "headroom",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "authored peak 2.5 (1.321928 stops) clamps to the 2.5 cap while 25.6448 % of pixels are above 1.0 and 0.7517 % sit at the cap.",
+      "measured" : {
+        "authoredPeak" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "authoredPeakStops" : {
+          "type" : "number",
+          "value" : 1.3219280948873624
+        },
+        "clampOK" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "decodedFractionAboveCap" : {
+          "type" : "number",
+          "value" : 0.003914527777777778
+        },
+        "decodedFractionAboveContentHeadroom" : {
+          "type" : "number",
+          "value" : 0.003914527777777778
+        },
+        "decodedNonFiniteSamples" : {
+          "type" : "integer",
+          "value" : 0
+        },
+        "decodedPeak" : {
+          "type" : "number",
+          "value" : 2.990718126296997
+        },
+        "floorOK" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "fractionAboveOne" : {
+          "type" : "number",
+          "value" : 0.25644808333333335
+        },
+        "fractionAtCap" : {
+          "type" : "number",
+          "value" : 0.007517166666666667
+        },
+        "headroomCap" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "minimumAuthoredPeak" : {
+          "type" : "number",
+          "value" : 1.0499999523162842
+        }
+      },
+      "name" : "clipping",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "decoded SDR base vs the Capture One base: ΔE2000 mean 1.4406 (<= 2.5), p95 4.1200 (<= 6.0); max 28.34, 8-bit mean 1.475 LSB — the docs/03 §5 render target (mean < 1 / p95 < 2) applies to the bit-exact 16-bit base, not to a decoded 8-bit 4:2:0 HEVC container whose measured codec loss on the M0 trial image is mean 1.44 / p95 4.12 (deviation recorded in work/m4/probe/calibration.md).",
+      "measured" : {
+        "fractionAbove2" : {
+          "type" : "number",
+          "value" : 0.229158375
+        },
+        "fractionAbove5" : {
+          "type" : "number",
+          "value" : 0.027523791666666665
+        },
+        "max" : {
+          "type" : "number",
+          "value" : 28.34086428409491
+        },
+        "mean" : {
+          "type" : "number",
+          "value" : 1.4406046136056738
+        },
+        "meanAbsDiff8Bit" : {
+          "type" : "number",
+          "value" : 1.475296125
+        },
+        "meanLimit" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "p50" : {
+          "type" : "number",
+          "value" : 0.99
+        },
+        "p95" : {
+          "type" : "number",
+          "value" : 4.12
+        },
+        "p95Limit" : {
+          "type" : "number",
+          "value" : 6
+        },
+        "p99" : {
+          "type" : "number",
+          "value" : 6.54
+        },
+        "p99AbsDiff8Bit" : {
+          "type" : "integer",
+          "value" : 7
+        },
+        "pixelCount" : {
+          "type" : "integer",
+          "value" : 24000000
+        },
+        "renderTargetMean" : {
+          "type" : "number",
+          "value" : 1
+        },
+        "renderTargetP95" : {
+          "type" : "number",
+          "value" : 2
+        }
+      },
+      "name" : "baseDeltaE",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "map-stripped copy 1946906 B (sha256 d639359abd87) is a HEIF without an ISO gain map and matches the delivered SDR primary: mean 0.627 LSB, p99 3 LSB, ΔE2000 mean 0.5268.",
+      "measured" : {
+        "copyBytes" : {
+          "type" : "integer",
+          "value" : 1946906
+        },
+        "copyCompatibleBrands" : {
+          "type" : "text",
+          "value" : "mif1,miaf,MiHB,heic"
+        },
+        "copyHeight" : {
+          "type" : "integer",
+          "value" : 4000
+        },
+        "copyIsHEIF" : {
+          "type" : "boolean",
+          "value" : true
+        },
+        "copyIsoGainMapPresent" : {
+          "type" : "boolean",
+          "value" : false
+        },
+        "copyMajorBrand" : {
+          "type" : "text",
+          "value" : "heic"
+        },
+        "copySha256" : {
+          "type" : "text",
+          "value" : "d639359abd87bc9c311d2f7351f79d307e34225269fc21c9236f144f96805b0e"
+        },
+        "copyTmapBrand" : {
+          "type" : "boolean",
+          "value" : false
+        },
+        "copyWidth" : {
+          "type" : "integer",
+          "value" : 6000
+        },
+        "deliveredHeight" : {
+          "type" : "integer",
+          "value" : 4000
+        },
+        "deliveredWidth" : {
+          "type" : "integer",
+          "value" : 6000
+        },
+        "deltaEMax" : {
+          "type" : "number",
+          "value" : 12.96006290931531
+        },
+        "deltaEMean" : {
+          "type" : "number",
+          "value" : 0.5268437651944299
+        },
+        "deltaEMeanLimit" : {
+          "type" : "number",
+          "value" : 1
+        },
+        "deltaEP95" : {
+          "type" : "number",
+          "value" : 1.71
+        },
+        "deltaEP99" : {
+          "type" : "number",
+          "value" : 2.63
+        },
+        "fractionNonZero8Bit" : {
+          "type" : "number",
+          "value" : 0.4721150416666667
+        },
+        "maxAbsDiff" : {
+          "type" : "integer",
+          "value" : 25
+        },
+        "meanAbsDiff" : {
+          "type" : "number",
+          "value" : 0.6272920972222222
+        },
+        "meanAbsDiffLimit" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "p50AbsDiff" : {
+          "type" : "integer",
+          "value" : 0
+        },
+        "p99AbsDiff" : {
+          "type" : "integer",
+          "value" : 3
+        },
+        "p99AbsDiffLimit" : {
+          "type" : "integer",
+          "value" : 8
+        }
+      },
+      "name" : "fallback",
+      "status" : "PASS"
+    },
+    {
+      "detail" : "preview-scale render vs the delivered HDR decode downscaled to 2560x1707: ΔE2000 mean 1.1902, p95 3.3700, p99 5.4200, 1.373 % of pixels above ΔE 5 (expected at highlight edges only).",
+      "measured" : {
+        "fractionAbove2" : {
+          "type" : "number",
+          "value" : 0.16562339814001173
+        },
+        "fractionAbove3" : {
+          "type" : "number",
+          "value" : 0.06844038334797892
+        },
+        "fractionAbove5" : {
+          "type" : "number",
+          "value" : 0.013728855448154657
+        },
+        "fractionAbove5Limit" : {
+          "type" : "number",
+          "value" : 0.05
+        },
+        "max" : {
+          "type" : "number",
+          "value" : 47.67546959693204
+        },
+        "mean" : {
+          "type" : "number",
+          "value" : 1.1901773176530552
+        },
+        "meanLimit" : {
+          "type" : "number",
+          "value" : 2.5
+        },
+        "p50" : {
+          "type" : "number",
+          "value" : 0.8200000000000001
+        },
+        "p95" : {
+          "type" : "number",
+          "value" : 3.37
+        },
+        "p99" : {
+          "type" : "number",
+          "value" : 5.42
+        },
+        "p99Limit" : {
+          "type" : "number",
+          "value" : 10
+        },
+        "pixelCount" : {
+          "type" : "integer",
+          "value" : 4369920
+        },
+        "previewHeight" : {
+          "type" : "integer",
+          "value" : 1707
+        },
+        "previewLongEdge" : {
+          "type" : "integer",
+          "value" : 2560
+        },
+        "previewWidth" : {
+          "type" : "integer",
+          "value" : 2560
+        }
+      },
+      "name" : "previewAgreement",
+      "status" : "PASS"
+    }
+  ],
+  "failures" : [
+
+  ],
+  "pass" : true,
+  "provenance" : {
+    "appVersion" : "0.4.0-m4",
+    "encoderVersion" : "5dba4e2",
+    "generatedAt" : "2026-11-03T13:41:46+08:00",
+    "hostOS" : "Version 27.2 (Build 26B123)",
+    "tool" : "photon deliver"
+  },
+  "recipe" : {
+    "created" : "2026-11-03T11:45:38+08:00",
+    "depth" : 8,
+    "headroomCap" : 2.5,
+    "liftStops" : 2.015059471130371,
+    "quality" : 0.85,
+    "renderKey" : "0bb774682c9d178c852f085b3badf2813397485c422dc50e79efc3e0be5fb747",
+    "start" : 0.19711047410964966,
+    "transition" : 1
+  },
+  "render" : {
+    "authoredPeak" : 2.5,
+    "authoredPeakStops" : 1.3219280948873624,
+    "capEngaged" : true,
+    "fractionAboveOne" : 0.25644808333333335,
+    "fractionAtCap" : 0.007517166666666667,
+    "headroomCap" : 2.5,
+    "height" : 4000,
+    "previewLongEdge" : 2560,
+    "width" : 6000
+  },
+  "schema" : 0,
+  "source" : {
+    "bitsPerComponent" : 16,
+    "height" : 4000,
+    "path" : "samples/sources/R0003777-P3.tif",
+    "profileName" : "Display P3",
+    "sha256" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+    "width" : 6000
+  },
+  "timings" : {
+    "decodeSeconds" : 0.2894059419631958,
+    "encodeSeconds" : 1.2170650959014893,
+    "previewSeconds" : 0.25679290294647217,
+    "renderSeconds" : 0.19319510459899902,
+    "totalSeconds" : 20.72908592224121,
+    "verifySeconds" : 16.218780994415283
+  }
+}

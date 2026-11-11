@@ -1,0 +1,46 @@
+# Large local media — real material, never committed (was samples/)
+fixtures/media/
+
+# External tool (own git clone, MIT) — re-clone separately
+tools/toGainMapHDR/
+
+# Local DSH plugin checkout (separate upstream repo)
+dsh-apple-mode/
+
+# Working folders used by the workflow (created by the app / experiments)
+inbox/
+work/
+out/
+cache/
+
+# Stage-1 trial delivery (archived locally, binaries not in git)
+docs/archive/stage-1/delivery/
+
+# P0 spikes (throwaway; conclusions go to docs/decisions/)
+.spikes/
+
+# macOS
+.DS_Store
+
+# Xcode / Swift
+DerivedData/
+xcuserdata/
+*.xcuserstate
+.build/
+.swiftpm/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local build/test scratch (parallel agents, xcodebuild derived data, SwiftPM)
+.dd*/
+.build*/
+.tmp*/
+.mc*/
+*.profraw
+
+# Local investigation scratch (previewAgreement evidence, probes)
+.scratch/

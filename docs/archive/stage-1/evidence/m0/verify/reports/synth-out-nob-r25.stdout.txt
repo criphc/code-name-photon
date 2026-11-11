@@ -1,0 +1,14 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/work/m0/synthetic/out-nob-r25/hdr.heic
+  file        5817 bytes  sha256=58e0113805cbc89fbc4fab0f9ecc1a7bca772e9a649bee421413346e2805149f
+  container   major=heic brands=[mif1, tmap, MiHE, miaf, MiHB, heic] items=17
+  base image  1024x768 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=last
+  aux ISO     present 1024x768 fmt=420f altHeadroom=3.9844x [ImageIO omitted aux data bytes]
+  aux HDRGain absent
+  sdrDecode   1024x768 8bpc contentHeadroom=1.0000 calcHeadroom=1.0000
+  hdrDecode   OK 1024x768 16bpc contentHeadroom=3.9844 calc=3.9844
+              measured peak=3.9844 mean=2.0100 frac>1=75.39%
+  checks      dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=PASS isoAuxPresent=PASS noAlpha=FAIL sdrFallbackPresent=PASS
+  skipped     basePreserved (no --base supplied); headroomWithin5pct (no --expect-headroom supplied)
+  result      FAIL
+    failure: noAlpha: SDR decode hasAlpha=true (last), HDR decode hasAlpha=true (last)
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/synth-out-nob-r25.json

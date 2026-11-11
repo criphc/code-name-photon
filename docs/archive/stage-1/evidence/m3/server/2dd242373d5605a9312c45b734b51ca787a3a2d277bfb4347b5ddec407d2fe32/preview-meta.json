@@ -1,0 +1,56 @@
+{
+  "appVersion" : "0.3.0-m21",
+  "base" : {
+    "bytes" : 22505797,
+    "file" : "preview-base.png",
+    "format" : "png-16-p3",
+    "height" : 1702,
+    "longEdge" : 2560,
+    "profileName" : "Display P3",
+    "sha256" : "99160418a506a6bc64dc6c0f06596ef3e43e0c169f27f94a0867a54645655582",
+    "width" : 2560,
+    "workingSpace" : "linear-extended-DisplayP3-float32"
+  },
+  "createdAt" : "2026-11-03T10:54:02+08:00",
+  "recipeDefaults" : {
+    "base" : {
+      "profile" : "DisplayP3",
+      "tone_map" : "c1_match_v1"
+    },
+    "created" : "2026-11-03T10:54:02+08:00",
+    "encoder" : {
+      "depth" : 8,
+      "map" : "iso-rgb",
+      "quality" : 0.85,
+      "subsample" : false,
+      "tool" : "toGainMapHDR"
+    },
+    "hdr" : {
+      "headroom_cap" : 2.5,
+      "lift_stops" : 1.4,
+      "start" : 0.62,
+      "transition" : 0.28
+    },
+    "schema" : 0,
+    "source" : {
+      "height" : 5599,
+      "path" : "/Users/criphc/Sites/llm-photon/samples/sources/FPL05190-P3.tif",
+      "sha256" : "2dd242373d5605a9312c45b734b51ca787a3a2d277bfb4347b5ddec407d2fe32",
+      "width" : 8423
+    },
+    "versions" : {
+      "encoder" : "5dba4e2",
+      "recipe" : 0,
+      "tone_map" : 1
+    }
+  },
+  "schema" : 0,
+  "source" : {
+    "bitsPerComponent" : 16,
+    "height" : 5599,
+    "path" : "/Users/criphc/Sites/llm-photon/samples/sources/FPL05190-P3.tif",
+    "profileName" : "Display P3",
+    "sha256" : "2dd242373d5605a9312c45b734b51ca787a3a2d277bfb4347b5ddec407d2fe32",
+    "width" : 8423
+  }
+}

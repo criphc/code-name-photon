@@ -1,0 +1,475 @@
+{
+  "alpha" : {
+    "delivered_full" : {
+      "aux_present" : true,
+      "file" : "full",
+      "heif_info_alpha_line" : "alpha channel: no",
+      "sdr_alpha_info_raw" : 5,
+      "sdr_bits_per_pixel" : 32,
+      "sdr_has_alpha_data" : false
+    },
+    "delivered_preview" : {
+      "aux_present" : true,
+      "file" : "preview",
+      "heif_info_alpha_line" : "alpha channel: no",
+      "sdr_alpha_info_raw" : 5,
+      "sdr_bits_per_pixel" : 32,
+      "sdr_has_alpha_data" : false
+    },
+    "delivered_sdr_reference" : {
+      "aux_present" : false,
+      "file" : "sdr",
+      "heif_info_alpha_line" : "alpha channel: no",
+      "sdr_alpha_info_raw" : 5,
+      "sdr_bits_per_pixel" : 32,
+      "sdr_has_alpha_data" : false
+    },
+    "hdr_tif" : {
+      "alpha_info_raw" : 1,
+      "bitmap_info_raw" : 8449,
+      "bits_per_component" : 32,
+      "bits_per_pixel" : 128,
+      "colorspace" : "nil",
+      "height" : 4000,
+      "samples_per_pixel" : 4,
+      "width" : 6000
+    },
+    "sdr_tif" : {
+      "alpha_info_raw" : 0,
+      "bits_per_component" : 16,
+      "bits_per_pixel" : 48,
+      "colorspace" : "kCGColorSpaceDisplayP3",
+      "height" : 4000,
+      "profile" : "Display P3",
+      "samples_per_pixel" : 3,
+      "width" : 6000
+    },
+    "source" : {
+      "has_alpha" : false,
+      "samples_per_pixel" : 3
+    }
+  },
+  "authored_peak" : {
+    "cap_linear" : 2.5,
+    "clamped_to_cap" : true,
+    "linear" : 2.5,
+    "stops" : 1.3219280948873624
+  },
+  "base" : {
+    "delta_vs_source_16bit" : {
+      "identical" : true,
+      "max_abs_lsb" : 0,
+      "mean_abs_lsb" : 0,
+      "samples" : 72000000,
+      "samples_differing" : 0
+    },
+    "file" : "work\/m0\/real\/sdr.tif",
+    "layout" : {
+      "alpha_info_raw" : 0,
+      "bits_per_component" : 16,
+      "bits_per_pixel" : 48,
+      "colorspace" : "kCGColorSpaceDisplayP3",
+      "height" : 4000,
+      "profile" : "Display P3",
+      "samples_per_pixel" : 3,
+      "width" : 6000
+    },
+    "sha256" : "5378900171aaa2f42fb698ecfe43b841d5032958cffb2bda84efc20d72c40604",
+    "size_bytes" : 144011414,
+    "stream_determinism_2writes_identical" : true,
+    "tone_map" : "c1_match_v1 (identity pass-through)"
+  },
+  "deliverables" : {
+    "base_preservation" : {
+      "delivered_sdr_vs_source_8bit" : {
+        "channels_differing" : 54006471,
+        "channels_gt_4lsb8" : 3168615,
+        "channels_total" : 72000000,
+        "max_abs_lsb8" : 138,
+        "mean_abs_lsb8" : 1.9668261234843507,
+        "mean_signed_lsb8" : 0.09070466666666667,
+        "p50_abs_lsb8" : 1,
+        "p90_abs_lsb8" : 3,
+        "p99_abs_lsb8" : 7,
+        "p999_abs_lsb8" : 12,
+        "p9999_abs_lsb8" : 18,
+        "pixels_any_channel_gt_2lsb8" : 8663858
+      },
+      "note" : "Compare after decoding the delivered SDR fallback and quantising the source to 8-bit Display P3; HEVC at q=0.85 is the only loss."
+    },
+    "delivered_sdr_decode_extremes" : {
+      "cap" : 2.5,
+      "decode_path" : "ImageIO CGImage -> CIImage -> extended linear Display P3, strip renders",
+      "fraction_pixels_gt_1_0" : 0.0023452916666666665,
+      "fraction_pixels_gt_cap" : 0,
+      "mean_of_per_pixel_max_linear" : 0.41830036966818834,
+      "peak_linear" : 1.1934481859207153,
+      "pixels_gt_1_0" : 56287,
+      "pixels_gt_cap" : 0
+    },
+    "full" : {
+      "file" : "work\/m0\/real\/out\/R0003777-M0.heic",
+      "inspect" : {
+        "aux_present" : true,
+        "aux_property_types" : [
+
+        ],
+        "compatible_brands" : [
+          "mif1",
+          "tmap",
+          "miaf",
+          "MiHB",
+          "heic"
+        ],
+        "depth" : 8,
+        "ftyp_head_hex" : "00 00 00 24 66 74 79 70 68 65 69 63 00 00 00 00 6d 69 66 31 74 6d 61 70 6d 69 61 66 4d 69 48 42",
+        "hdr" : {
+          "alpha_info_raw" : 6,
+          "bits_per_component" : 10,
+          "bits_per_pixel" : 32,
+          "calculated_content_headroom" : 2.6240234375,
+          "colorspace" : "nil",
+          "content_headroom_linear" : 2.4999997615814209,
+          "height" : 4000,
+          "width" : 6000
+        },
+        "heif_info" : "MIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n\nimage: 6000x4000 (id=43), primary\n  tiles: 6x7, tile size: 1024x576\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  alpha channel: no \n  depth channel: no\nmetadata:\n  Exif: 102 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\nnone\nMIME items:\n",
+        "iso_aux" : {
+          "HDRToneMap_AlternateHeadroom_linear" : 2.4999998355727362,
+          "HDRToneMap_AlternateHeadroom_stops" : 1.321928,
+          "HDRToneMap_BaseHeadroom_stops" : 0,
+          "HDRToneMap_GainMapMax_stops_channels" : [
+            1.3998120000000001,
+            1.3998120000000001,
+            1.3998120000000001
+          ],
+          "HDRToneMap_GainMapMin_stops_channels" : [
+            0,
+            0,
+            0
+          ],
+          "keys" : [
+            "kCGImageAuxiliaryDataInfoMetadata",
+            "kCGImageAuxiliaryDataInfoColorSpace",
+            "kCGImageAuxiliaryDataInfoDataDescription"
+          ],
+          "present" : true
+        },
+        "main_brand" : "heic",
+        "profile" : "Display P3",
+        "sdr" : {
+          "alpha_info_raw" : 5,
+          "bits_per_component" : 8,
+          "bits_per_pixel" : 32,
+          "calculated_content_headroom" : 1,
+          "colorspace" : "kCGColorSpaceDisplayP3",
+          "content_headroom_linear" : 1,
+          "has_alpha_data" : false,
+          "height" : 4000,
+          "width" : 6000
+        },
+        "tmap_present" : true,
+        "type" : "public.heic"
+      },
+      "sha256" : "1c9020c6ed8ae07720c165914fb3fb38b1a901355dd5162c554401e900783d39",
+      "size_bytes" : 3853079
+    },
+    "hdr_fidelity_vs_authored" : {
+      "authored_mean_of_per_pixel_max" : 0.47081154631280464,
+      "authored_peak_linear" : 2.5,
+      "channels_abs_diff_gt_0.1" : 24934,
+      "channels_abs_diff_gt_0.5" : 8,
+      "channels_total" : 72000000,
+      "decode_path" : "CIImage(contentsOf: [.expandToHDR: true]) -> extended linear Display P3, strip renders",
+      "delivered_mean_of_per_pixel_max" : 0.47264969323158829,
+      "delivered_peak_linear" : 3.0413467884063721,
+      "fraction_pixels_delivered_over_cap" : 0.0039604999999999996,
+      "max_abs_diff_linear" : 0.82095009088516235,
+      "mean_abs_diff_linear" : 0.0061529255431463118,
+      "p90_abs_diff_linear" : 0.014,
+      "p99_abs_diff_linear" : 0.035000000000000003,
+      "p999_abs_diff_linear" : 0.073999999999999996,
+      "pixels_delivered_over_cap" : 95052
+    },
+    "preview" : {
+      "channels_clamped_to_cap" : 19012,
+      "file" : "work\/m0\/real\/out\/R0003777-M0-2560.heic",
+      "inspect" : {
+        "aux_present" : true,
+        "aux_property_types" : [
+
+        ],
+        "compatible_brands" : [
+          "tmap",
+          "heic",
+          "mif1"
+        ],
+        "depth" : 8,
+        "ftyp_head_hex" : "00 00 00 1c 66 74 79 70 68 65 69 63 00 00 00 00 74 6d 61 70 68 65 69 63 6d 69 66 31 00 00 0c d7",
+        "hdr" : {
+          "alpha_info_raw" : 6,
+          "bits_per_component" : 10,
+          "bits_per_pixel" : 32,
+          "calculated_content_headroom" : 2.7490234375,
+          "colorspace" : "nil",
+          "content_headroom_linear" : 2.4999997615814209,
+          "height" : 1707,
+          "width" : 2560
+        },
+        "heif_info" : "MIME type: image\/heic\nmain brand: heic\ncompatible brands: tmap, heic, mif1\n\nimage: 2560x1707 (id=21), primary\n  tiles: 5x4, tile size: 512x512\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  alpha channel: no \n  depth channel: no\nmetadata:\n  Exif: 102 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\nnone\nMIME items:\n",
+        "iso_aux" : {
+          "HDRToneMap_AlternateHeadroom_linear" : 2.4999998355727362,
+          "HDRToneMap_AlternateHeadroom_stops" : 1.321928,
+          "HDRToneMap_BaseHeadroom_stops" : 0,
+          "HDRToneMap_GainMapMax_stops_channels" : [
+            1.3998120000000001,
+            1.3998120000000001,
+            1.3998120000000001
+          ],
+          "HDRToneMap_GainMapMin_stops_channels" : [
+            0,
+            0,
+            0
+          ],
+          "keys" : [
+            "kCGImageAuxiliaryDataInfoMetadata",
+            "kCGImageAuxiliaryDataInfoColorSpace",
+            "kCGImageAuxiliaryDataInfoDataDescription"
+          ],
+          "present" : true
+        },
+        "main_brand" : "heic",
+        "profile" : "Display P3",
+        "sdr" : {
+          "alpha_info_raw" : 5,
+          "bits_per_component" : 8,
+          "bits_per_pixel" : 32,
+          "calculated_content_headroom" : 1,
+          "colorspace" : "kCGColorSpaceDisplayP3",
+          "content_headroom_linear" : 1,
+          "has_alpha_data" : false,
+          "height" : 1707,
+          "width" : 2560
+        },
+        "tmap_present" : true,
+        "type" : "public.heic"
+      },
+      "long_edge" : 2560,
+      "peak_before_cap_clamp_linear" : 2.9779610633850098,
+      "preview_hdr_tif_readback_peak_linear" : 2.5,
+      "sha256" : "9941f74967eae1d7ef4764591696cf41a0e87bab051ff99167fb38ec7a30854c",
+      "size_bytes" : 882761
+    },
+    "sdr_reference" : {
+      "delta_vs_delivered_sdr_8bit" : {
+        "channels_differing" : 41836958,
+        "channels_gt_4lsb8" : 1134650,
+        "channels_total" : 72000000,
+        "max_abs_lsb8" : 45,
+        "mean_abs_lsb8" : 1.6692556136610124,
+        "mean_signed_lsb8" : -0.077008986111111108,
+        "p50_abs_lsb8" : 1,
+        "p90_abs_lsb8" : 2,
+        "p99_abs_lsb8" : 5,
+        "p999_abs_lsb8" : 9,
+        "p9999_abs_lsb8" : 13,
+        "pixels_any_channel_gt_2lsb8" : 4923544
+      },
+      "delta_vs_source_8bit" : {
+        "channels_differing" : 53507234,
+        "channels_gt_4lsb8" : 2884586,
+        "channels_total" : 72000000,
+        "max_abs_lsb8" : 95,
+        "mean_abs_lsb8" : 1.9196181398575003,
+        "mean_signed_lsb8" : 0.013695680555555555,
+        "p50_abs_lsb8" : 1,
+        "p90_abs_lsb8" : 3,
+        "p99_abs_lsb8" : 7,
+        "p999_abs_lsb8" : 11,
+        "p9999_abs_lsb8" : 17,
+        "pixels_any_channel_gt_2lsb8" : 8262496
+      },
+      "file" : "work\/m0\/real\/out\/R0003777-M0-sdr.heic",
+      "inspect" : {
+        "aux_present" : false,
+        "aux_property_types" : [
+
+        ],
+        "compatible_brands" : [
+          "mif1",
+          "miaf",
+          "MiHB",
+          "heic"
+        ],
+        "depth" : 8,
+        "ftyp_head_hex" : "00 00 00 20 66 74 79 70 68 65 69 63 00 00 00 00 6d 69 66 31 6d 69 61 66 4d 69 48 42 68 65 69 63",
+        "hdr" : {
+          "alpha_info_raw" : 5,
+          "bits_per_component" : 8,
+          "bits_per_pixel" : 32,
+          "calculated_content_headroom" : 1,
+          "colorspace" : "kCGColorSpaceDisplayP3",
+          "content_headroom_linear" : 1,
+          "height" : 4000,
+          "width" : 6000
+        },
+        "heif_info" : "MIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, miaf, MiHB, heic\n\nimage: 6000x4000 (id=43), primary\n  tiles: 6x7, tile size: 1024x576\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  content light level: MaxCLL=203 MaxFALL=64\n  alpha channel: no \n  depth channel: no\nmetadata:\n  none\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\n  content light level (clli):\n    max content light level: 203\n    max pic average light level: 64\nMIME items:\n",
+        "iso_aux" : {
+          "HDRToneMap_AlternateHeadroom_linear" : null,
+          "HDRToneMap_AlternateHeadroom_stops" : null,
+          "HDRToneMap_BaseHeadroom_stops" : null,
+          "HDRToneMap_GainMapMax_stops_channels" : [
+
+          ],
+          "HDRToneMap_GainMapMin_stops_channels" : [
+
+          ],
+          "keys" : [
+
+          ],
+          "present" : false
+        },
+        "main_brand" : "heic",
+        "profile" : "Display P3",
+        "sdr" : {
+          "alpha_info_raw" : 5,
+          "bits_per_component" : 8,
+          "bits_per_pixel" : 32,
+          "calculated_content_headroom" : 1,
+          "colorspace" : "kCGColorSpaceDisplayP3",
+          "content_headroom_linear" : 1,
+          "has_alpha_data" : false,
+          "height" : 4000,
+          "width" : 6000
+        },
+        "tmap_present" : false,
+        "type" : "public.heic"
+      },
+      "sha256" : "33b5aec3c2e0ac39c83f6d9a552877a43a57a5fbc02cc84b5aa2b60d7914e467",
+      "size_bytes" : 2034332
+    }
+  },
+  "encode" : {
+    "command" : "tools\/toGainMapHDR\/bin\/toGainMapHDR work\/m0\/real\/hdr.tif work\/m0\/real\/out -b work\/m0\/real\/sdr.tif -R 2.5 -d 8 -q 0.85 -c p3",
+    "elapsed_s" : 1.0003929138183594,
+    "exit_code" : 0,
+    "log" : "work\/m0\/real\/logs\/encode-full.log",
+    "repeat_deterministic" : true,
+    "size_overhead_vs_sdr_only" : {
+      "delivered_full_bytes" : 3853079,
+      "extra_bytes_for_gain_map" : 1818747,
+      "note" : "full-resolution RGB gain map (no -H subsampling), 6000x4000 base",
+      "ratio" : 1.8940266387197371,
+      "sdr_only_encode_bytes" : 2034332
+    }
+  },
+  "hdr" : {
+    "buffer_channels_gt_1" : 4841388,
+    "buffer_peak_linear" : 2.5,
+    "buffer_pixels_at_cap" : 103346,
+    "buffer_pixels_gt_1" : 2626048,
+    "file" : "work\/m0\/real\/hdr.tif",
+    "layout" : {
+      "alpha_info_raw" : 1,
+      "bitmap_info_raw" : 8449,
+      "bits_per_component" : 32,
+      "bits_per_pixel" : 128,
+      "colorspace" : "nil",
+      "height" : 4000,
+      "samples_per_pixel" : 4,
+      "width" : 6000
+    },
+    "readback_channels_gt_1" : 4841388,
+    "readback_fraction_pixels_at_cap" : 0.0043060833333333336,
+    "readback_fraction_pixels_gt_1" : 0.10941866666666666,
+    "readback_matches_buffer" : true,
+    "readback_min_linear" : 0,
+    "readback_nan_count" : 0,
+    "readback_peak_linear" : 2.5,
+    "readback_peak_stops" : 1.3219280948873624,
+    "readback_pixels_at_cap" : 103346,
+    "readback_pixels_gt_1" : 2626048,
+    "sha256" : "ea3d888c2f04cbf8d059de19ddf32846b15df5f2e832175f3012b3efeb9460cb",
+    "size_bytes" : 384032782,
+    "stream_determinism_2writes_identical" : true
+  },
+  "mask" : {
+    "base_linear_max" : 1,
+    "base_linear_min" : 0,
+    "coverage_luma_ge_threshold" : {
+      "0.62" : 0.16486920833333332,
+      "0.70" : 0.080492041666666667,
+      "0.80" : 0.012815583333333333,
+      "0.90" : 0.0056639166666666669,
+      "1.00" : 0.00097058333333333328
+    },
+    "end" : 0.90000000000000002,
+    "fraction_pixels_at_cap_expected" : 0.0043060833333333336,
+    "fraction_pixels_gt_1_expected" : 0.10941866666666666,
+    "luma_stats" : {
+      "max" : 1,
+      "mean" : 0.30841703002781246,
+      "min" : 0.0007739872089587152,
+      "p50" : 0.24775,
+      "p90" : 0.68264999999999998,
+      "p99" : 0.81625000000000003,
+      "p999" : 0.99995000000000001
+    },
+    "mask_one_fraction" : 0.0056639166666666669,
+    "mask_zero_fraction" : 0.83513087500000005,
+    "start" : 0.62,
+    "transition" : 0.28000000000000003
+  },
+  "recipe" : {
+    "base_tone_map" : "c1_match_v1",
+    "encoder" : {
+      "color_space" : "p3",
+      "depth" : 8,
+      "map" : "iso-rgb",
+      "quality" : 0.84999999999999998,
+      "R" : 2.5,
+      "subsample" : false,
+      "tool" : "tools\/toGainMapHDR\/bin\/toGainMapHDR"
+    },
+    "gain" : "2^(lift_stops*m), then absolute clamp to headroom_cap",
+    "headroom_cap_linear" : 2.5,
+    "headroom_cap_stops" : 1.321928,
+    "lift_stops" : 1.3999999999999999,
+    "mask_curve" : "smoothstep(t), t=clamp((luma-start)\/transition,0,1)",
+    "mask_luma" : "Rec.709 luma of linear extended Display P3",
+    "start" : 0.62,
+    "transition" : 0.28000000000000003
+  },
+  "schema" : 1,
+  "source" : {
+    "alpha_info_raw" : 0,
+    "bits_per_component" : 16,
+    "colorspace" : "kCGColorSpaceDisplayP3",
+    "depth_tag" : 16,
+    "has_alpha" : false,
+    "height" : 4000,
+    "path" : "samples\/sources\/R0003777-P3.tif",
+    "profile" : "Display P3",
+    "samples_per_pixel" : 3,
+    "sha256" : "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+    "size_bytes" : 144058400,
+    "width" : 6000
+  },
+  "task" : "M0-C real pair",
+  "timings_s" : {
+    "base_delta_16bit" : 0.25088798999786377,
+    "build_preview_tiffs" : 0.73341500759124756,
+    "decode_to_linear_float" : 0.12276995182037354,
+    "encode_full" : 1.0003929138183594,
+    "encode_full_repeat" : 0.97933900356292725,
+    "encode_preview" : 0.42873990535736084,
+    "hdr_fidelity_decode_compare" : 0.60624897480010986,
+    "mask_and_hdr" : 4.1386040449142456,
+    "readback_verify_hdr" : 1.8407989740371704,
+    "total_render_and_encode" : 16.604975938796997,
+    "verify_deliverables" : 4.4801900386810303,
+    "write_hdr_tif" : 0.35074901580810547,
+    "write_sdr_heic" : 0.48875701427459717,
+    "write_sdr_tif" : 0.11338996887207031
+  }
+}

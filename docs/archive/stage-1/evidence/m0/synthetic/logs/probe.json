@@ -1,0 +1,1108 @@
+{
+  "generatedBy" : "work\/m0\/synthetic\/probe.swift",
+  "host" : "Version 27.2 (Build 26B123)",
+  "inputs" : {
+    "authoredPeakMeasured" : 3.9980566501617432,
+    "authoredPeakRequested" : 4,
+    "baseTIFF" : {
+      "bytes" : 4719630,
+      "cgBpp" : 48,
+      "cgBps" : 16,
+      "cgColorSpace" : "kCGColorSpaceDisplayP3",
+      "colorModel" : "RGB",
+      "depth" : 16,
+      "path" : "base.tif",
+      "pixelHeight" : 768,
+      "pixelWidth" : 1024,
+      "profileName" : "Display P3",
+      "sha256" : "753c6aa0fbc9d190b73d7159fa71a57a12ce1ecaa43c387b4d927b6878fc6fef"
+    },
+    "baseTIFFDecoded8bitP3Stats" : [
+      {
+        "max" : 188,
+        "mean" : 188,
+        "min" : 188,
+        "variance" : 0
+      },
+      {
+        "max" : 188,
+        "mean" : 188,
+        "min" : 188,
+        "variance" : 0
+      },
+      {
+        "max" : 188,
+        "mean" : 188,
+        "min" : 188,
+        "variance" : 0
+      }
+    ],
+    "baseTIFFDecodedLinearP3Stats" : [
+      {
+        "max" : 0.49998557567596436,
+        "mean" : 0.49998557567596436,
+        "min" : 0.49998557567596436,
+        "variance" : -2.4796553699246715e-12
+      },
+      {
+        "max" : 0.49998557567596436,
+        "mean" : 0.49998557567596436,
+        "min" : 0.49998557567596436,
+        "variance" : -2.4796553699246715e-12
+      },
+      {
+        "max" : 0.49998557567596436,
+        "mean" : 0.49998557567596436,
+        "min" : 0.49998557567596436,
+        "variance" : -2.4796553699246715e-12
+      }
+    ],
+    "hdrTIFF" : {
+      "bytes" : 12584462,
+      "cgBpp" : 128,
+      "cgBps" : 32,
+      "cgColorSpace" : "nil",
+      "colorModel" : "RGB",
+      "depth" : 32,
+      "path" : "hdr.tif",
+      "pixelHeight" : 768,
+      "pixelWidth" : 1024,
+      "profileName" : "Display P3 Linear",
+      "sha256" : "a7976a36f23fcfcecb9edec31456978af4f1ad318ce94f74b4a89a38840688fe"
+    }
+  },
+  "runs" : [
+    {
+      "appleGainMapAux" : {
+        "present" : false
+      },
+      "basePreservationVsBaseTIFF" : {
+        "applicable" : true,
+        "diff8bitP3" : [
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          }
+        ]
+      },
+      "command" : "toGainMapHDR hdr.tif out-b-r25 -b base.tif -R 2.5 -d 8 -q 0.85 -c p3",
+      "decodedSDRBaseStats8bitP3" : [
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        }
+      ],
+      "decodeToHDR" : {
+        "alphaInfoRaw" : 6,
+        "bitsPerComponent" : 10,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 4.0029296875,
+        "colorSpaceName" : "nil",
+        "contentHeadroom" : 3.9843740463256836,
+        "decodedPeakLinearP3" : 4.0029659271240234,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileRow" : [
+          {
+            "absDiff" : 0.014114087447524071,
+            "authoredLinearP3" : 0.021943358704447746,
+            "decodedLinearP3" : 0.036057446151971817,
+            "x" : 0
+          },
+          {
+            "absDiff" : 0.0015051364898681641,
+            "authoredLinearP3" : 1.0169433355331421,
+            "decodedLinearP3" : 1.0184484720230103,
+            "x" : 256
+          },
+          {
+            "absDiff" : 0.020633935928344727,
+            "authoredLinearP3" : 2.0119433403015137,
+            "decodedLinearP3" : 2.0325772762298584,
+            "x" : 512
+          },
+          {
+            "absDiff" : 0.021224260330200195,
+            "authoredLinearP3" : 3.0069434642791748,
+            "decodedLinearP3" : 3.028167724609375,
+            "x" : 768
+          },
+          {
+            "absDiff" : 0.0049092769622802734,
+            "authoredLinearP3" : 3.9980566501617432,
+            "decodedLinearP3" : 4.0029659271240234,
+            "x" : 1023
+          }
+        ],
+        "success" : true,
+        "vsAuthoredHDR" : {
+          "maxAbsDiff" : 0.060969114303588867,
+          "meanAbsDiff" : 0.013791936894752629
+        },
+        "width" : 1024
+      },
+      "exiftool" : "exit=0\n[ExifTool]      ExifTool Version Number         : 13.55\n[System]        File Name                       : hdr.heic\n[System]        Directory                       : \/Users\/criphc\/Sites\/llm-photon\/work\/m0\/synthetic\/out-b-r25\n[System]        File Size                       : 4.2 kB\n[System]        File Modification Date\/Time     : 2026:11:02 20:51:54+08:00\n[System]        File Access Date\/Time           : 2026:11:02 20:58:05+08:00\n[System]        File Inode Change Date\/Time     : 2026:11:02 20:51:54+08:00\n[System]        File Permissions                : -rw-r--r--\n[File]          File Type                       : HEIC\n[File]          File Type Extension             : heic\n[File]          MIME Type                       : image\/heic\n[File]          Exif Byte Order                 : Big-endian (Motorola, MM)\n[File]          Image Width                     : 1024\n[File]          Image Height                    : 768\n[QuickTime]     Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)\n[QuickTime]     Minor Version                   : 0.0.0\n[QuickTime]     Compatible Brands               : mif1, tmap, miaf, MiHB, heic\n[QuickTime]     Handler Type                    : Picture\n[QuickTime]     Image Spatial Extent            : 512x512\n[QuickTime]     Image Spatial Extent            : 1024x768\n[QuickTime]     Rotation                        : Horizontal (normal)\n[QuickTime]     Image Pixel Depth               : 8 8 8\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : Unspecified\n[QuickTime]     Transfer Characteristics        : Unspecified\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : SMPTE EG 432-1\n[QuickTime]     Transfer Characteristics        : SMPTE ST 2084, ITU BT.2100 PQ\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Image Pixel Depth               : 10 10 10\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     Media Data Size                 : 2304\n[QuickTime]     Media Data Offset               : 1899\n[Meta]          Primary Item Reference          : 5\n[Meta]          Meta Image Size                 : 1024x768 0 257 1024 768 0 0 192 0 0 0 1 255 18169 128 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0\n[IFD0]          Photometric Interpretation      : RGB\n[IFD0]          Orientation                     : Horizontal (normal)\n[IFD0]          Resolution Unit                 : inches\n[ExifIFD]       Exif Image Width                : 1024\n[ExifIFD]       Exif Image Height               : 768\n[ICC-header]    Profile CMM Type                : Apple Computer Inc.\n[ICC-header]    Profile Version                 : 4.0.0\n[ICC-header]    Profile Class                   : Display Device Profile\n[ICC-header]    Color Space Data                : RGB\n[ICC-header]    Profile Connection Space        : XYZ\n[ICC-header]    Profile Date Time               : 2022:01:01 00:00:00\n[ICC-header]    Profile File Signature          : acsp\n[ICC-header]    Primary Platform                : Apple Computer Inc.\n[ICC-header]    CMM Flags                       : Not Embedded, Independent\n[ICC-header]    Device Manufacturer             : Apple Computer Inc.\n[ICC-header]    Device Model                    : \n[ICC-header]    Device Attributes               : Reflective, Glossy, Positive, Color\n[ICC-header]    Rendering Intent                : Perceptual\n[ICC-header]    Connection Space Illuminant     : 0.9642 1 0.82491\n[ICC-header]    Profile Creator                 : Apple Computer Inc.\n[ICC-header]    Profile ID                      : 0\n[ICC_Profile]   Profile Description             : Display P3\n[ICC_Profile]   Profile Copyright               : Copyright Apple Inc., 2022\n[ICC_Profile]   Media White Point               : 0.96419 1 0.82489\n[ICC_Profile]   Red Matrix Column               : 0.51512 0.2412 -0.00105\n[ICC_Profile]   Green Matrix Column             : 0.29198 0.69225 0.04189\n[ICC_Profile]   Blue Matrix Column              : 0.1571 0.06657 0.78407\n[ICC_Profile]   Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168\n[ICC_Profile]   Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)\n[Composite]     Image Size                      : 1024x768\n[Composite]     Megapixels                      : 0.786\n",
+      "file" : {
+        "bytes" : 4203,
+        "ftyp" : {
+          "boxSize" : 36,
+          "compatibleBrands" : [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand" : "heic",
+          "minorVersion" : 0
+        },
+        "sha256" : "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e"
+      },
+      "halfSizeMap" : false,
+      "headroomArg" : "2.5",
+      "heifInfo" : "exit=0\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n\nimage: 1024x768 (id=5), primary\n  tiles: 2x2, tile size: 512x512\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  alpha channel: no \n  depth channel: no\nmetadata:\n  Exif: 102 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\nnone\nMIME items:\n",
+      "heifInfoDumpBoxes" : "exit=0\nBox: ftyp ----- (File Type)\nsize: 36   (header size: 8)\nmajor brand: heic\nminor version: 0\ncompatible brands: mif1,tmap,miaf,MiHB,heic\n\nBox: meta ----- (Metadata)\nsize: 1847   (header size: 12)\n| Box: hdlr ----- (Handler Reference)\n| size: 33   (header size: 12)\n| pre_defined: 0\n| handler_type: pict\n| name: \n| \n| Box: dinf ----- (Data Information)\n| size: 36   (header size: 8)\n| | Box: dref ----- (Data Reference)\n| | size: 28   (header size: 12)\n| | | Box: url  ----- (Data Entry URL)\n| | | size: 12   (header size: 12)\n| | | location: \n| \n| Box: pitm ----- (Primary Item)\n| size: 14   (header size: 12)\n| item_ID: 5\n| \n| Box: iinf ----- (Item Information)\n| size: 266   (header size: 12)\n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 1\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 2\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 3\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 4\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 5\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 6\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 7\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 8\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 9\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 10\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 11\n| | item_protection_index: 0\n| | item_type: tmap\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 13\n| | item_protection_index: 0\n| | item_type: Exif\n| | item_name: \n| | hidden item: true\n| \n| Box: iref ----- (Item Reference)\n| size: 84   (header size: 12)\n| reference with type 'dimg' from ID: 5 to IDs: 1 2 3 4 \n| reference with type 'dimg' from ID: 10 to IDs: 6 7 8 9 \n| reference with type 'dimg' from ID: 11 to IDs: 5 10 \n| reference with type 'cdsc' from ID: 13 to IDs: 5 11 \n| \n| Box: iprp ----- (Item Properties)\n| size: 992   (header size: 8)\n| | Box: ipco ----- (Item Property Container)\n| | size: 899   (header size: 8)\n| | | index: 1\n| | | Box: colr -----\n| | | size: 548   (header size: 8)\n| | | colour_type: prof\n| | | profile size: 536\n| | | \n| | | index: 2\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 512\n| | | image height: 512\n| | | \n| | | index: 3\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 1024\n| | | image height: 768\n| | | \n| | | index: 4\n| | | Box: irot ----- (Image Rotation)\n| | | size: 9   (header size: 8)\n| | | rotation: 0 degrees (CCW)\n| | | \n| | | index: 5\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 8,8,8\n| | | \n| | | index: 6\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 2\n| | | transfer_characteristics: 2\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 7\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 12\n| | | transfer_characteristics: 16\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 8\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 10,10,10\n| | | \n| | | index: 9\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 0c 0d 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 61 72 c8 44 53 64 \n| | | \n| | | index: 10\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 02 02 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 60 84 b2 11 14 d9 \n| | \n| | Box: ipma ----- (Item Property Association)\n| | size: 85   (header size: 12)\n| | associations for item ID: 1\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 2\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 3\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 4\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 5\n| | | property index: 1 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 6\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 7\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 8\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 9\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 10\n| | | property index: 6 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 11\n| | | property index: 7 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 8 (essential: false)\n| | | property index: 4 (essential: true)\n| \n| Box: grpl ----- (Groups List)\n| size: 36   (header size: 8)\n| | Box: altr -----\n| | size: 28   (header size: 12)\n| | group id: 12\n| | entity IDs: 11 5\n| \n| Box: idat ----- (Item Data)\n| size: 166   (header size: 8)\n| number of data bytes: 158\n| \n| Box: iloc ----- (Item Location)\n| size: 208   (header size: 12)\n| item ID: 1\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2001,191 \n| item ID: 2\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2192,191 \n| item ID: 3\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2383,198 \n| item ID: 4\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2581,198 \n| item ID: 5\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 0,8 \n| item ID: 6\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2779,395 \n| item ID: 7\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3174,307 \n| item ID: 8\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3481,403 \n| item ID: 9\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3884,319 \n| item ID: 10\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 8,8 \n| item ID: 11\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 16,142 \n| item ID: 13\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 1899,102 \n\n=== Item Data ===\n\nitem ID 5 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\n\nitem ID 10 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n",
+      "isoGainMapAux" : {
+        "colorSpace" : "<CGColorSpace 0x798cc17870> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "dataDescription" : {
+          "BytesPerRow" : 1024,
+          "Height" : 768,
+          "PixelFormat" : 875704422,
+          "PixelFormatFourCC" : "420f",
+          "Width" : 1024
+        },
+        "hdrToneMap" : {
+          "alternateHeadroom" : 1.994353,
+          "baseColorIsWorkingColor" : "True",
+          "baseHeadroom" : 0,
+          "channels" : [
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version" : 1
+        },
+        "keys" : [
+          "kCGImageAuxiliaryDataInfoColorSpace",
+          "kCGImageAuxiliaryDataInfoDataDescription",
+          "kCGImageAuxiliaryDataInfoMetadata"
+        ],
+        "metadata" : {
+          "parsed" : true,
+          "tagCount" : 5,
+          "tags" : {
+            "HDRToneMap:AlternateHeadroom" : "1.994353",
+            "HDRToneMap:BaseColorIsWorkingColor" : "True",
+            "HDRToneMap:BaseHeadroom" : "0.000000",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:Version" : "1"
+          }
+        },
+        "present" : true
+      },
+      "name" : "out-b-r25",
+      "plainDecode" : {
+        "alphaInfoRaw" : 5,
+        "auxiliaryDataProperties" : "none",
+        "bitsPerComponent" : 8,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 0.501953125,
+        "colorSpaceName" : "kCGColorSpaceDisplayP3",
+        "contentHeadroom" : 1,
+        "depthProperty" : 8,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileName" : "Display P3",
+        "width" : 1024
+      },
+      "relativePath" : "out-b-r25\/hdr.heic",
+      "usesBase" : true,
+      "xxdHead" : "exit=0\n00000000: 0000 0024 6674 7970 6865 6963 0000 0000  ...$ftypheic....\n00000010: 6d69 6631 746d 6170 6d69 6166 4d69 4842  mif1tmapmiafMiHB\n00000020: 6865 6963 0000 0737 6d65 7461 0000 0000  heic...7meta....\n00000030: 0000 0021 6864 6c72 0000 0000 0000 0000  ...!hdlr........\n"
+    },
+    {
+      "appleGainMapAux" : {
+        "present" : false
+      },
+      "basePreservationVsBaseTIFF" : {
+        "applicable" : true,
+        "diff8bitP3" : [
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          }
+        ]
+      },
+      "command" : "toGainMapHDR hdr.tif out-b-r15 -b base.tif -R 1.5 -d 8 -q 0.85 -c p3",
+      "decodedSDRBaseStats8bitP3" : [
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        }
+      ],
+      "decodeToHDR" : {
+        "alphaInfoRaw" : 6,
+        "bitsPerComponent" : 10,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 4.0029296875,
+        "colorSpaceName" : "nil",
+        "contentHeadroom" : 3.9843740463256836,
+        "decodedPeakLinearP3" : 4.0029659271240234,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileRow" : [
+          {
+            "absDiff" : 0.014114087447524071,
+            "authoredLinearP3" : 0.021943358704447746,
+            "decodedLinearP3" : 0.036057446151971817,
+            "x" : 0
+          },
+          {
+            "absDiff" : 0.0015051364898681641,
+            "authoredLinearP3" : 1.0169433355331421,
+            "decodedLinearP3" : 1.0184484720230103,
+            "x" : 256
+          },
+          {
+            "absDiff" : 0.020633935928344727,
+            "authoredLinearP3" : 2.0119433403015137,
+            "decodedLinearP3" : 2.0325772762298584,
+            "x" : 512
+          },
+          {
+            "absDiff" : 0.021224021911621094,
+            "authoredLinearP3" : 3.0069434642791748,
+            "decodedLinearP3" : 3.0281674861907959,
+            "x" : 768
+          },
+          {
+            "absDiff" : 0.0049092769622802734,
+            "authoredLinearP3" : 3.9980566501617432,
+            "decodedLinearP3" : 4.0029659271240234,
+            "x" : 1023
+          }
+        ],
+        "success" : true,
+        "vsAuthoredHDR" : {
+          "maxAbsDiff" : 0.060969114303588867,
+          "meanAbsDiff" : 0.013791902122951191
+        },
+        "width" : 1024
+      },
+      "exiftool" : "exit=0\n[ExifTool]      ExifTool Version Number         : 13.55\n[System]        File Name                       : hdr.heic\n[System]        Directory                       : \/Users\/criphc\/Sites\/llm-photon\/work\/m0\/synthetic\/out-b-r15\n[System]        File Size                       : 4.2 kB\n[System]        File Modification Date\/Time     : 2026:11:02 20:51:54+08:00\n[System]        File Access Date\/Time           : 2026:11:02 20:58:07+08:00\n[System]        File Inode Change Date\/Time     : 2026:11:02 20:51:54+08:00\n[System]        File Permissions                : -rw-r--r--\n[File]          File Type                       : HEIC\n[File]          File Type Extension             : heic\n[File]          MIME Type                       : image\/heic\n[File]          Exif Byte Order                 : Big-endian (Motorola, MM)\n[File]          Image Width                     : 1024\n[File]          Image Height                    : 768\n[QuickTime]     Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)\n[QuickTime]     Minor Version                   : 0.0.0\n[QuickTime]     Compatible Brands               : mif1, tmap, miaf, MiHB, heic\n[QuickTime]     Handler Type                    : Picture\n[QuickTime]     Image Spatial Extent            : 512x512\n[QuickTime]     Image Spatial Extent            : 1024x768\n[QuickTime]     Rotation                        : Horizontal (normal)\n[QuickTime]     Image Pixel Depth               : 8 8 8\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : Unspecified\n[QuickTime]     Transfer Characteristics        : Unspecified\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : SMPTE EG 432-1\n[QuickTime]     Transfer Characteristics        : SMPTE ST 2084, ITU BT.2100 PQ\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Image Pixel Depth               : 10 10 10\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     Media Data Size                 : 2304\n[QuickTime]     Media Data Offset               : 1899\n[Meta]          Primary Item Reference          : 5\n[Meta]          Meta Image Size                 : 1024x768 0 257 1024 768 0 0 192 0 0 0 1 255 18169 128 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0\n[IFD0]          Photometric Interpretation      : RGB\n[IFD0]          Orientation                     : Horizontal (normal)\n[IFD0]          Resolution Unit                 : inches\n[ExifIFD]       Exif Image Width                : 1024\n[ExifIFD]       Exif Image Height               : 768\n[ICC-header]    Profile CMM Type                : Apple Computer Inc.\n[ICC-header]    Profile Version                 : 4.0.0\n[ICC-header]    Profile Class                   : Display Device Profile\n[ICC-header]    Color Space Data                : RGB\n[ICC-header]    Profile Connection Space        : XYZ\n[ICC-header]    Profile Date Time               : 2022:01:01 00:00:00\n[ICC-header]    Profile File Signature          : acsp\n[ICC-header]    Primary Platform                : Apple Computer Inc.\n[ICC-header]    CMM Flags                       : Not Embedded, Independent\n[ICC-header]    Device Manufacturer             : Apple Computer Inc.\n[ICC-header]    Device Model                    : \n[ICC-header]    Device Attributes               : Reflective, Glossy, Positive, Color\n[ICC-header]    Rendering Intent                : Perceptual\n[ICC-header]    Connection Space Illuminant     : 0.9642 1 0.82491\n[ICC-header]    Profile Creator                 : Apple Computer Inc.\n[ICC-header]    Profile ID                      : 0\n[ICC_Profile]   Profile Description             : Display P3\n[ICC_Profile]   Profile Copyright               : Copyright Apple Inc., 2022\n[ICC_Profile]   Media White Point               : 0.96419 1 0.82489\n[ICC_Profile]   Red Matrix Column               : 0.51512 0.2412 -0.00105\n[ICC_Profile]   Green Matrix Column             : 0.29198 0.69225 0.04189\n[ICC_Profile]   Blue Matrix Column              : 0.1571 0.06657 0.78407\n[ICC_Profile]   Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168\n[ICC_Profile]   Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)\n[Composite]     Image Size                      : 1024x768\n[Composite]     Megapixels                      : 0.786\n",
+      "file" : {
+        "bytes" : 4203,
+        "ftyp" : {
+          "boxSize" : 36,
+          "compatibleBrands" : [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand" : "heic",
+          "minorVersion" : 0
+        },
+        "sha256" : "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e"
+      },
+      "halfSizeMap" : false,
+      "headroomArg" : "1.5",
+      "heifInfo" : "exit=0\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n\nimage: 1024x768 (id=5), primary\n  tiles: 2x2, tile size: 512x512\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  alpha channel: no \n  depth channel: no\nmetadata:\n  Exif: 102 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\nnone\nMIME items:\n",
+      "heifInfoDumpBoxes" : "exit=0\nBox: ftyp ----- (File Type)\nsize: 36   (header size: 8)\nmajor brand: heic\nminor version: 0\ncompatible brands: mif1,tmap,miaf,MiHB,heic\n\nBox: meta ----- (Metadata)\nsize: 1847   (header size: 12)\n| Box: hdlr ----- (Handler Reference)\n| size: 33   (header size: 12)\n| pre_defined: 0\n| handler_type: pict\n| name: \n| \n| Box: dinf ----- (Data Information)\n| size: 36   (header size: 8)\n| | Box: dref ----- (Data Reference)\n| | size: 28   (header size: 12)\n| | | Box: url  ----- (Data Entry URL)\n| | | size: 12   (header size: 12)\n| | | location: \n| \n| Box: pitm ----- (Primary Item)\n| size: 14   (header size: 12)\n| item_ID: 5\n| \n| Box: iinf ----- (Item Information)\n| size: 266   (header size: 12)\n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 1\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 2\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 3\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 4\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 5\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 6\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 7\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 8\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 9\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 10\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 11\n| | item_protection_index: 0\n| | item_type: tmap\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 13\n| | item_protection_index: 0\n| | item_type: Exif\n| | item_name: \n| | hidden item: true\n| \n| Box: iref ----- (Item Reference)\n| size: 84   (header size: 12)\n| reference with type 'dimg' from ID: 5 to IDs: 1 2 3 4 \n| reference with type 'dimg' from ID: 10 to IDs: 6 7 8 9 \n| reference with type 'dimg' from ID: 11 to IDs: 5 10 \n| reference with type 'cdsc' from ID: 13 to IDs: 5 11 \n| \n| Box: iprp ----- (Item Properties)\n| size: 992   (header size: 8)\n| | Box: ipco ----- (Item Property Container)\n| | size: 899   (header size: 8)\n| | | index: 1\n| | | Box: colr -----\n| | | size: 548   (header size: 8)\n| | | colour_type: prof\n| | | profile size: 536\n| | | \n| | | index: 2\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 512\n| | | image height: 512\n| | | \n| | | index: 3\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 1024\n| | | image height: 768\n| | | \n| | | index: 4\n| | | Box: irot ----- (Image Rotation)\n| | | size: 9   (header size: 8)\n| | | rotation: 0 degrees (CCW)\n| | | \n| | | index: 5\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 8,8,8\n| | | \n| | | index: 6\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 2\n| | | transfer_characteristics: 2\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 7\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 12\n| | | transfer_characteristics: 16\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 8\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 10,10,10\n| | | \n| | | index: 9\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 0c 0d 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 61 72 c8 44 53 64 \n| | | \n| | | index: 10\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 02 02 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 60 84 b2 11 14 d9 \n| | \n| | Box: ipma ----- (Item Property Association)\n| | size: 85   (header size: 12)\n| | associations for item ID: 1\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 2\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 3\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 4\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 5\n| | | property index: 1 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 6\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 7\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 8\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 9\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 10\n| | | property index: 6 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 11\n| | | property index: 7 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 8 (essential: false)\n| | | property index: 4 (essential: true)\n| \n| Box: grpl ----- (Groups List)\n| size: 36   (header size: 8)\n| | Box: altr -----\n| | size: 28   (header size: 12)\n| | group id: 12\n| | entity IDs: 11 5\n| \n| Box: idat ----- (Item Data)\n| size: 166   (header size: 8)\n| number of data bytes: 158\n| \n| Box: iloc ----- (Item Location)\n| size: 208   (header size: 12)\n| item ID: 1\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2001,191 \n| item ID: 2\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2192,191 \n| item ID: 3\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2383,198 \n| item ID: 4\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2581,198 \n| item ID: 5\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 0,8 \n| item ID: 6\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2779,395 \n| item ID: 7\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3174,307 \n| item ID: 8\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3481,403 \n| item ID: 9\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3884,319 \n| item ID: 10\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 8,8 \n| item ID: 11\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 16,142 \n| item ID: 13\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 1899,102 \n\n=== Item Data ===\n\nitem ID 5 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\n\nitem ID 10 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n",
+      "isoGainMapAux" : {
+        "colorSpace" : "<CGColorSpace 0x798cc17870> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "dataDescription" : {
+          "BytesPerRow" : 1024,
+          "Height" : 768,
+          "PixelFormat" : 875704422,
+          "PixelFormatFourCC" : "420f",
+          "Width" : 1024
+        },
+        "hdrToneMap" : {
+          "alternateHeadroom" : 1.994353,
+          "baseColorIsWorkingColor" : "True",
+          "baseHeadroom" : 0,
+          "channels" : [
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version" : 1
+        },
+        "keys" : [
+          "kCGImageAuxiliaryDataInfoColorSpace",
+          "kCGImageAuxiliaryDataInfoDataDescription",
+          "kCGImageAuxiliaryDataInfoMetadata"
+        ],
+        "metadata" : {
+          "parsed" : true,
+          "tagCount" : 5,
+          "tags" : {
+            "HDRToneMap:AlternateHeadroom" : "1.994353",
+            "HDRToneMap:BaseColorIsWorkingColor" : "True",
+            "HDRToneMap:BaseHeadroom" : "0.000000",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:Version" : "1"
+          }
+        },
+        "present" : true
+      },
+      "name" : "out-b-r15",
+      "plainDecode" : {
+        "alphaInfoRaw" : 5,
+        "auxiliaryDataProperties" : "none",
+        "bitsPerComponent" : 8,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 0.501953125,
+        "colorSpaceName" : "kCGColorSpaceDisplayP3",
+        "contentHeadroom" : 1,
+        "depthProperty" : 8,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileName" : "Display P3",
+        "width" : 1024
+      },
+      "relativePath" : "out-b-r15\/hdr.heic",
+      "usesBase" : true,
+      "xxdHead" : "exit=0\n00000000: 0000 0024 6674 7970 6865 6963 0000 0000  ...$ftypheic....\n00000010: 6d69 6631 746d 6170 6d69 6166 4d69 4842  mif1tmapmiafMiHB\n00000020: 6865 6963 0000 0737 6d65 7461 0000 0000  heic...7meta....\n00000030: 0000 0021 6864 6c72 0000 0000 0000 0000  ...!hdlr........\n"
+    },
+    {
+      "appleGainMapAux" : {
+        "present" : false
+      },
+      "basePreservationVsBaseTIFF" : {
+        "applicable" : true,
+        "diff8bitP3" : [
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          }
+        ]
+      },
+      "command" : "toGainMapHDR hdr.tif out-b-r6 -b base.tif -R 6 -d 8 -q 0.85 -c p3",
+      "decodedSDRBaseStats8bitP3" : [
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        }
+      ],
+      "decodeToHDR" : {
+        "alphaInfoRaw" : 6,
+        "bitsPerComponent" : 10,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 4.0029296875,
+        "colorSpaceName" : "nil",
+        "contentHeadroom" : 3.9843740463256836,
+        "decodedPeakLinearP3" : 4.0029659271240234,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileRow" : [
+          {
+            "absDiff" : 0.014114087447524071,
+            "authoredLinearP3" : 0.021943358704447746,
+            "decodedLinearP3" : 0.036057446151971817,
+            "x" : 0
+          },
+          {
+            "absDiff" : 0.0015051364898681641,
+            "authoredLinearP3" : 1.0169433355331421,
+            "decodedLinearP3" : 1.0184484720230103,
+            "x" : 256
+          },
+          {
+            "absDiff" : 0.020633935928344727,
+            "authoredLinearP3" : 2.0119433403015137,
+            "decodedLinearP3" : 2.0325772762298584,
+            "x" : 512
+          },
+          {
+            "absDiff" : 0.021224021911621094,
+            "authoredLinearP3" : 3.0069434642791748,
+            "decodedLinearP3" : 3.0281674861907959,
+            "x" : 768
+          },
+          {
+            "absDiff" : 0.0049092769622802734,
+            "authoredLinearP3" : 3.9980566501617432,
+            "decodedLinearP3" : 4.0029659271240234,
+            "x" : 1023
+          }
+        ],
+        "success" : true,
+        "vsAuthoredHDR" : {
+          "maxAbsDiff" : 0.060969114303588867,
+          "meanAbsDiff" : 0.013791902122951191
+        },
+        "width" : 1024
+      },
+      "exiftool" : "exit=0\n[ExifTool]      ExifTool Version Number         : 13.55\n[System]        File Name                       : hdr.heic\n[System]        Directory                       : \/Users\/criphc\/Sites\/llm-photon\/work\/m0\/synthetic\/out-b-r6\n[System]        File Size                       : 4.2 kB\n[System]        File Modification Date\/Time     : 2026:11:02 20:51:54+08:00\n[System]        File Access Date\/Time           : 2026:11:02 20:58:10+08:00\n[System]        File Inode Change Date\/Time     : 2026:11:02 20:51:54+08:00\n[System]        File Permissions                : -rw-r--r--\n[File]          File Type                       : HEIC\n[File]          File Type Extension             : heic\n[File]          MIME Type                       : image\/heic\n[File]          Exif Byte Order                 : Big-endian (Motorola, MM)\n[File]          Image Width                     : 1024\n[File]          Image Height                    : 768\n[QuickTime]     Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)\n[QuickTime]     Minor Version                   : 0.0.0\n[QuickTime]     Compatible Brands               : mif1, tmap, miaf, MiHB, heic\n[QuickTime]     Handler Type                    : Picture\n[QuickTime]     Image Spatial Extent            : 512x512\n[QuickTime]     Image Spatial Extent            : 1024x768\n[QuickTime]     Rotation                        : Horizontal (normal)\n[QuickTime]     Image Pixel Depth               : 8 8 8\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : Unspecified\n[QuickTime]     Transfer Characteristics        : Unspecified\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : SMPTE EG 432-1\n[QuickTime]     Transfer Characteristics        : SMPTE ST 2084, ITU BT.2100 PQ\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Image Pixel Depth               : 10 10 10\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     Media Data Size                 : 2304\n[QuickTime]     Media Data Offset               : 1899\n[Meta]          Primary Item Reference          : 5\n[Meta]          Meta Image Size                 : 1024x768 0 257 1024 768 0 0 192 0 0 0 1 255 18169 128 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 65293 11191 64 0 191 41853 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0\n[IFD0]          Photometric Interpretation      : RGB\n[IFD0]          Orientation                     : Horizontal (normal)\n[IFD0]          Resolution Unit                 : inches\n[ExifIFD]       Exif Image Width                : 1024\n[ExifIFD]       Exif Image Height               : 768\n[ICC-header]    Profile CMM Type                : Apple Computer Inc.\n[ICC-header]    Profile Version                 : 4.0.0\n[ICC-header]    Profile Class                   : Display Device Profile\n[ICC-header]    Color Space Data                : RGB\n[ICC-header]    Profile Connection Space        : XYZ\n[ICC-header]    Profile Date Time               : 2022:01:01 00:00:00\n[ICC-header]    Profile File Signature          : acsp\n[ICC-header]    Primary Platform                : Apple Computer Inc.\n[ICC-header]    CMM Flags                       : Not Embedded, Independent\n[ICC-header]    Device Manufacturer             : Apple Computer Inc.\n[ICC-header]    Device Model                    : \n[ICC-header]    Device Attributes               : Reflective, Glossy, Positive, Color\n[ICC-header]    Rendering Intent                : Perceptual\n[ICC-header]    Connection Space Illuminant     : 0.9642 1 0.82491\n[ICC-header]    Profile Creator                 : Apple Computer Inc.\n[ICC-header]    Profile ID                      : 0\n[ICC_Profile]   Profile Description             : Display P3\n[ICC_Profile]   Profile Copyright               : Copyright Apple Inc., 2022\n[ICC_Profile]   Media White Point               : 0.96419 1 0.82489\n[ICC_Profile]   Red Matrix Column               : 0.51512 0.2412 -0.00105\n[ICC_Profile]   Green Matrix Column             : 0.29198 0.69225 0.04189\n[ICC_Profile]   Blue Matrix Column              : 0.1571 0.06657 0.78407\n[ICC_Profile]   Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168\n[ICC_Profile]   Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)\n[Composite]     Image Size                      : 1024x768\n[Composite]     Megapixels                      : 0.786\n",
+      "file" : {
+        "bytes" : 4203,
+        "ftyp" : {
+          "boxSize" : 36,
+          "compatibleBrands" : [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand" : "heic",
+          "minorVersion" : 0
+        },
+        "sha256" : "8d010ca497e2c7bb0eb35c5076dcff21047fb81f68e0057b90b29a6df21ddb5e"
+      },
+      "halfSizeMap" : false,
+      "headroomArg" : "6",
+      "heifInfo" : "exit=0\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n\nimage: 1024x768 (id=5), primary\n  tiles: 2x2, tile size: 512x512\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  alpha channel: no \n  depth channel: no\nmetadata:\n  Exif: 102 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\nnone\nMIME items:\n",
+      "heifInfoDumpBoxes" : "exit=0\nBox: ftyp ----- (File Type)\nsize: 36   (header size: 8)\nmajor brand: heic\nminor version: 0\ncompatible brands: mif1,tmap,miaf,MiHB,heic\n\nBox: meta ----- (Metadata)\nsize: 1847   (header size: 12)\n| Box: hdlr ----- (Handler Reference)\n| size: 33   (header size: 12)\n| pre_defined: 0\n| handler_type: pict\n| name: \n| \n| Box: dinf ----- (Data Information)\n| size: 36   (header size: 8)\n| | Box: dref ----- (Data Reference)\n| | size: 28   (header size: 12)\n| | | Box: url  ----- (Data Entry URL)\n| | | size: 12   (header size: 12)\n| | | location: \n| \n| Box: pitm ----- (Primary Item)\n| size: 14   (header size: 12)\n| item_ID: 5\n| \n| Box: iinf ----- (Item Information)\n| size: 266   (header size: 12)\n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 1\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 2\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 3\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 4\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 5\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 6\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 7\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 8\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 9\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 10\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 11\n| | item_protection_index: 0\n| | item_type: tmap\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 13\n| | item_protection_index: 0\n| | item_type: Exif\n| | item_name: \n| | hidden item: true\n| \n| Box: iref ----- (Item Reference)\n| size: 84   (header size: 12)\n| reference with type 'dimg' from ID: 5 to IDs: 1 2 3 4 \n| reference with type 'dimg' from ID: 10 to IDs: 6 7 8 9 \n| reference with type 'dimg' from ID: 11 to IDs: 5 10 \n| reference with type 'cdsc' from ID: 13 to IDs: 5 11 \n| \n| Box: iprp ----- (Item Properties)\n| size: 992   (header size: 8)\n| | Box: ipco ----- (Item Property Container)\n| | size: 899   (header size: 8)\n| | | index: 1\n| | | Box: colr -----\n| | | size: 548   (header size: 8)\n| | | colour_type: prof\n| | | profile size: 536\n| | | \n| | | index: 2\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 512\n| | | image height: 512\n| | | \n| | | index: 3\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 1024\n| | | image height: 768\n| | | \n| | | index: 4\n| | | Box: irot ----- (Image Rotation)\n| | | size: 9   (header size: 8)\n| | | rotation: 0 degrees (CCW)\n| | | \n| | | index: 5\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 8,8,8\n| | | \n| | | index: 6\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 2\n| | | transfer_characteristics: 2\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 7\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 12\n| | | transfer_characteristics: 16\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 8\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 10,10,10\n| | | \n| | | index: 9\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 0c 0d 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 61 72 c8 44 53 64 \n| | | \n| | | index: 10\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 02 02 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 60 84 b2 11 14 d9 \n| | \n| | Box: ipma ----- (Item Property Association)\n| | size: 85   (header size: 12)\n| | associations for item ID: 1\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 2\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 3\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 4\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 9 (essential: true)\n| | associations for item ID: 5\n| | | property index: 1 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 6\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 7\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 8\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 9\n| | | property index: 2 (essential: true)\n| | | property index: 6 (essential: true)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 10\n| | | property index: 6 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 11\n| | | property index: 7 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 8 (essential: false)\n| | | property index: 4 (essential: true)\n| \n| Box: grpl ----- (Groups List)\n| size: 36   (header size: 8)\n| | Box: altr -----\n| | size: 28   (header size: 12)\n| | group id: 12\n| | entity IDs: 11 5\n| \n| Box: idat ----- (Item Data)\n| size: 166   (header size: 8)\n| number of data bytes: 158\n| \n| Box: iloc ----- (Item Location)\n| size: 208   (header size: 12)\n| item ID: 1\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2001,191 \n| item ID: 2\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2192,191 \n| item ID: 3\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2383,198 \n| item ID: 4\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2581,198 \n| item ID: 5\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 0,8 \n| item ID: 6\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2779,395 \n| item ID: 7\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3174,307 \n| item ID: 8\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3481,403 \n| item ID: 9\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3884,319 \n| item ID: 10\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 8,8 \n| item ID: 11\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 16,142 \n| item ID: 13\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 1899,102 \n\n=== Item Data ===\n\nitem ID 5 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\n\nitem ID 10 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n",
+      "isoGainMapAux" : {
+        "colorSpace" : "<CGColorSpace 0x798cc17870> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "dataDescription" : {
+          "BytesPerRow" : 1024,
+          "Height" : 768,
+          "PixelFormat" : 875704422,
+          "PixelFormatFourCC" : "420f",
+          "Width" : 1024
+        },
+        "hdrToneMap" : {
+          "alternateHeadroom" : 1.994353,
+          "baseColorIsWorkingColor" : "True",
+          "baseHeadroom" : 0,
+          "channels" : [
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 2.994354,
+              "GainMapMin" : -3.7942070000000001,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version" : 1
+        },
+        "keys" : [
+          "kCGImageAuxiliaryDataInfoColorSpace",
+          "kCGImageAuxiliaryDataInfoDataDescription",
+          "kCGImageAuxiliaryDataInfoMetadata"
+        ],
+        "metadata" : {
+          "parsed" : true,
+          "tagCount" : 5,
+          "tags" : {
+            "HDRToneMap:AlternateHeadroom" : "1.994353",
+            "HDRToneMap:BaseColorIsWorkingColor" : "True",
+            "HDRToneMap:BaseHeadroom" : "0.000000",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMax" : "2.994354",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMin" : "-3.794207",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:Version" : "1"
+          }
+        },
+        "present" : true
+      },
+      "name" : "out-b-r6",
+      "plainDecode" : {
+        "alphaInfoRaw" : 5,
+        "auxiliaryDataProperties" : "none",
+        "bitsPerComponent" : 8,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 0.501953125,
+        "colorSpaceName" : "kCGColorSpaceDisplayP3",
+        "contentHeadroom" : 1,
+        "depthProperty" : 8,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileName" : "Display P3",
+        "width" : 1024
+      },
+      "relativePath" : "out-b-r6\/hdr.heic",
+      "usesBase" : true,
+      "xxdHead" : "exit=0\n00000000: 0000 0024 6674 7970 6865 6963 0000 0000  ...$ftypheic....\n00000010: 6d69 6631 746d 6170 6d69 6166 4d69 4842  mif1tmapmiafMiHB\n00000020: 6865 6963 0000 0737 6d65 7461 0000 0000  heic...7meta....\n00000030: 0000 0021 6864 6c72 0000 0000 0000 0000  ...!hdlr........\n"
+    },
+    {
+      "appleGainMapAux" : {
+        "present" : false
+      },
+      "basePreservationVsBaseTIFF" : {
+        "applicable" : false,
+        "reason" : "no -b: tool generated and tone-mapped its own SDR base"
+      },
+      "command" : "toGainMapHDR hdr.tif out-nob-r25 -R 2.5 -d 8 -q 0.85 -c p3",
+      "decodedSDRBaseStats8bitP3" : [
+        {
+          "max" : 255,
+          "mean" : 226.21951293945312,
+          "min" : 37,
+          "variance" : 2205.43223195678
+        },
+        {
+          "max" : 255,
+          "mean" : 226.21951293945312,
+          "min" : 37,
+          "variance" : 2205.43223195678
+        },
+        {
+          "max" : 255,
+          "mean" : 226.21951293945312,
+          "min" : 37,
+          "variance" : 2205.43223195678
+        }
+      ],
+      "decodeToHDR" : {
+        "alphaInfoRaw" : 3,
+        "bitsPerComponent" : 16,
+        "bitsPerPixel" : 64,
+        "calculatedContentHeadroom" : 3.984375,
+        "colorSpaceName" : "nil",
+        "contentHeadroom" : 3.9843740463256836,
+        "decodedPeakLinearP3" : 3.9844076633453369,
+        "hasAlpha" : true,
+        "height" : 768,
+        "profileRow" : [
+          {
+            "absDiff" : 0.00033611617982387543,
+            "authoredLinearP3" : 0.021943358704447746,
+            "decodedLinearP3" : 0.022279474884271622,
+            "x" : 0
+          },
+          {
+            "absDiff" : 0.00053274631500244141,
+            "authoredLinearP3" : 1.0169433355331421,
+            "decodedLinearP3" : 1.0164105892181396,
+            "x" : 256
+          },
+          {
+            "absDiff" : 0.0095782279968261719,
+            "authoredLinearP3" : 2.0119433403015137,
+            "decodedLinearP3" : 2.0215215682983398,
+            "x" : 512
+          },
+          {
+            "absDiff" : 0.00045156478881835938,
+            "authoredLinearP3" : 3.0069434642791748,
+            "decodedLinearP3" : 3.0064918994903564,
+            "x" : 768
+          },
+          {
+            "absDiff" : 0.01364898681640625,
+            "authoredLinearP3" : 3.9980566501617432,
+            "decodedLinearP3" : 3.9844076633453369,
+            "x" : 1023
+          }
+        ],
+        "success" : true,
+        "vsAuthoredHDR" : {
+          "maxAbsDiff" : 0.014234304428100586,
+          "meanAbsDiff" : 0.0035603505818168437
+        },
+        "width" : 1024
+      },
+      "exiftool" : "exit=0\n[ExifTool]      ExifTool Version Number         : 13.55\n[System]        File Name                       : hdr.heic\n[System]        Directory                       : \/Users\/criphc\/Sites\/llm-photon\/work\/m0\/synthetic\/out-nob-r25\n[System]        File Size                       : 5.8 kB\n[System]        File Modification Date\/Time     : 2026:11:02 20:51:55+08:00\n[System]        File Access Date\/Time           : 2026:11:02 20:58:12+08:00\n[System]        File Inode Change Date\/Time     : 2026:11:02 20:51:55+08:00\n[System]        File Permissions                : -rw-r--r--\n[File]          File Type                       : HEIC\n[File]          File Type Extension             : heic\n[File]          MIME Type                       : image\/heic\n[File]          Exif Byte Order                 : Big-endian (Motorola, MM)\n[File]          Image Width                     : 1024\n[File]          Image Height                    : 768\n[QuickTime]     Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)\n[QuickTime]     Minor Version                   : 0.0.0\n[QuickTime]     Compatible Brands               : mif1, tmap, MiHE, miaf, MiHB, heic\n[QuickTime]     Handler Type                    : Picture\n[QuickTime]     Image Spatial Extent            : 512x512\n[QuickTime]     Image Spatial Extent            : 1024x768\n[QuickTime]     Rotation                        : Horizontal (normal)\n[QuickTime]     Image Pixel Depth               : 8 8 8\n[QuickTime]     Image Pixel Depth               : 8\n[QuickTime]     Auxiliary Image Type            : urn:mpeg:hevc:2015:auxid:1\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : Unspecified\n[QuickTime]     Transfer Characteristics        : Unspecified\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : SMPTE EG 432-1\n[QuickTime]     Transfer Characteristics        : SMPTE ST 2084, ITU BT.2100 PQ\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Image Pixel Depth               : 10 10 10\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Format Range Extensions\n[QuickTime]     Gen Profile Compatibility Flags : Format Range Extensions\n[QuickTime]     Constraint Indicator Flags      : 191 200 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : Monochrome\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     Media Data Size                 : 3478\n[QuickTime]     Media Data Offset               : 2339\n[Meta]          Primary Item Reference          : 5\n[Meta]          Meta Image Size                 : 1024x768 0 257 1024 768 0 257 1024 768 0 0 192 0 0 0 1 255 18169 128 0 34 19563 128 0 255 18169 128 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 34 19563 128 0 255 18169 128 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 34 19563 128 0 255 18169 128 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0\n[IFD0]          Photometric Interpretation      : RGB\n[IFD0]          Orientation                     : Horizontal (normal)\n[IFD0]          Resolution Unit                 : inches\n[ExifIFD]       Exif Image Width                : 1024\n[ExifIFD]       Exif Image Height               : 768\n[ICC-header]    Profile CMM Type                : Apple Computer Inc.\n[ICC-header]    Profile Version                 : 4.0.0\n[ICC-header]    Profile Class                   : Display Device Profile\n[ICC-header]    Color Space Data                : RGB\n[ICC-header]    Profile Connection Space        : XYZ\n[ICC-header]    Profile Date Time               : 2022:01:01 00:00:00\n[ICC-header]    Profile File Signature          : acsp\n[ICC-header]    Primary Platform                : Apple Computer Inc.\n[ICC-header]    CMM Flags                       : Not Embedded, Independent\n[ICC-header]    Device Manufacturer             : Apple Computer Inc.\n[ICC-header]    Device Model                    : \n[ICC-header]    Device Attributes               : Reflective, Glossy, Positive, Color\n[ICC-header]    Rendering Intent                : Perceptual\n[ICC-header]    Connection Space Illuminant     : 0.9642 1 0.82491\n[ICC-header]    Profile Creator                 : Apple Computer Inc.\n[ICC-header]    Profile ID                      : 0\n[ICC_Profile]   Profile Description             : Display P3\n[ICC_Profile]   Profile Copyright               : Copyright Apple Inc., 2022\n[ICC_Profile]   Media White Point               : 0.96419 1 0.82489\n[ICC_Profile]   Red Matrix Column               : 0.51512 0.2412 -0.00105\n[ICC_Profile]   Green Matrix Column             : 0.29198 0.69225 0.04189\n[ICC_Profile]   Blue Matrix Column              : 0.1571 0.06657 0.78407\n[ICC_Profile]   Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168\n[ICC_Profile]   Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)\n[Composite]     Image Size                      : 1024x768\n[Composite]     Megapixels                      : 0.786\n",
+      "file" : {
+        "bytes" : 5817,
+        "ftyp" : {
+          "boxSize" : 40,
+          "compatibleBrands" : [
+            "mif1",
+            "tmap",
+            "MiHE",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand" : "heic",
+          "minorVersion" : 0
+        },
+        "sha256" : "58e0113805cbc89fbc4fab0f9ecc1a7bca772e9a649bee421413346e2805149f"
+      },
+      "halfSizeMap" : false,
+      "headroomArg" : "2.5",
+      "heifInfo" : "exit=0\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, MiHE, miaf, MiHB, heic\n\nimage: 1024x768 (id=5), primary\n  tiles: 2x2, tile size: 512x512\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  alpha channel: yes \n  depth channel: no\nmetadata:\n  Exif: 102 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\nnone\nMIME items:\n",
+      "heifInfoDumpBoxes" : "exit=0\nBox: ftyp ----- (File Type)\nsize: 40   (header size: 8)\nmajor brand: heic\nminor version: 0\ncompatible brands: mif1,tmap,MiHE,miaf,MiHB,heic\n\nBox: meta ----- (Metadata)\nsize: 2283   (header size: 12)\n| Box: hdlr ----- (Handler Reference)\n| size: 33   (header size: 12)\n| pre_defined: 0\n| handler_type: pict\n| name: \n| \n| Box: dinf ----- (Data Information)\n| size: 36   (header size: 8)\n| | Box: dref ----- (Data Reference)\n| | size: 28   (header size: 12)\n| | | Box: url  ----- (Data Entry URL)\n| | | size: 12   (header size: 12)\n| | | location: \n| \n| Box: pitm ----- (Primary Item)\n| size: 14   (header size: 12)\n| item_ID: 5\n| \n| Box: iinf ----- (Item Information)\n| size: 371   (header size: 12)\n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 1\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 2\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 3\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 4\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 5\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 6\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 7\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 8\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 9\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 10\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 11\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 12\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 13\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 14\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 15\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 16\n| | item_protection_index: 0\n| | item_type: tmap\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 18\n| | item_protection_index: 0\n| | item_type: Exif\n| | item_name: \n| | hidden item: true\n| \n| Box: iref ----- (Item Reference)\n| size: 120   (header size: 12)\n| reference with type 'dimg' from ID: 5 to IDs: 1 2 3 4 \n| reference with type 'dimg' from ID: 10 to IDs: 6 7 8 9 \n| reference with type 'auxl' from ID: 10 to IDs: 5 16 \n| reference with type 'dimg' from ID: 15 to IDs: 11 12 13 14 \n| reference with type 'dimg' from ID: 16 to IDs: 5 15 \n| reference with type 'cdsc' from ID: 18 to IDs: 5 16 \n| \n| Box: iprp ----- (Item Properties)\n| size: 1199   (header size: 8)\n| | Box: ipco ----- (Item Property Container)\n| | size: 1079   (header size: 8)\n| | | index: 1\n| | | Box: colr -----\n| | | size: 548   (header size: 8)\n| | | colour_type: prof\n| | | profile size: 536\n| | | \n| | | index: 2\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 512\n| | | image height: 512\n| | | \n| | | index: 3\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 1024\n| | | image height: 768\n| | | \n| | | index: 4\n| | | Box: irot ----- (Image Rotation)\n| | | size: 9   (header size: 8)\n| | | rotation: 0 degrees (CCW)\n| | | \n| | | index: 5\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 8,8,8\n| | | \n| | | index: 6\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 14   (header size: 12)\n| | | bits_per_channel: 8\n| | | \n| | | index: 7\n| | | Box: auxC ----- (Image Properties for Auxiliary Images)\n| | | size: 55   (header size: 12)\n| | | aux type: urn:mpeg:hevc:2015:auxid:1\n| | | aux subtypes: 00 00 00 0c 00 00 00 08 4e 01 a5 04 00 01 fe 40 \n| | | \n| | | index: 8\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 2\n| | | transfer_characteristics: 2\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 9\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 12\n| | | transfer_characteristics: 16\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 10\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 10,10,10\n| | | \n| | | index: 11\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 0c 0d 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 61 72 c8 44 53 64 \n| | | \n| | | index: 12\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 111   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 4\n| | | general_profile_compatibility_flags: 0000.1000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10111111 11001000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: monochrome\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 04 08 00 00 03 00 bf c8 00 00 03 00 00 5a 17 02 40 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 04 08 00 00 03 00 bf c8 00 00 03 00 00 5a c0 10 08 02 01 62 05 ee 45 95 4d c0 80 80 80 20 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 61 72 c8 44 53 64 \n| | | \n| | | index: 13\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 02 02 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 60 84 b2 11 14 d9 \n| | \n| | Box: ipma ----- (Item Property Association)\n| | size: 112   (header size: 12)\n| | associations for item ID: 1\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 11 (essential: true)\n| | associations for item ID: 2\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 11 (essential: true)\n| | associations for item ID: 3\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 11 (essential: true)\n| | associations for item ID: 4\n| | | property index: 2 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 11 (essential: true)\n| | associations for item ID: 5\n| | | property index: 1 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 6\n| | | property index: 2 (essential: true)\n| | | property index: 12 (essential: true)\n| | associations for item ID: 7\n| | | property index: 2 (essential: true)\n| | | property index: 12 (essential: true)\n| | associations for item ID: 8\n| | | property index: 2 (essential: true)\n| | | property index: 12 (essential: true)\n| | associations for item ID: 9\n| | | property index: 2 (essential: true)\n| | | property index: 12 (essential: true)\n| | associations for item ID: 10\n| | | property index: 3 (essential: false)\n| | | property index: 6 (essential: false)\n| | | property index: 7 (essential: true)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 11\n| | | property index: 2 (essential: true)\n| | | property index: 8 (essential: true)\n| | | property index: 13 (essential: true)\n| | associations for item ID: 12\n| | | property index: 2 (essential: true)\n| | | property index: 8 (essential: true)\n| | | property index: 13 (essential: true)\n| | associations for item ID: 13\n| | | property index: 2 (essential: true)\n| | | property index: 8 (essential: true)\n| | | property index: 13 (essential: true)\n| | associations for item ID: 14\n| | | property index: 2 (essential: true)\n| | | property index: 8 (essential: true)\n| | | property index: 13 (essential: true)\n| | associations for item ID: 15\n| | | property index: 8 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 5 (essential: false)\n| | | property index: 4 (essential: true)\n| | associations for item ID: 16\n| | | property index: 9 (essential: true)\n| | | property index: 3 (essential: false)\n| | | property index: 10 (essential: false)\n| | | property index: 4 (essential: true)\n| \n| Box: grpl ----- (Groups List)\n| size: 36   (header size: 8)\n| | Box: altr -----\n| | size: 28   (header size: 12)\n| | group id: 17\n| | entity IDs: 16 5\n| \n| Box: idat ----- (Item Data)\n| size: 174   (header size: 8)\n| number of data bytes: 166\n| \n| Box: iloc ----- (Item Location)\n| size: 288   (header size: 12)\n| item ID: 1\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2441,352 \n| item ID: 2\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2793,229 \n| item ID: 3\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3022,353 \n| item ID: 4\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3375,225 \n| item ID: 5\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 0,8 \n| item ID: 6\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3600,155 \n| item ID: 7\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3755,155 \n| item ID: 8\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 3910,163 \n| item ID: 9\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 4073,163 \n| item ID: 10\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 8,8 \n| item ID: 11\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 4236,393 \n| item ID: 12\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 4629,387 \n| item ID: 13\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 5016,403 \n| item ID: 14\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 5419,398 \n| item ID: 15\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 16,8 \n| item ID: 16\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 24,142 \n| item ID: 18\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2339,102 \n\n=== Item Data ===\n\nitem ID 5 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\n\nitem ID 10 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\n\nitem ID 15 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, MiHE, miaf, MiHB, heic\n",
+      "isoGainMapAux" : {
+        "colorSpace" : "<CGColorSpace 0x798cc17870> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3; SMPTE ST 2084 PQ)",
+        "dataDescription" : {
+          "BytesPerRow" : 1024,
+          "Height" : 768,
+          "PixelFormat" : 875704422,
+          "PixelFormatFourCC" : "420f",
+          "Width" : 1024
+        },
+        "hdrToneMap" : {
+          "alternateHeadroom" : 1.994353,
+          "baseColorIsWorkingColor" : "True",
+          "baseHeadroom" : 0,
+          "channels" : [
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 1.994353,
+              "GainMapMin" : 0.267957,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 1.994353,
+              "GainMapMin" : 0.267957,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 1.994353,
+              "GainMapMin" : 0.267957,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version" : 1
+        },
+        "keys" : [
+          "kCGImageAuxiliaryDataInfoColorSpace",
+          "kCGImageAuxiliaryDataInfoDataDescription",
+          "kCGImageAuxiliaryDataInfoMetadata"
+        ],
+        "metadata" : {
+          "parsed" : true,
+          "tagCount" : 5,
+          "tags" : {
+            "HDRToneMap:AlternateHeadroom" : "1.994353",
+            "HDRToneMap:BaseColorIsWorkingColor" : "True",
+            "HDRToneMap:BaseHeadroom" : "0.000000",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMax" : "1.994353",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMin" : "0.267957",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMax" : "1.994353",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMin" : "0.267957",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMax" : "1.994353",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMin" : "0.267957",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:Version" : "1"
+          }
+        },
+        "present" : true
+      },
+      "name" : "out-nob-r25",
+      "plainDecode" : {
+        "alphaInfoRaw" : 3,
+        "auxiliaryDataProperties" : "none",
+        "bitsPerComponent" : 8,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 1,
+        "colorSpaceName" : "kCGColorSpaceDisplayP3",
+        "contentHeadroom" : 1,
+        "depthProperty" : 8,
+        "hasAlpha" : true,
+        "height" : 768,
+        "profileName" : "Display P3",
+        "width" : 1024
+      },
+      "relativePath" : "out-nob-r25\/hdr.heic",
+      "usesBase" : false,
+      "xxdHead" : "exit=0\n00000000: 0000 0028 6674 7970 6865 6963 0000 0000  ...(ftypheic....\n00000010: 6d69 6631 746d 6170 4d69 4845 6d69 6166  mif1tmapMiHEmiaf\n00000020: 4d69 4842 6865 6963 0000 08eb 6d65 7461  MiHBheic....meta\n00000030: 0000 0000 0000 0021 6864 6c72 0000 0000  .......!hdlr....\n"
+    },
+    {
+      "appleGainMapAux" : {
+        "present" : false
+      },
+      "basePreservationVsBaseTIFF" : {
+        "applicable" : true,
+        "diff8bitP3" : [
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          },
+          {
+            "fractionDiffering" : 0,
+            "maxAbsDiff" : 0,
+            "meanAbsDiff" : 0,
+            "pixelsDiffering" : 0
+          }
+        ]
+      },
+      "command" : "toGainMapHDR hdr.tif out-b-r25-H -b base.tif -R 2.5 -d 8 -q 0.85 -c p3 -H",
+      "decodedSDRBaseStats8bitP3" : [
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        },
+        {
+          "max" : 188,
+          "mean" : 188,
+          "min" : 188,
+          "variance" : 0
+        }
+      ],
+      "decodeToHDR" : {
+        "alphaInfoRaw" : 6,
+        "bitsPerComponent" : 10,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 2.013671875,
+        "colorSpaceName" : "nil",
+        "contentHeadroom" : 4.9261140823364258,
+        "decodedPeakLinearP3" : 2.0141332149505615,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileRow" : [
+          {
+            "absDiff" : 0.48149469681084156,
+            "authoredLinearP3" : 0.021943358704447746,
+            "decodedLinearP3" : 0.50343805551528931,
+            "x" : 0
+          },
+          {
+            "absDiff" : 0.0015051364898681641,
+            "authoredLinearP3" : 1.0169433355331421,
+            "decodedLinearP3" : 1.0184484720230103,
+            "x" : 256
+          },
+          {
+            "absDiff" : 0.0021898746490478516,
+            "authoredLinearP3" : 2.0119433403015137,
+            "decodedLinearP3" : 2.0141332149505615,
+            "x" : 512
+          },
+          {
+            "absDiff" : 0.99281024932861328,
+            "authoredLinearP3" : 3.0069434642791748,
+            "decodedLinearP3" : 2.0141332149505615,
+            "x" : 768
+          },
+          {
+            "absDiff" : 2.142620325088501,
+            "authoredLinearP3" : 3.9980566501617432,
+            "decodedLinearP3" : 1.8554363250732422,
+            "x" : 1023
+          }
+        ],
+        "success" : true,
+        "vsAuthoredHDR" : {
+          "maxAbsDiff" : 2.2576146125793457,
+          "meanAbsDiff" : 0.52809167825701786
+        },
+        "width" : 1024
+      },
+      "exiftool" : "exit=0\n[ExifTool]      ExifTool Version Number         : 13.55\n[System]        File Name                       : hdr.heic\n[System]        Directory                       : \/Users\/criphc\/Sites\/llm-photon\/work\/m0\/synthetic\/out-b-r25-H\n[System]        File Size                       : 3.1 kB\n[System]        File Modification Date\/Time     : 2026:11:02 20:51:55+08:00\n[System]        File Access Date\/Time           : 2026:11:02 20:58:15+08:00\n[System]        File Inode Change Date\/Time     : 2026:11:02 20:51:55+08:00\n[System]        File Permissions                : -rw-r--r--\n[File]          File Type                       : HEIC\n[File]          File Type Extension             : heic\n[File]          MIME Type                       : image\/heic\n[File]          Exif Byte Order                 : Big-endian (Motorola, MM)\n[File]          Image Width                     : 1024\n[File]          Image Height                    : 768\n[QuickTime]     Major Brand                     : High Efficiency Image Format HEVC still image (.HEIC)\n[QuickTime]     Minor Version                   : 0.0.0\n[QuickTime]     Compatible Brands               : mif1, tmap, miaf, MiHB, heic\n[QuickTime]     Handler Type                    : Picture\n[QuickTime]     Max Content Light Level         : 203\n[QuickTime]     Max Pic Average Light Level     : 64\n[QuickTime]     Image Spatial Extent            : 512x512\n[QuickTime]     Image Spatial Extent            : 1024x768\n[QuickTime]     Rotation                        : Horizontal (normal)\n[QuickTime]     Image Pixel Depth               : 8 8 8\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : Unspecified\n[QuickTime]     Transfer Characteristics        : Unspecified\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     Image Spatial Extent            : 512x384\n[QuickTime]     Color Profiles                  : nclx\n[QuickTime]     Color Primaries                 : SMPTE EG 432-1\n[QuickTime]     Transfer Characteristics        : sRGB or sYCC\n[QuickTime]     Matrix Coefficients             : BT.601\n[QuickTime]     Video Full Range Flag           : Full\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 90 (level 3.0)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     HEVC Configuration Version      : 1\n[QuickTime]     General Profile Space           : Conforming\n[QuickTime]     General Tier Flag               : Main Tier\n[QuickTime]     General Profile IDC             : Main Still Picture\n[QuickTime]     Gen Profile Compatibility Flags : Main Still Picture, Main 10, Main\n[QuickTime]     Constraint Indicator Flags      : 176 0 0 0 0 0\n[QuickTime]     General Level IDC               : 63 (level 2.1)\n[QuickTime]     Min Spatial Segmentation IDC    : 0\n[QuickTime]     Parallelism Type                : 0\n[QuickTime]     Chroma Format                   : 4:2:0\n[QuickTime]     Bit Depth Luma                  : 8\n[QuickTime]     Bit Depth Chroma                : 8\n[QuickTime]     Average Frame Rate              : 0\n[QuickTime]     Constant Frame Rate             : Unknown\n[QuickTime]     Num Temporal Layers             : 1\n[QuickTime]     Temporal ID Nested              : No\n[QuickTime]     Media Data Size                 : 1335\n[QuickTime]     Media Data Offset               : 1720\n[Meta]          Primary Item Reference          : 5\n[Meta]          Meta Image Size                 : 1024x768 0 0 192 0 0 0 1 147 14995 64 0 0 0 0 1 127 62579 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 0 0 0 1 127 62579 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0 0 0 0 1 127 62579 64 0 0 1 0 1 0 10737 16384 0 0 10737 16384 0\n[IFD0]          Photometric Interpretation      : RGB\n[IFD0]          Orientation                     : Horizontal (normal)\n[IFD0]          Resolution Unit                 : inches\n[ICC-header]    Profile CMM Type                : Apple Computer Inc.\n[ICC-header]    Profile Version                 : 4.0.0\n[ICC-header]    Profile Class                   : Display Device Profile\n[ICC-header]    Color Space Data                : RGB\n[ICC-header]    Profile Connection Space        : XYZ\n[ICC-header]    Profile Date Time               : 2022:01:01 00:00:00\n[ICC-header]    Profile File Signature          : acsp\n[ICC-header]    Primary Platform                : Apple Computer Inc.\n[ICC-header]    CMM Flags                       : Not Embedded, Independent\n[ICC-header]    Device Manufacturer             : Apple Computer Inc.\n[ICC-header]    Device Model                    : \n[ICC-header]    Device Attributes               : Reflective, Glossy, Positive, Color\n[ICC-header]    Rendering Intent                : Perceptual\n[ICC-header]    Connection Space Illuminant     : 0.9642 1 0.82491\n[ICC-header]    Profile Creator                 : Apple Computer Inc.\n[ICC-header]    Profile ID                      : 0\n[ICC_Profile]   Profile Description             : Display P3\n[ICC_Profile]   Profile Copyright               : Copyright Apple Inc., 2022\n[ICC_Profile]   Media White Point               : 0.96419 1 0.82489\n[ICC_Profile]   Red Matrix Column               : 0.51512 0.2412 -0.00105\n[ICC_Profile]   Green Matrix Column             : 0.29198 0.69225 0.04189\n[ICC_Profile]   Blue Matrix Column              : 0.1571 0.06657 0.78407\n[ICC_Profile]   Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Chromatic Adaptation            : 1.04788 0.02292 -0.0502 0.02959 0.99048 -0.01706 -0.00923 0.01508 0.75168\n[ICC_Profile]   Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)\n[ICC_Profile]   Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)\n[Composite]     Image Size                      : 1024x768\n[Composite]     Megapixels                      : 0.786\n",
+      "file" : {
+        "bytes" : 3055,
+        "ftyp" : {
+          "boxSize" : 36,
+          "compatibleBrands" : [
+            "mif1",
+            "tmap",
+            "miaf",
+            "MiHB",
+            "heic"
+          ],
+          "majorBrand" : "heic",
+          "minorVersion" : 0
+        },
+        "sha256" : "adbb1a14d7ec557c740ee9ad1ab868f15b7dd1f3b21bacb57d0d5f0c64ffb6c5"
+      },
+      "halfSizeMap" : true,
+      "headroomArg" : "2.5",
+      "heifInfo" : "exit=0\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n\nimage: 1024x768 (id=5), primary\n  tiles: 2x2, tile size: 512x512\n  colorspace: YCbCr, 4:2:0\n  bit depth: 8\n  color profile: prof\n  content light level: MaxCLL=203 MaxFALL=64\n  alpha channel: no \n  depth channel: no\nmetadata:\n  Exif: 60 bytes\ntransformations:\n  angle (ccw): 0\nregion annotations:\n  none\ntext items:\n  none\nproperties:\n  content light level (clli):\n    max content light level: 203\n    max pic average light level: 64\nMIME items:\n",
+      "heifInfoDumpBoxes" : "exit=0\nBox: ftyp ----- (File Type)\nsize: 36   (header size: 8)\nmajor brand: heic\nminor version: 0\ncompatible brands: mif1,tmap,miaf,MiHB,heic\n\nBox: meta ----- (Metadata)\nsize: 1668   (header size: 12)\n| Box: hdlr ----- (Handler Reference)\n| size: 33   (header size: 12)\n| pre_defined: 0\n| handler_type: pict\n| name: \n| \n| Box: dinf ----- (Data Information)\n| size: 36   (header size: 8)\n| | Box: dref ----- (Data Reference)\n| | size: 28   (header size: 12)\n| | | Box: url  ----- (Data Entry URL)\n| | | size: 12   (header size: 12)\n| | | location: \n| \n| Box: pitm ----- (Primary Item)\n| size: 14   (header size: 12)\n| item_ID: 5\n| \n| Box: iinf ----- (Item Information)\n| size: 182   (header size: 12)\n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 1\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 2\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 3\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 4\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 5\n| | item_protection_index: 0\n| | item_type: grid\n| | item_name: \n| | hidden item: false\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 6\n| | item_protection_index: 0\n| | item_type: Exif\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 7\n| | item_protection_index: 0\n| | item_type: hvc1\n| | item_name: \n| | hidden item: true\n| | \n| | Box: infe ----- (Item Info Entry)\n| | size: 21   (header size: 12)\n| | item_ID: 8\n| | item_protection_index: 0\n| | item_type: tmap\n| | item_name: \n| | hidden item: false\n| \n| Box: iref ----- (Item Reference)\n| size: 64   (header size: 12)\n| reference with type 'dimg' from ID: 5 to IDs: 1 2 3 4 \n| reference with type 'cdsc' from ID: 6 to IDs: 5 8 \n| reference with type 'dimg' from ID: 8 to IDs: 5 7 \n| \n| Box: iprp ----- (Item Properties)\n| size: 989   (header size: 8)\n| | Box: ipco ----- (Item Property Container)\n| | size: 914   (header size: 8)\n| | | index: 1\n| | | Box: colr -----\n| | | size: 548   (header size: 8)\n| | | colour_type: prof\n| | | profile size: 536\n| | | \n| | | index: 2\n| | | Box: clli ----- (Content Light Level Information)\n| | | size: 12   (header size: 8)\n| | | max_content_light_level: 203\n| | | max_pic_average_light_level: 64\n| | | \n| | | index: 3\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 512\n| | | image height: 512\n| | | \n| | | index: 4\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 1024\n| | | image height: 768\n| | | \n| | | index: 5\n| | | Box: irot ----- (Image Rotation)\n| | | size: 9   (header size: 8)\n| | | rotation: 0 degrees (CCW)\n| | | \n| | | index: 6\n| | | Box: pixi ----- (Pixel Information)\n| | | size: 16   (header size: 12)\n| | | bits_per_channel: 8,8,8\n| | | \n| | | index: 7\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 2\n| | | transfer_characteristics: 2\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 8\n| | | Box: ispe ----- (Image Spatial Extents)\n| | | size: 20   (header size: 12)\n| | | image width: 512\n| | | image height: 384\n| | | \n| | | index: 9\n| | | Box: colr -----\n| | | size: 19   (header size: 8)\n| | | colour_type: nclx\n| | | colour_primaries: 12\n| | | transfer_characteristics: 13\n| | | matrix_coefficients: 6\n| | | full_range_flag: 1\n| | | \n| | | index: 10\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 112   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 90\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 02 02 06 00 80 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 61 72 c8 44 53 64 \n| | | \n| | | index: 11\n| | | Box: hvcC ----- (HEVC Configuration Item)\n| | | size: 111   (header size: 8)\n| | | configuration_version: 1\n| | | general_profile_space: 0\n| | | general_tier_flag: 0\n| | | general_profile_idc: 3\n| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 \n| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 \n| | | general_level_idc: 63\n| | | min_spatial_segmentation_idc: 0\n| | | parallelism_type: 0\n| | | chroma_format: 4:2:0\n| | | bit_depth_luma: 8\n| | | bit_depth_chroma: 8\n| | | avg_frame_rate: 0\n| | | constant_frame_rate: 0\n| | | num_temporal_layers: 1\n| | | temporal_id_nested: 0\n| | | length_size: 4\n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 32\n| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 3f 70 24 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 33\n| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 3f a0 04 02 01 81 62 1e e4 59 54 dc 08 08 18 02 \n| | | <array>\n| | | | array_completeness: 0\n| | | | NAL_unit_type: 34\n| | | | 44 01 c0 60 84 b2 11 14 d9 \n| | \n| | Box: ipma ----- (Item Property Association)\n| | size: 67   (header size: 12)\n| | associations for item ID: 1\n| | | property index: 3 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 2 (essential: false)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 2\n| | | property index: 3 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 2 (essential: false)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 3\n| | | property index: 3 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 2 (essential: false)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 4\n| | | property index: 3 (essential: true)\n| | | property index: 1 (essential: true)\n| | | property index: 2 (essential: false)\n| | | property index: 10 (essential: true)\n| | associations for item ID: 5\n| | | property index: 1 (essential: true)\n| | | property index: 2 (essential: false)\n| | | property index: 4 (essential: false)\n| | | property index: 6 (essential: false)\n| | | property index: 5 (essential: true)\n| | associations for item ID: 7\n| | | property index: 7 (essential: true)\n| | | property index: 8 (essential: false)\n| | | property index: 6 (essential: false)\n| | | property index: 11 (essential: true)\n| | | property index: 5 (essential: true)\n| | associations for item ID: 8\n| | | property index: 9 (essential: true)\n| | | property index: 4 (essential: false)\n| | | property index: 6 (essential: false)\n| | | property index: 5 (essential: true)\n| \n| Box: grpl ----- (Groups List)\n| size: 36   (header size: 8)\n| | Box: altr -----\n| | size: 28   (header size: 12)\n| | group id: 9\n| | entity IDs: 8 5\n| \n| Box: idat ----- (Item Data)\n| size: 158   (header size: 8)\n| number of data bytes: 150\n| \n| Box: iloc ----- (Item Location)\n| size: 144   (header size: 12)\n| item ID: 1\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 1780,191 \n| item ID: 2\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 1971,191 \n| item ID: 3\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2162,198 \n| item ID: 4\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2360,198 \n| item ID: 5\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 0,8 \n| item ID: 6\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 1720,60 \n| item ID: 7\n|   construction method: 0\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 2558,497 \n| item ID: 8\n|   construction method: 1\n|   data_reference_index: 0\n|   base_offset: 0\n|   extents: 8,142 \n\n=== Item Data ===\n\nitem ID 5 (grid):\n  rows: 2\n  columns: 2\n  output width: 1024\n  output height: 768\nMIME type: image\/heic\nmain brand: heic\ncompatible brands: mif1, tmap, miaf, MiHB, heic\n",
+      "isoGainMapAux" : {
+        "colorSpace" : "<CGColorSpace 0x798a935a40> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3)",
+        "dataDescription" : {
+          "BytesPerRow" : 512,
+          "Height" : 384,
+          "PixelFormat" : 875704422,
+          "PixelFormatFourCC" : "420f",
+          "Width" : 512
+        },
+        "hdrToneMap" : {
+          "alternateHeadroom" : 2.3004500000000001,
+          "baseColorIsWorkingColor" : "True",
+          "baseHeadroom" : 0,
+          "channels" : [
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 1.999295,
+              "GainMapMin" : 0,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 1.999295,
+              "GainMapMin" : 0,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:"
+            },
+            {
+              "AlternateOffset" : 1.0000000000000001e-05,
+              "BaseOffset" : 1.0000000000000001e-05,
+              "gainMapMax" : 1.999295,
+              "GainMapMin" : 0,
+              "Gamma" : 1,
+              "index" : "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:"
+            }
+          ],
+          "version" : 1
+        },
+        "keys" : [
+          "kCGImageAuxiliaryDataInfoColorSpace",
+          "kCGImageAuxiliaryDataInfoDataDescription",
+          "kCGImageAuxiliaryDataInfoMetadata"
+        ],
+        "metadata" : {
+          "parsed" : true,
+          "tagCount" : 5,
+          "tags" : {
+            "HDRToneMap:AlternateHeadroom" : "2.300450",
+            "HDRToneMap:BaseColorIsWorkingColor" : "True",
+            "HDRToneMap:BaseHeadroom" : "0.000000",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMax" : "1.999295",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:GainMapMin" : "0.000000",
+            "HDRToneMap:ChannelMetadata[0].HDRToneMap:[0].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMax" : "1.999295",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:GainMapMin" : "0.000000",
+            "HDRToneMap:ChannelMetadata[1].HDRToneMap:[1].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:AlternateOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:BaseOffset" : "0.000010",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMax" : "1.999295",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:GainMapMin" : "0.000000",
+            "HDRToneMap:ChannelMetadata[2].HDRToneMap:[2].HDRToneMap:Gamma" : "1.000000",
+            "HDRToneMap:Version" : "1"
+          }
+        },
+        "present" : true
+      },
+      "name" : "out-b-r25-H",
+      "plainDecode" : {
+        "alphaInfoRaw" : 5,
+        "auxiliaryDataProperties" : "none",
+        "bitsPerComponent" : 8,
+        "bitsPerPixel" : 32,
+        "calculatedContentHeadroom" : 0.501953125,
+        "colorSpaceName" : "kCGColorSpaceDisplayP3",
+        "contentHeadroom" : 1,
+        "depthProperty" : 8,
+        "hasAlpha" : false,
+        "height" : 768,
+        "profileName" : "Display P3",
+        "width" : 1024
+      },
+      "relativePath" : "out-b-r25-H\/hdr.heic",
+      "usesBase" : true,
+      "xxdHead" : "exit=0\n00000000: 0000 0024 6674 7970 6865 6963 0000 0000  ...$ftypheic....\n00000010: 6d69 6631 746d 6170 6d69 6166 4d69 4842  mif1tmapmiafMiHB\n00000020: 6865 6963 0000 0684 6d65 7461 0000 0000  heic....meta....\n00000030: 0000 0021 6864 6c72 0000 0000 0000 0000  ...!hdlr........\n"
+    }
+  ]
+}

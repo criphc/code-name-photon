@@ -1,0 +1,45 @@
+{
+  "item": {
+    "hasRecipe": true,
+    "height": 4000,
+    "id": "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+    "name": "R0003777-P3.tif",
+    "path": "/Users/criphc/Sites/llm-photon/samples/sources/R0003777-P3.tif",
+    "previewReady": true,
+    "state": "recipe_received",
+    "width": 6000
+  },
+  "recipe": {
+    "base": {
+      "profile": "DisplayP3",
+      "tone_map": "c1_match_v1"
+    },
+    "created": "2026-11-03T11:45:38+08:00",
+    "encoder": {
+      "depth": 8,
+      "map": "iso-rgb",
+      "quality": 0.85,
+      "subsample": false,
+      "tool": "toGainMapHDR"
+    },
+    "hdr": {
+      "headroom_cap": 2.5,
+      "lift_stops": 2.015059471130371,
+      "start": 0.19711047410964966,
+      "transition": 1
+    },
+    "schema": 0,
+    "source": {
+      "height": 4000,
+      "path": "/Users/criphc/Sites/llm-photon/samples/sources/R0003777-P3.tif",
+      "sha256": "bd486ca6e0a26734feba094190aec098d77c9a0e23a66c0cc641086f03916116",
+      "width": 6000
+    },
+    "versions": {
+      "encoder": "5dba4e2",
+      "recipe": 0,
+      "tone_map": 1
+    }
+  },
+  "renderKey": "0bb774682c9d178c852f085b3badf2813397485c422dc50e79efc3e0be5fb747"
+}

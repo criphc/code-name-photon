@@ -1,0 +1,526 @@
+Box: ftyp ----- (File Type)
+size: 40   (header size: 8)
+major brand: heic
+minor version: 0
+compatible brands: mif1,tmap,MiHE,miaf,MiHB,heic
+
+Box: meta ----- (Metadata)
+size: 2283   (header size: 12)
+| Box: hdlr ----- (Handler Reference)
+| size: 33   (header size: 12)
+| pre_defined: 0
+| handler_type: pict
+| name: 
+| 
+| Box: dinf ----- (Data Information)
+| size: 36   (header size: 8)
+| | Box: dref ----- (Data Reference)
+| | size: 28   (header size: 12)
+| | | Box: url  ----- (Data Entry URL)
+| | | size: 12   (header size: 12)
+| | | location: 
+| 
+| Box: pitm ----- (Primary Item)
+| size: 14   (header size: 12)
+| item_ID: 5
+| 
+| Box: iinf ----- (Item Information)
+| size: 371   (header size: 12)
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 1
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 2
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 3
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 4
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 5
+| | item_protection_index: 0
+| | item_type: grid
+| | item_name: 
+| | hidden item: false
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 6
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 7
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 8
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 9
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 10
+| | item_protection_index: 0
+| | item_type: grid
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 11
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 12
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 13
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 14
+| | item_protection_index: 0
+| | item_type: hvc1
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 15
+| | item_protection_index: 0
+| | item_type: grid
+| | item_name: 
+| | hidden item: true
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 16
+| | item_protection_index: 0
+| | item_type: tmap
+| | item_name: 
+| | hidden item: false
+| | 
+| | Box: infe ----- (Item Info Entry)
+| | size: 21   (header size: 12)
+| | item_ID: 18
+| | item_protection_index: 0
+| | item_type: Exif
+| | item_name: 
+| | hidden item: true
+| 
+| Box: iref ----- (Item Reference)
+| size: 120   (header size: 12)
+| reference with type 'dimg' from ID: 5 to IDs: 1 2 3 4 
+| reference with type 'dimg' from ID: 10 to IDs: 6 7 8 9 
+| reference with type 'auxl' from ID: 10 to IDs: 5 16 
+| reference with type 'dimg' from ID: 15 to IDs: 11 12 13 14 
+| reference with type 'dimg' from ID: 16 to IDs: 5 15 
+| reference with type 'cdsc' from ID: 18 to IDs: 5 16 
+| 
+| Box: iprp ----- (Item Properties)
+| size: 1199   (header size: 8)
+| | Box: ipco ----- (Item Property Container)
+| | size: 1079   (header size: 8)
+| | | index: 1
+| | | Box: colr -----
+| | | size: 548   (header size: 8)
+| | | colour_type: prof
+| | | profile size: 536
+| | | 
+| | | index: 2
+| | | Box: ispe ----- (Image Spatial Extents)
+| | | size: 20   (header size: 12)
+| | | image width: 512
+| | | image height: 512
+| | | 
+| | | index: 3
+| | | Box: ispe ----- (Image Spatial Extents)
+| | | size: 20   (header size: 12)
+| | | image width: 1024
+| | | image height: 768
+| | | 
+| | | index: 4
+| | | Box: irot ----- (Image Rotation)
+| | | size: 9   (header size: 8)
+| | | rotation: 0 degrees (CCW)
+| | | 
+| | | index: 5
+| | | Box: pixi ----- (Pixel Information)
+| | | size: 16   (header size: 12)
+| | | bits_per_channel: 8,8,8
+| | | 
+| | | index: 6
+| | | Box: pixi ----- (Pixel Information)
+| | | size: 14   (header size: 12)
+| | | bits_per_channel: 8
+| | | 
+| | | index: 7
+| | | Box: auxC ----- (Image Properties for Auxiliary Images)
+| | | size: 55   (header size: 12)
+| | | aux type: urn:mpeg:hevc:2015:auxid:1
+| | | aux subtypes: 00 00 00 0c 00 00 00 08 4e 01 a5 04 00 01 fe 40 
+| | | 
+| | | index: 8
+| | | Box: colr -----
+| | | size: 19   (header size: 8)
+| | | colour_type: nclx
+| | | colour_primaries: 2
+| | | transfer_characteristics: 2
+| | | matrix_coefficients: 6
+| | | full_range_flag: 1
+| | | 
+| | | index: 9
+| | | Box: colr -----
+| | | size: 19   (header size: 8)
+| | | colour_type: nclx
+| | | colour_primaries: 12
+| | | transfer_characteristics: 16
+| | | matrix_coefficients: 6
+| | | full_range_flag: 1
+| | | 
+| | | index: 10
+| | | Box: pixi ----- (Pixel Information)
+| | | size: 16   (header size: 12)
+| | | bits_per_channel: 10,10,10
+| | | 
+| | | index: 11
+| | | Box: hvcC ----- (HEVC Configuration Item)
+| | | size: 112   (header size: 8)
+| | | configuration_version: 1
+| | | general_profile_space: 0
+| | | general_tier_flag: 0
+| | | general_profile_idc: 3
+| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 
+| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 
+| | | general_level_idc: 90
+| | | min_spatial_segmentation_idc: 0
+| | | parallelism_type: 0
+| | | chroma_format: 4:2:0
+| | | bit_depth_luma: 8
+| | | bit_depth_chroma: 8
+| | | avg_frame_rate: 0
+| | | constant_frame_rate: 0
+| | | num_temporal_layers: 1
+| | | temporal_id_nested: 0
+| | | length_size: 4
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 32
+| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 33
+| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 0c 0d 06 00 80 
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 34
+| | | | 44 01 c0 61 72 c8 44 53 64 
+| | | 
+| | | index: 12
+| | | Box: hvcC ----- (HEVC Configuration Item)
+| | | size: 111   (header size: 8)
+| | | configuration_version: 1
+| | | general_profile_space: 0
+| | | general_tier_flag: 0
+| | | general_profile_idc: 4
+| | | general_profile_compatibility_flags: 0000.1000 0000.0000 0000.0000 0000.0000 
+| | | general_constraint_indicator_flags: 10111111 11001000 00000000 00000000 00000000 00000000 
+| | | general_level_idc: 90
+| | | min_spatial_segmentation_idc: 0
+| | | parallelism_type: 0
+| | | chroma_format: monochrome
+| | | bit_depth_luma: 8
+| | | bit_depth_chroma: 8
+| | | avg_frame_rate: 0
+| | | constant_frame_rate: 0
+| | | num_temporal_layers: 1
+| | | temporal_id_nested: 0
+| | | length_size: 4
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 32
+| | | | 40 01 0c 01 ff ff 04 08 00 00 03 00 bf c8 00 00 03 00 00 5a 17 02 40 
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 33
+| | | | 42 01 01 04 08 00 00 03 00 bf c8 00 00 03 00 00 5a c0 10 08 02 01 62 05 ee 45 95 4d c0 80 80 80 20 
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 34
+| | | | 44 01 c0 61 72 c8 44 53 64 
+| | | 
+| | | index: 13
+| | | Box: hvcC ----- (HEVC Configuration Item)
+| | | size: 112   (header size: 8)
+| | | configuration_version: 1
+| | | general_profile_space: 0
+| | | general_tier_flag: 0
+| | | general_profile_idc: 3
+| | | general_profile_compatibility_flags: 0111.0000 0000.0000 0000.0000 0000.0000 
+| | | general_constraint_indicator_flags: 10110000 00000000 00000000 00000000 00000000 00000000 
+| | | general_level_idc: 90
+| | | min_spatial_segmentation_idc: 0
+| | | parallelism_type: 0
+| | | chroma_format: 4:2:0
+| | | bit_depth_luma: 8
+| | | bit_depth_chroma: 8
+| | | avg_frame_rate: 0
+| | | constant_frame_rate: 0
+| | | num_temporal_layers: 1
+| | | temporal_id_nested: 0
+| | | length_size: 4
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 32
+| | | | 40 01 0c 01 ff ff 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a 70 24 
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 33
+| | | | 42 01 01 03 70 00 00 03 00 b0 00 00 03 00 00 03 00 5a a0 04 02 00 80 58 87 b9 16 55 37 02 02 06 00 80 
+| | | <array>
+| | | | array_completeness: 0
+| | | | NAL_unit_type: 34
+| | | | 44 01 c0 60 84 b2 11 14 d9 
+| | 
+| | Box: ipma ----- (Item Property Association)
+| | size: 112   (header size: 12)
+| | associations for item ID: 1
+| | | property index: 2 (essential: true)
+| | | property index: 1 (essential: true)
+| | | property index: 11 (essential: true)
+| | associations for item ID: 2
+| | | property index: 2 (essential: true)
+| | | property index: 1 (essential: true)
+| | | property index: 11 (essential: true)
+| | associations for item ID: 3
+| | | property index: 2 (essential: true)
+| | | property index: 1 (essential: true)
+| | | property index: 11 (essential: true)
+| | associations for item ID: 4
+| | | property index: 2 (essential: true)
+| | | property index: 1 (essential: true)
+| | | property index: 11 (essential: true)
+| | associations for item ID: 5
+| | | property index: 1 (essential: true)
+| | | property index: 3 (essential: false)
+| | | property index: 5 (essential: false)
+| | | property index: 4 (essential: true)
+| | associations for item ID: 6
+| | | property index: 2 (essential: true)
+| | | property index: 12 (essential: true)
+| | associations for item ID: 7
+| | | property index: 2 (essential: true)
+| | | property index: 12 (essential: true)
+| | associations for item ID: 8
+| | | property index: 2 (essential: true)
+| | | property index: 12 (essential: true)
+| | associations for item ID: 9
+| | | property index: 2 (essential: true)
+| | | property index: 12 (essential: true)
+| | associations for item ID: 10
+| | | property index: 3 (essential: false)
+| | | property index: 6 (essential: false)
+| | | property index: 7 (essential: true)
+| | | property index: 4 (essential: true)
+| | associations for item ID: 11
+| | | property index: 2 (essential: true)
+| | | property index: 8 (essential: true)
+| | | property index: 13 (essential: true)
+| | associations for item ID: 12
+| | | property index: 2 (essential: true)
+| | | property index: 8 (essential: true)
+| | | property index: 13 (essential: true)
+| | associations for item ID: 13
+| | | property index: 2 (essential: true)
+| | | property index: 8 (essential: true)
+| | | property index: 13 (essential: true)
+| | associations for item ID: 14
+| | | property index: 2 (essential: true)
+| | | property index: 8 (essential: true)
+| | | property index: 13 (essential: true)
+| | associations for item ID: 15
+| | | property index: 8 (essential: true)
+| | | property index: 3 (essential: false)
+| | | property index: 5 (essential: false)
+| | | property index: 4 (essential: true)
+| | associations for item ID: 16
+| | | property index: 9 (essential: true)
+| | | property index: 3 (essential: false)
+| | | property index: 10 (essential: false)
+| | | property index: 4 (essential: true)
+| 
+| Box: grpl ----- (Groups List)
+| size: 36   (header size: 8)
+| | Box: altr -----
+| | size: 28   (header size: 12)
+| | group id: 17
+| | entity IDs: 16 5
+| 
+| Box: idat ----- (Item Data)
+| size: 174   (header size: 8)
+| number of data bytes: 166
+| 
+| Box: iloc ----- (Item Location)
+| size: 288   (header size: 12)
+| item ID: 1
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 2441,352 
+| item ID: 2
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 2793,229 
+| item ID: 3
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 3022,353 
+| item ID: 4
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 3375,225 
+| item ID: 5
+|   construction method: 1
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 0,8 
+| item ID: 6
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 3600,155 
+| item ID: 7
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 3755,155 
+| item ID: 8
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 3910,163 
+| item ID: 9
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 4073,163 
+| item ID: 10
+|   construction method: 1
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 8,8 
+| item ID: 11
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 4236,393 
+| item ID: 12
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 4629,387 
+| item ID: 13
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 5016,403 
+| item ID: 14
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 5419,398 
+| item ID: 15
+|   construction method: 1
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 16,8 
+| item ID: 16
+|   construction method: 1
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 24,142 
+| item ID: 18
+|   construction method: 0
+|   data_reference_index: 0
+|   base_offset: 0
+|   extents: 2339,102 
+
+=== Item Data ===
+
+item ID 5 (grid):
+  rows: 2
+  columns: 2
+  output width: 1024
+  output height: 768
+
+item ID 10 (grid):
+  rows: 2
+  columns: 2
+  output width: 1024
+  output height: 768
+
+item ID 15 (grid):
+  rows: 2
+  columns: 2
+  output width: 1024
+  output height: 768
+MIME type: image/heic
+main brand: heic
+compatible brands: mif1, tmap, MiHE, miaf, MiHB, heic

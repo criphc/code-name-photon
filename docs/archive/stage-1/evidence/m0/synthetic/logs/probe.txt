@@ -1,0 +1,17 @@
+
+=== out-b-r25  (toGainMapHDR hdr.tif out-b-r25 -b base.tif -R 2.5 -d 8 -q 0.85 -c p3) ===
+  size=4203 B  auxISO=yes  altHeadroom=1.994353  HDRcontentHeadroom=3.9844  decodedPeak=4.0030  sdrAlpha=false
+
+=== out-b-r15  (toGainMapHDR hdr.tif out-b-r15 -b base.tif -R 1.5 -d 8 -q 0.85 -c p3) ===
+  size=4203 B  auxISO=yes  altHeadroom=1.994353  HDRcontentHeadroom=3.9844  decodedPeak=4.0030  sdrAlpha=false
+
+=== out-b-r6  (toGainMapHDR hdr.tif out-b-r6 -b base.tif -R 6 -d 8 -q 0.85 -c p3) ===
+  size=4203 B  auxISO=yes  altHeadroom=1.994353  HDRcontentHeadroom=3.9844  decodedPeak=4.0030  sdrAlpha=false
+
+=== out-nob-r25  (toGainMapHDR hdr.tif out-nob-r25 -R 2.5 -d 8 -q 0.85 -c p3) ===
+  size=5817 B  auxISO=yes  altHeadroom=1.994353  HDRcontentHeadroom=3.9844  decodedPeak=3.9844  sdrAlpha=true
+
+=== out-b-r25-H  (toGainMapHDR hdr.tif out-b-r25-H -b base.tif -R 2.5 -d 8 -q 0.85 -c p3 -H) ===
+  size=3055 B  auxISO=yes  altHeadroom=2.30045  HDRcontentHeadroom=4.9261  decodedPeak=2.0141  sdrAlpha=false
+
+wrote /Users/criphc/Sites/llm-photon/work/m0/synthetic/logs/probe.json (135229 bytes)

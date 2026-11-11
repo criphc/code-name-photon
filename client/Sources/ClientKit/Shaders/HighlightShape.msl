@@ -1,0 +1,136 @@
+#include <metal_stdlib>
+using namespace metal;
+
+// The GPU port of ContractKit.HighlightShape / HDRRendition (client/README.md, one maths, one parity gate).
+//
+// The MSL body of `highlightShapeKernel` is the only GPU implementation of the creative
+// maths. `HighlightUniforms` in client/Sources/ClientKit/RenderContract/HighlightUniforms.swift
+// is the layout contract; the parity test (client/Tests/ClientKitTests/ShaderParityTests.swift)
+// compiles this exact packaged file through `ShaderResource` and compares the kernel output with
+// the CPU contract on the decoded base.
+//
+// Semantics (contract/README.md, maths; client/README.md, control model):
+//   luma    = 0.2126*r + 0.7152*g + 0.0722*b        (linear extended Display P3 base)
+//   mask    = smoothstep(start, start + transition, luma)
+//   gain    = 2^(liftStops * mask)
+//   authored= min(base * gain, headroomCap)         (only the highlights move)
+//
+// The base texture is already linearised by BasePNG (16-bit P3 PNG -> linear extended
+// Display P3 float), so this shader never sees encoded samples and never modifies the base.
+
+struct HighlightUniforms {
+    float start;
+    float liftStops;
+    float transition;
+    float headroomCap;
+    float displayHeadroom;
+    uint mode;    // JudgeRenderMode: 0 authored, 1 compare (gain = 1), 2 overlay
+    uint pad0;
+    uint pad1;
+};
+
+// Must match HighlightUniforms.byteCount (32 bytes) on the Swift side.
+static_assert(sizeof(HighlightUniforms) == 32, "HighlightUniforms layout changed");
+
+kernel void highlightShapeKernel(
+    texture2d<float, access::read> base [[texture(0)]],
+    texture2d<float, access::write> destination [[texture(1)]],
+    constant HighlightUniforms &uniforms [[buffer(0)]],
+    uint2 position [[thread_position_in_grid]])
+{
+    if (position.x >= destination.get_width() || position.y >= destination.get_height()) {
+        return;
+    }
+
+    const float4 sample = base.read(position);
+    const float3 rgb = sample.rgb;
+
+    // One luma, therefore one gain for R/G/B - the same expression as RGBA.rec709Luma.
+    const float luma = 0.2126f * rgb.r + 0.7152f * rgb.g + 0.0722f * rgb.b;
+
+    // smoothstep returns 0 at/below edge0 and 1 at/above edge1, exactly like
+    // HighlightShape.mask (transition is validated >= 0.001, so the edges never coincide).
+    const float mask = smoothstep(uniforms.start, uniforms.start + uniforms.transition, luma);
+    float gain = (mask == 0.0f) ? 1.0f : exp2(uniforms.liftStops * mask);
+
+    // Hold-to-compare: the same texture with gain = 1 (no second decode, no second tone map).
+    if (uniforms.mode == 1u) {
+        gain = 1.0f;
+    }
+
+    // Only an upper clamp: values below the cap are preserved, the base itself is untouched.
+    const float3 authored = min(rgb * gain, float3(uniforms.headroomCap));
+
+    if (uniforms.mode == 2u) {
+        // False-colour overlay, same three-way test as OverlayBands.classify.
+        // authored > displayHeadroom -> authored beyond the current display headroom;
+        // authored > 1.0           -> authored above SDR white, presentable;
+        // otherwise                -> dimmed luma of the base (the untouched area).
+        const float peak = max(authored.r, max(authored.g, authored.b));
+        float3 shown;
+        if (peak > uniforms.displayHeadroom) {
+            shown = float3(1.0f, 0.10f, 0.55f);   // magenta: beyond the display's headroom
+        } else if (peak > 1.0f) {
+            shown = float3(1.0f, 0.85f, 0.10f);   // amber: authored above SDR white
+        } else {
+            shown = float3(luma * 0.25f);          // dimmed base, no authored HDR
+        }
+        destination.write(float4(shown, 1.0f), position);
+        return;
+    }
+
+    destination.write(float4(authored, 1.0f), position);
+}
+
+// MARK: - Present pass (draws the intermediate texture into the EDR drawable)
+
+struct PresentUniforms {
+    float2 drawableSize;   // drawable size in pixels
+    float2 imageSize;      // intermediate texture size in pixels
+};
+
+struct PresentVertex {
+    float4 position [[position]];
+    float2 uv;
+};
+
+// One oversized triangle covering the viewport; no vertex buffer needed.
+vertex PresentVertex presentVertex(uint vertexID [[vertex_id]])
+{
+    const float2 positions[3] = {
+        float2(-1.0f, -1.0f),
+        float2(3.0f, -1.0f),
+        float2(-1.0f, 3.0f)
+    };
+    PresentVertex out;
+    out.position = float4(positions[vertexID], 0.0f, 1.0f);
+    // Placeholder; the fragment shader derives uv from [[position]] instead.
+    out.uv = positions[vertexID] * 0.5f + 0.5f;
+    return out;
+}
+
+// Aspect-fit the intermediate texture into the drawable (fit-to-screen only, client/README.md, scope)
+// and pass linear values through unchanged: the layer's extendedLinearDisplayP3 colour
+// space with wantsExtendedDynamicRangeContent makes 1.0 SDR reference white and values
+// above 1.0 HDR up to the currently available headroom.
+fragment float4 presentFragment(
+    PresentVertex in [[stage_in]],
+    constant PresentUniforms &uniforms [[buffer(0)]],
+    texture2d<float> source [[texture(0)]],
+    sampler linearSampler [[sampler(0)]])
+{
+    const float2 drawable = uniforms.drawableSize;
+    const float2 image = uniforms.imageSize;
+    const float scale = min(drawable.x / image.x, drawable.y / image.y);
+    const float2 shown = image * scale;
+    const float2 origin = (drawable - shown) * 0.5f;
+
+    // [[position]] is in window coordinates, (0,0) = top-left of the render target.
+    const float2 point = in.position.xy - origin;
+    if (point.x < 0.0f || point.y < 0.0f || point.x > shown.x || point.y > shown.y) {
+        return float4(0.0f, 0.0f, 0.0f, 1.0f);   // letterbox: true black
+    }
+
+    const float2 uv = point / shown;
+    return float4(source.sample(linearSampler, uv).rgb, 1.0f);
+}

@@ -1,0 +1,14 @@
+verify-heic v0.1.0 — /Users/criphc/Sites/llm-photon/samples/reference/IMG_7473.JPG
+  file        3567237 bytes  sha256=e8cf64f7bd64c30e43addedc039f67169597ea96d7d05b575604ead08d86753f
+  container   major=n/a brands=[] items=0
+  base image  3024x4032 RGB 8bpc/32bpp profile=Display P3 orientation=1 alpha=noneSkipLast
+  aux ISO     present 1512x2016 fmt=420f altHeadroom=5.3359x [ImageIO omitted aux data bytes]
+  aux HDRGain absent
+  sdrDecode   3024x4032 8bpc contentHeadroom=1.0000 calcHeadroom=1.0000
+  hdrDecode   OK 3024x4032 10bpc contentHeadroom=5.3359 calc=2.8379
+              measured peak=5.5053 mean=0.5042 frac>1=16.26%
+  checks      dimsMatch=PASS hdrDecodeSucceeded=PASS heifContainer=FAIL isoAuxPresent=PASS noAlpha=PASS sdrFallbackPresent=PASS
+  skipped     basePreserved (no --base supplied); headroomWithin5pct (no --expect-headroom supplied)
+  result      FAIL
+    failure: heifContainer: input is not a HEIF/ISO BMFF image (major brand n/a); verify-heic only certifies HEIC deliverables
+  report      /Users/criphc/Sites/llm-photon/work/m0/verify/reports/non-heif-jpeg.json

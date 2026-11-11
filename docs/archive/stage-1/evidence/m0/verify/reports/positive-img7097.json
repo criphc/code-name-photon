@@ -1,0 +1,1338 @@
+{
+  "aux" : {
+    "hdrGainMap" : {
+      "auxBytesPerRow" : 2048,
+      "auxHeight" : 1512,
+      "auxWidth" : 2016,
+      "colorSpace" : null,
+      "dataBytes" : 3096576,
+      "dataDescription" : {
+        "BytesPerRow" : 2048,
+        "Height" : 1512,
+        "PixelFormat" : 1278226488,
+        "Width" : 2016
+      },
+      "dataPrefixHex" : "696f7271706e6c6a6b6a6c70716d6d70",
+      "infoKeys" : [
+        "kCGImageAuxiliaryDataInfoData",
+        "kCGImageAuxiliaryDataInfoDataDescription",
+        "kCGImageAuxiliaryDataInfoMetadata"
+      ],
+      "label" : "hdrGainMap",
+      "metadata" : {
+        "gainMap" : {
+          "hasXMP" : "True",
+          "HDRGainMapHeadroom" : "5.535640",
+          "HDRGainMapVersion" : "131072"
+        },
+        "kind" : "CGImageMetadata",
+        "present" : true,
+        "tags" : [
+          {
+            "kind" : "scalar",
+            "name" : "hasXMP",
+            "namespace" : "http://ns.apple.com/ImageIO/1.0/",
+            "path" : "iio:hasXMP",
+            "prefix" : "iio",
+            "value" : "True"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "HDRGainMapVersion",
+            "namespace" : "http://ns.apple.com/HDRGainMap/1.0/",
+            "path" : "HDRGainMap:HDRGainMapVersion",
+            "prefix" : "HDRGainMap",
+            "value" : "131072"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "HDRGainMapHeadroom",
+            "namespace" : "http://ns.apple.com/HDRGainMap/1.0/",
+            "path" : "HDRGainMap:HDRGainMapHeadroom",
+            "prefix" : "HDRGainMap",
+            "value" : "5.535640"
+          }
+        ],
+        "totalTags" : 3,
+        "truncated" : false
+      },
+      "pixelFormat" : {
+        "fourCC" : "L008",
+        "hex" : "0x4C303038",
+        "raw" : 1278226488
+      },
+      "present" : true,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeHDRGainMap"
+    },
+    "hdrGainMapAuxPresent" : true,
+    "hdrGainMapLinearHeadroom" : 5.5356399999999999,
+    "isoAuxLinearHeadroom" : 5.5356395278553281,
+    "isoAuxPresent" : true,
+    "isoGainMap" : {
+      "auxBytesPerRow" : 2048,
+      "auxHeight" : 1512,
+      "auxWidth" : 2016,
+      "colorSpace" : {
+        "description" : "<CGColorSpace 0x7ab8c012d0> (kCGColorSpaceICCBased; kCGColorSpaceModelRGB; Display P3 Primaries; PQ (Adaptive Gain Curve 7ABE0AC1CD878411))"
+      },
+      "dataBytes" : 3096576,
+      "dataDescription" : {
+        "BytesPerRow" : 2048,
+        "Height" : 1512,
+        "PixelFormat" : 1278226488,
+        "Width" : 2016
+      },
+      "dataPrefixHex" : "696f7271706e6c6a6b6a6c70716d6d70",
+      "infoKeys" : [
+        "kCGImageAuxiliaryDataInfoColorSpace",
+        "kCGImageAuxiliaryDataInfoData",
+        "kCGImageAuxiliaryDataInfoDataDescription",
+        "kCGImageAuxiliaryDataInfoMetadata"
+      ],
+      "label" : "isoGainMap",
+      "metadata" : {
+        "gainMap" : {
+          "AlternateHeadroom" : "2.468750",
+          "alternateHeadroomLinear" : 5.5356395278553281,
+          "alternateHeadroomLog2" : 2.46875,
+          "BaseColorIsWorkingColor" : "True",
+          "BaseHeadroom" : "0.000000",
+          "baseHeadroomLinear" : 1,
+          "baseHeadroomLog2" : 0,
+          "channelCount" : 1,
+          "channels" : [
+            {
+              "AlternateOffset" : "0.000010",
+              "BaseOffset" : "0.000010",
+              "GainMapMax" : "2.468750",
+              "GainMapMin" : "-1.096680",
+              "Gamma" : "1.315430"
+            }
+          ],
+          "gainMapMax" : 2.46875,
+          "gainMapMin" : -1.0966800000000001,
+          "gamma" : 1.3154300000000001,
+          "Version" : "1"
+        },
+        "kind" : "CGImageMetadata",
+        "present" : true,
+        "tags" : [
+          {
+            "kind" : "scalar",
+            "name" : "Version",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:Version",
+            "prefix" : "HDRToneMap",
+            "value" : "1"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseHeadroom",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:BaseHeadroom",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000000"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateHeadroom",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:AlternateHeadroom",
+            "prefix" : "HDRToneMap",
+            "value" : "2.468750"
+          },
+          {
+            "count" : 1,
+            "kind" : "array",
+            "name" : "ChannelMetadata",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "count" : 5,
+            "kind" : "dictionary",
+            "name" : "[0]",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0]",
+            "prefix" : "HDRToneMap"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMax",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].GainMapMax/HDRToneMap:GainMapMax",
+            "prefix" : "HDRToneMap",
+            "value" : "2.468750"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "GainMapMin",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].GainMapMin/HDRToneMap:GainMapMin",
+            "prefix" : "HDRToneMap",
+            "value" : "-1.096680"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "AlternateOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].AlternateOffset/HDRToneMap:AlternateOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseOffset",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].BaseOffset/HDRToneMap:BaseOffset",
+            "prefix" : "HDRToneMap",
+            "value" : "0.000010"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "Gamma",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:ChannelMetadata[0]/HDRToneMap:[0].Gamma/HDRToneMap:Gamma",
+            "prefix" : "HDRToneMap",
+            "value" : "1.315430"
+          },
+          {
+            "kind" : "scalar",
+            "name" : "BaseColorIsWorkingColor",
+            "namespace" : "http://ns.apple.com/HDRToneMap/1.0/",
+            "path" : "HDRToneMap:BaseColorIsWorkingColor",
+            "prefix" : "HDRToneMap",
+            "value" : "True"
+          }
+        ],
+        "totalTags" : 11,
+        "truncated" : false
+      },
+      "pixelFormat" : {
+        "fourCC" : "L008",
+        "hex" : "0x4C303038",
+        "raw" : 1278226488
+      },
+      "present" : true,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeISOGainMap"
+    }
+  },
+  "baseCheck" : {
+    "available" : false,
+    "reason" : "no --base supplied"
+  },
+  "checks" : {
+    "dimsMatch" : {
+      "actualHeight" : 3024,
+      "actualWidth" : 4032,
+      "detail" : "HEIC SDR decode 4032x3024 vs primary image properties 4032x3024",
+      "expectedHeight" : 3024,
+      "expectedSource" : "primary image properties",
+      "expectedWidth" : 4032,
+      "pass" : true
+    },
+    "hdrDecodeSucceeded" : {
+      "detail" : "kCGImageSourceDecodeToHDR succeeded (4032x3024, 10bpc, contentHeadroom=5.5356)",
+      "isHDRContent" : true,
+      "pass" : true
+    },
+    "heifContainer" : {
+      "detail" : "ISO BMFF container with HEIF brand(s)",
+      "pass" : true
+    },
+    "isoAuxPresent" : {
+      "detail" : "kCGImageAuxiliaryDataTypeISOGainMap present",
+      "pass" : true
+    },
+    "noAlpha" : {
+      "detail" : "SDR decode hasAlpha=false (noneSkipLast), HDR decode hasAlpha=false (noneSkipFirst)",
+      "hdrHasAlpha" : false,
+      "pass" : true,
+      "sdrHasAlpha" : false
+    },
+    "sdrFallbackPresent" : {
+      "detail" : "plain CGImageSourceCreateImageAtIndex decoded 4032x3024",
+      "pass" : true
+    }
+  },
+  "container" : {
+    "ftyp" : {
+      "compatibleBrands" : [
+        "mif1",
+        "MiHB",
+        "MiHA",
+        "heix",
+        "MiHE",
+        "MiPr",
+        "miaf",
+        "heic",
+        "tmap"
+      ],
+      "majorBrand" : "heic",
+      "minorVersion" : 0
+    },
+    "infeCount" : 105,
+    "inputIsHEIF" : true,
+    "isISOBaseMedia" : true,
+    "itemCount" : 105,
+    "items" : [
+      {
+        "itemID" : 1,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 2,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 3,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 4,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 5,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 6,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 7,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 8,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 9,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 10,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 11,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 12,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 13,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 14,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 15,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 16,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 17,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 18,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 19,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 20,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 21,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 22,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 23,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 24,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 25,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 26,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 27,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 28,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 29,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 30,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 31,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 32,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 33,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 34,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 35,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 36,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 37,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 38,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 39,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 40,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 41,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 42,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 43,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 44,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 45,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 46,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 47,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 48,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 49,
+        "itemType" : "grid"
+      },
+      {
+        "itemID" : 50,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 51,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 52,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 53,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 54,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 55,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 56,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 57,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 58,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 59,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 60,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 61,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 62,
+        "itemType" : "grid"
+      },
+      {
+        "itemID" : 63,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 64,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 65,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 66,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 67,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 68,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 69,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 70,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 71,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 72,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 73,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 74,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 75,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 76,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 77,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 78,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 79,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 80,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 81,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 82,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 83,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 84,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 85,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 86,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 87,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 88,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 89,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 90,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 91,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 92,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 93,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 94,
+        "itemType" : "grid"
+      },
+      {
+        "itemID" : 95,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 96,
+        "itemType" : "mime"
+      },
+      {
+        "itemID" : 97,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 98,
+        "itemType" : "mime"
+      },
+      {
+        "itemID" : 99,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 100,
+        "itemType" : "mime"
+      },
+      {
+        "itemID" : 101,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 102,
+        "itemType" : "mime"
+      },
+      {
+        "itemID" : 104,
+        "itemType" : "tmap"
+      },
+      {
+        "itemID" : 105,
+        "itemType" : "uri "
+      },
+      {
+        "itemID" : 106,
+        "itemType" : "Exif"
+      }
+    ],
+    "itemTypeCounts" : {
+      "Exif" : 1,
+      "grid" : 3,
+      "hvc1" : 95,
+      "mime" : 4,
+      "tmap" : 1,
+      "uri " : 1
+    },
+    "metaChildTypes" : [
+      "hdlr",
+      "dinf",
+      "pitm",
+      "iinf",
+      "iref",
+      "iprp",
+      "grpl",
+      "idat",
+      "iloc"
+    ],
+    "primaryItemID" : 49,
+    "tmapBrandPresent" : true,
+    "tmapItemPresent" : true,
+    "topLevelBoxCount" : 3,
+    "topLevelBoxes" : [
+      {
+        "size" : 52,
+        "type" : "ftyp"
+      },
+      {
+        "size" : 34815,
+        "type" : "meta"
+      },
+      {
+        "size" : 2461808,
+        "type" : "mdat"
+      }
+    ]
+  },
+  "file" : {
+    "absolutePath" : "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7097.HEIC",
+    "imageCount" : 1,
+    "imageIOType" : "public.heic",
+    "path" : "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7097.HEIC",
+    "primaryImageIndex" : 0,
+    "sha256" : "003230bdfb2c15c92f76fbfeb25cdcd9485834d243d7a322d6f3fcc8d9dd23cd",
+    "sizeBytes" : 2496675
+  },
+  "hdrDecode" : {
+    "alphaInfo" : "noneSkipFirst",
+    "alphaInfoRaw" : 6,
+    "bitsPerComponent" : 10,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 4.2802734375,
+    "colorSpaceName" : null,
+    "contentAverageLightLevel" : 1.4187191724777222,
+    "contentHeadroom" : 5.535639762878418,
+    "decoded" : true,
+    "decodeOptions" : {
+      "kCGImageSourceDecodeRequest" : "kCGImageSourceDecodeToHDR"
+    },
+    "hasAlpha" : false,
+    "height" : 3024,
+    "isFloat" : false,
+    "isHDRContent" : true,
+    "measured" : {
+      "cap" : null,
+      "contentHeadroomUsedAsCap" : 5.535639762878418,
+      "fractionAboveCap" : null,
+      "fractionAboveContentHeadroom" : 1.0935444136502338e-07,
+      "fractionAboveOne" : 0.31070784473768931,
+      "mean" : 0.88915374220684795,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : -0.00096731138182803988,
+      "nanCount" : 0,
+      "peak" : 5.6000628471374512,
+      "peakOverSdrPeak" : 4.2548832438776545,
+      "pixelCount" : 12192768,
+      "renderHeight" : 3024,
+      "renderWidth" : 4032,
+      "sampleCount" : 36578304
+    },
+    "success" : true,
+    "width" : 4032
+  },
+  "imageMetadata" : {
+    "headroomTags" : [
+
+    ],
+    "kind" : "CGImageMetadata",
+    "present" : true,
+    "tags" : [
+      {
+        "kind" : "scalar",
+        "name" : "PixelYDimension",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:PixelYDimension",
+        "prefix" : "exif",
+        "value" : "3024"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "LensModel",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensModel",
+        "prefix" : "exifEX",
+        "value" : "iPhone Air back camera 5.96mm f/1.6"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "OffsetTime",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:OffsetTime",
+        "prefix" : "exif",
+        "value" : "+08:00"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureBiasValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureBiasValue",
+        "prefix" : "exif",
+        "value" : "0/1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureTime",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureTime",
+        "prefix" : "exif",
+        "value" : "1/739"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "DateCreated",
+        "namespace" : "http://ns.adobe.com/photoshop/1.0/",
+        "path" : "photoshop:DateCreated",
+        "prefix" : "photoshop",
+        "value" : "2026-09-18T16:43:02.178"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "FocalLenIn35mmFilm",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:FocalLenIn35mmFilm",
+        "prefix" : "exif",
+        "value" : "26"
+      },
+      {
+        "count" : 1,
+        "kind" : "array",
+        "name" : "ISOSpeedRatings",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ISOSpeedRatings",
+        "prefix" : "exif"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[0]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ISOSpeedRatings[0]/exif:[0]",
+        "prefix" : "exif",
+        "value" : "50"
+      },
+      {
+        "count" : 4,
+        "kind" : "array",
+        "name" : "LensSpecification",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification",
+        "prefix" : "exifEX"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[0]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[0]/exifEX:[0]",
+        "prefix" : "exifEX",
+        "value" : "6249513/1048576"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[1]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[1]/exifEX:[1]",
+        "prefix" : "exifEX",
+        "value" : "6249513/1048576"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[2]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[2]/exifEX:[2]",
+        "prefix" : "exifEX",
+        "value" : "8/5"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[3]",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensSpecification[3]/exifEX:[3]",
+        "prefix" : "exifEX",
+        "value" : "8/5"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "CreateDate",
+        "namespace" : "http://ns.adobe.com/xap/1.0/",
+        "path" : "xmp:CreateDate",
+        "prefix" : "xmp",
+        "value" : "2026-09-18T16:43:02.178"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "OffsetTimeDigitized",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:OffsetTimeDigitized",
+        "prefix" : "exif",
+        "value" : "+08:00"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Make",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Make",
+        "prefix" : "tiff",
+        "value" : "Apple"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExifVersion",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExifVersion",
+        "prefix" : "exif",
+        "value" : "0232"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ColorSpace",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ColorSpace",
+        "prefix" : "exif",
+        "value" : "65535"
+      },
+      {
+        "count" : 5,
+        "kind" : "dictionary",
+        "name" : "Flash",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash",
+        "prefix" : "exif"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "RedEyeMode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.RedEyeMode/exif:RedEyeMode",
+        "prefix" : "exif",
+        "value" : "False"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Function",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Function/exif:Function",
+        "prefix" : "exif",
+        "value" : "False"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Return",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Return/exif:Return",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Mode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Mode/exif:Mode",
+        "prefix" : "exif",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Fired",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:Flash.Fired/exif:Fired",
+        "prefix" : "exif",
+        "value" : "False"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureProgram",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureProgram",
+        "prefix" : "exif",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ResolutionUnit",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:ResolutionUnit",
+        "prefix" : "tiff",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "BrightnessValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:BrightnessValue",
+        "prefix" : "exif",
+        "value" : "59611/7874"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "FocalLength",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:FocalLength",
+        "prefix" : "exif",
+        "value" : "6249513/1048576"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "FNumber",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:FNumber",
+        "prefix" : "exif",
+        "value" : "8/5"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "PhotographicSensitivity",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:PhotographicSensitivity",
+        "prefix" : "exifEX",
+        "value" : "50"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "XResolution",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:XResolution",
+        "prefix" : "tiff",
+        "value" : "72/1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "CreatorTool",
+        "namespace" : "http://ns.adobe.com/xap/1.0/",
+        "path" : "xmp:CreatorTool",
+        "prefix" : "xmp",
+        "value" : "27.0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SubsecTimeDigitized",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubsecTimeDigitized",
+        "prefix" : "exif",
+        "value" : "178"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "YResolution",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:YResolution",
+        "prefix" : "tiff",
+        "value" : "72/1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "MeteringMode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:MeteringMode",
+        "prefix" : "exif",
+        "value" : "5"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "WhiteBalance",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:WhiteBalance",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "LensMake",
+        "namespace" : "http://cipa.jp/exif/1.0/",
+        "path" : "exifEX:LensMake",
+        "prefix" : "exifEX",
+        "value" : "Apple"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "PixelXDimension",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:PixelXDimension",
+        "prefix" : "exif",
+        "value" : "4032"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ExposureMode",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ExposureMode",
+        "prefix" : "exif",
+        "value" : "0"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ApertureValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ApertureValue",
+        "prefix" : "exif",
+        "value" : "231647/170813"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SceneType",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SceneType",
+        "prefix" : "exif",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "CustomRendered",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:CustomRendered",
+        "prefix" : "exif",
+        "value" : "1"
+      },
+      {
+        "count" : 4,
+        "kind" : "array",
+        "name" : "SubjectArea",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea",
+        "prefix" : "exif"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[0]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[0]/exif:[0]",
+        "prefix" : "exif",
+        "value" : "2018"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[1]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[1]/exif:[1]",
+        "prefix" : "exif",
+        "value" : "1512"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[2]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[2]/exif:[2]",
+        "prefix" : "exif",
+        "value" : "2218"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "[3]",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubjectArea[3]/exif:[3]",
+        "prefix" : "exif",
+        "value" : "1331"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileWidth",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileWidth",
+        "prefix" : "tiff",
+        "value" : "512"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "HostComputer",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:HostComputer",
+        "prefix" : "tiff",
+        "value" : "iPhone Air"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Orientation",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Orientation",
+        "prefix" : "tiff",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SubsecTimeOriginal",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SubsecTimeOriginal",
+        "prefix" : "exif",
+        "value" : "178"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "Model",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Model",
+        "prefix" : "tiff",
+        "value" : "iPhone Air"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "SensingMethod",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:SensingMethod",
+        "prefix" : "exif",
+        "value" : "2"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ModifyDate",
+        "namespace" : "http://ns.adobe.com/xap/1.0/",
+        "path" : "xmp:ModifyDate",
+        "prefix" : "xmp",
+        "value" : "2026-09-18T16:43:02"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "OffsetTimeOriginal",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:OffsetTimeOriginal",
+        "prefix" : "exif",
+        "value" : "+08:00"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "ShutterSpeedValue",
+        "namespace" : "http://ns.adobe.com/exif/1.0/",
+        "path" : "exif:ShutterSpeedValue",
+        "prefix" : "exif",
+        "value" : "63858/6701"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileLength",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileLength",
+        "prefix" : "tiff",
+        "value" : "512"
+      }
+    ],
+    "totalTags" : 58,
+    "truncated" : false
+  },
+  "overall" : {
+    "checkCount" : 6,
+    "failures" : [
+
+    ],
+    "pass" : true,
+    "passedCount" : 6,
+    "skippedChecks" : [
+      "basePreserved (no --base supplied)",
+      "headroomWithin5pct (no --expect-headroom supplied)"
+    ]
+  },
+  "primaryImage" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "colorModel" : "RGB",
+    "decodedHeight" : 3024,
+    "decodedWidth" : 4032,
+    "depth" : 8,
+    "hasAlpha" : false,
+    "height" : 3024,
+    "isFloat" : false,
+    "isFloatDecoded" : false,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 4032
+  },
+  "properties" : {
+    "colorModel" : "RGB",
+    "depth" : 8,
+    "height" : 3024,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 4032
+  },
+  "sdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 1,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "hasAlpha" : false,
+    "height" : 3024,
+    "isFloat" : false,
+    "measured" : {
+      "cap" : null,
+      "fractionAboveCap" : null,
+      "fractionAboveOne" : 0.0050386699175554994,
+      "mean" : 0.32597910090250043,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : -0.017858333885669708,
+      "nanCount" : 0,
+      "peak" : 1.3161495923995972,
+      "pixelCount" : 12192768,
+      "renderHeight" : 3024,
+      "renderWidth" : 4032,
+      "sampleCount" : 36578304
+    },
+    "width" : 4032
+  },
+  "tool" : {
+    "arguments" : {
+      "base" : null,
+      "expectHeadroom" : null,
+      "input" : "/Users/criphc/Sites/llm-photon/samples/reference/IMG_7097.HEIC",
+      "out" : "/Users/criphc/Sites/llm-photon/work/m0/verify/reports/positive-img7097.json"
+    },
+    "generatedAt" : "2026-11-02T13:12:55Z",
+    "hostOS" : "Version 27.2 (Build 26B123)",
+    "name" : "verify-heic",
+    "version" : "0.1.0"
+  }
+}

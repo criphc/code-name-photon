@@ -1,0 +1,584 @@
+{
+  "aux" : {
+    "hdrGainMap" : {
+      "label" : "hdrGainMap",
+      "present" : false,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeHDRGainMap"
+    },
+    "hdrGainMapAuxPresent" : false,
+    "hdrGainMapLinearHeadroom" : null,
+    "isoAuxLinearHeadroom" : null,
+    "isoAuxPresent" : false,
+    "isoGainMap" : {
+      "label" : "isoGainMap",
+      "present" : false,
+      "typeConstant" : "kCGImageAuxiliaryDataTypeISOGainMap"
+    }
+  },
+  "baseCheck" : {
+    "available" : true,
+    "baseHeight" : 4000,
+    "baseImage" : {
+      "alphaInfo" : "none",
+      "alphaInfoRaw" : 0,
+      "bitsPerComponent" : 16,
+      "bitsPerPixel" : 48,
+      "calculatedContentHeadroom" : 1.0002048015594482,
+      "colorSpaceName" : "kCGColorSpaceDisplayP3",
+      "contentAverageLightLevel" : 0,
+      "contentHeadroom" : 1,
+      "decoded" : true,
+      "hasAlpha" : false,
+      "height" : 4000,
+      "isFloat" : false,
+      "width" : 6000
+    },
+    "baseMode" : "photo",
+    "basePath" : "/Users/criphc/Sites/llm-photon/work/m4/base-check/sdr.tif",
+    "baseProperties" : {
+      "colorModel" : "RGB",
+      "depth" : 16,
+      "height" : 4000,
+      "orientation" : 1,
+      "profileName" : "Display P3",
+      "width" : 6000
+    },
+    "baseSource" : {
+      "absolutePath" : "/Users/criphc/Sites/llm-photon/work/m4/base-check/sdr.tif",
+      "imageCount" : 1,
+      "imageIOType" : "public.tiff",
+      "path" : "/Users/criphc/Sites/llm-photon/work/m4/base-check/sdr.tif",
+      "properties" : {
+        "colorModel" : "RGB",
+        "depth" : 16,
+        "height" : 4000,
+        "orientation" : 1,
+        "profileName" : "Display P3",
+        "width" : 6000
+      }
+    },
+    "baseThresholds" : {
+      "absDiffP99Max" : 16,
+      "baseMode" : "photo",
+      "diagnosticsOnly" : [
+        "p99_9",
+        "maxAbsDiff",
+        "perChannel"
+      ],
+      "meanAbsDiffMax" : 2.5,
+      "meanSignedDiffAbsMax" : 0.5,
+      "passRule" : "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"
+    },
+    "baseUniform" : false,
+    "baseVariance" : {
+      "mean" : 135.08232175000001,
+      "overall" : 4016.0537409905846,
+      "overallNormalized" : 0.061761687673826754
+    },
+    "baseWidth" : 6000,
+    "decodedBaseVariance" : {
+      "mean" : 135.17730912499999,
+      "overall" : 4017.6205938214152,
+      "overallNormalized" : 0.061785783834239376,
+      "perChannel" : {
+        "b" : 5316.9537031893306,
+        "g" : 3620.3140912766794,
+        "r" : 2847.9036646681488
+      }
+    },
+    "diffHistogram" : {
+      ">2" : 13964798,
+      "0" : 16915024,
+      "1" : 26619121,
+      "2" : 14501057
+    },
+    "dimsMatch" : true,
+    "fractionAboveTwo" : 0.19395552777777778,
+    "fractionNonZero" : 0.76506911111111109,
+    "maxAbsDiff" : 137,
+    "meanAbsDiff" : 1.5966125416666668,
+    "meanSignedDiff" : 0.094987374999999999,
+    "percentiles" : {
+      "max" : 137,
+      "p50" : 1,
+      "p90" : 4,
+      "p99" : 8,
+      "p99_9" : 14
+    },
+    "perChannel" : {
+      "b" : {
+        "fractionNonZero" : 0.78919112499999999,
+        "maxAbsDiff" : 137,
+        "meanAbsDiff" : 1.8568847083333333,
+        "meanSignedDiff" : 0.30590737499999998
+      },
+      "g" : {
+        "fractionNonZero" : 0.73544516666666671,
+        "maxAbsDiff" : 79,
+        "meanAbsDiff" : 1.3337355,
+        "meanSignedDiff" : -0.10110175
+      },
+      "r" : {
+        "fractionNonZero" : 0.77057104166666668,
+        "maxAbsDiff" : 104,
+        "meanAbsDiff" : 1.5992174166666666,
+        "meanSignedDiff" : 0.080156500000000006
+      }
+    },
+    "rendering" : "both images rendered to 8-bit Display P3 (RGBA8) via CIContext"
+  },
+  "checks" : {
+    "basePreserved" : {
+      "absDiffP50" : 1,
+      "absDiffP90" : 4,
+      "absDiffP99" : 8,
+      "absDiffP99_9" : 14,
+      "baseMode" : "photo",
+      "baseThresholds" : {
+        "absDiffP99Max" : 16,
+        "baseMode" : "photo",
+        "diagnosticsOnly" : [
+          "p99_9",
+          "maxAbsDiff",
+          "perChannel"
+        ],
+        "meanAbsDiffMax" : 2.5,
+        "meanSignedDiffAbsMax" : 0.5,
+        "passRule" : "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"
+      },
+      "baseUniform" : false,
+      "decodedBaseVariance" : 4017.6205938214152,
+      "detail" : "photo base: |meanSignedDiff|=0.0950 (<=0.5), meanAbsDiff=1.5966 (<=2.5), absDiffP99=8 (<=16), p99.9=14 / maxAbsDiff=137 (diagnostics), fractionNonZero=0.7651",
+      "fractionAboveTwo" : true,
+      "fractionNonZero" : 0.76506911111111109,
+      "maxAbsDiff" : 137,
+      "meanAbsDiff" : 1.5966125416666668,
+      "meanSignedDiff" : 0.094987374999999999,
+      "pass" : true,
+      "thresholds" : {
+        "absDiffP99Max" : 16,
+        "baseMode" : "photo",
+        "diagnosticsOnly" : [
+          "p99_9",
+          "maxAbsDiff",
+          "perChannel"
+        ],
+        "meanAbsDiffMax" : 2.5,
+        "meanSignedDiffAbsMax" : 0.5,
+        "passRule" : "|meanSignedDiff| <= 0.5 && meanAbsDiff <= 2.5 && absDiffP99 <= 16"
+      }
+    },
+    "dimsMatch" : {
+      "actualHeight" : 4000,
+      "actualWidth" : 6000,
+      "detail" : "HEIC SDR decode 6000x4000 vs --base image 6000x4000",
+      "expectedHeight" : 4000,
+      "expectedSource" : "--base image",
+      "expectedWidth" : 6000,
+      "pass" : true
+    },
+    "hdrDecodeSucceeded" : {
+      "detail" : "kCGImageSourceDecodeToHDR succeeded (6000x4000, 8bpc, contentHeadroom=1.0000) [returned SDR content: no gain map / headroom <= 1.0]",
+      "isHDRContent" : false,
+      "pass" : true
+    },
+    "heifContainer" : {
+      "detail" : "ISO BMFF container with HEIF brand(s)",
+      "pass" : true
+    },
+    "isoAuxPresent" : {
+      "detail" : "kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)",
+      "pass" : false
+    },
+    "noAlpha" : {
+      "detail" : "SDR decode hasAlpha=false (noneSkipLast), HDR decode hasAlpha=false (noneSkipLast)",
+      "hdrHasAlpha" : false,
+      "pass" : true,
+      "sdrHasAlpha" : false
+    },
+    "sdrFallbackPresent" : {
+      "detail" : "plain CGImageSourceCreateImageAtIndex decoded 6000x4000",
+      "pass" : true
+    }
+  },
+  "container" : {
+    "ftyp" : {
+      "compatibleBrands" : [
+        "mif1",
+        "miaf",
+        "MiHB",
+        "heic"
+      ],
+      "majorBrand" : "heic",
+      "minorVersion" : 0
+    },
+    "infeCount" : 43,
+    "inputIsHEIF" : true,
+    "isISOBaseMedia" : true,
+    "itemCount" : 43,
+    "items" : [
+      {
+        "itemID" : 1,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 2,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 3,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 4,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 5,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 6,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 7,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 8,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 9,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 10,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 11,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 12,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 13,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 14,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 15,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 16,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 17,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 18,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 19,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 20,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 21,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 22,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 23,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 24,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 25,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 26,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 27,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 28,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 29,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 30,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 31,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 32,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 33,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 34,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 35,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 36,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 37,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 38,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 39,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 40,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 41,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 42,
+        "itemType" : "hvc1"
+      },
+      {
+        "itemID" : 43,
+        "itemType" : "grid"
+      }
+    ],
+    "itemTypeCounts" : {
+      "grid" : 1,
+      "hvc1" : 42
+    },
+    "metaChildTypes" : [
+      "hdlr",
+      "dinf",
+      "pitm",
+      "iinf",
+      "iref",
+      "iprp",
+      "idat",
+      "iloc"
+    ],
+    "primaryItemID" : 43,
+    "tmapBrandPresent" : false,
+    "tmapItemPresent" : false,
+    "topLevelBoxCount" : 3,
+    "topLevelBoxes" : [
+      {
+        "size" : 32,
+        "type" : "ftyp"
+      },
+      {
+        "size" : 2911,
+        "type" : "meta"
+      },
+      {
+        "size" : 1943963,
+        "type" : "mdat"
+      }
+    ]
+  },
+  "file" : {
+    "absolutePath" : "/Users/criphc/Sites/llm-photon/out/R0003777-P3-sdr.heic",
+    "imageCount" : 1,
+    "imageIOType" : "public.heic",
+    "path" : "/Users/criphc/Sites/llm-photon/out/R0003777-P3-sdr.heic",
+    "primaryImageIndex" : 0,
+    "sha256" : "d639359abd87bc9c311d2f7351f79d307e34225269fc21c9236f144f96805b0e",
+    "sizeBytes" : 1946906
+  },
+  "hdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 1,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0.31527093052864075,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "decodeOptions" : {
+      "kCGImageSourceDecodeRequest" : "kCGImageSourceDecodeToHDR"
+    },
+    "hasAlpha" : false,
+    "height" : 4000,
+    "isFloat" : false,
+    "isHDRContent" : false,
+    "measured" : {
+      "cap" : null,
+      "contentHeadroomUsedAsCap" : 1,
+      "fractionAboveCap" : null,
+      "fractionAboveContentHeadroom" : 0.00095545833333333333,
+      "fractionAboveOne" : 0.00095545833333333333,
+      "mean" : 0.31691832536006059,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : -0.0044051501899957657,
+      "nanCount" : 0,
+      "peak" : 1.2055537700653076,
+      "peakOverSdrPeak" : 1,
+      "pixelCount" : 24000000,
+      "renderHeight" : 4000,
+      "renderWidth" : 6000,
+      "sampleCount" : 72000000
+    },
+    "success" : true,
+    "width" : 6000
+  },
+  "imageMetadata" : {
+    "headroomTags" : [
+
+    ],
+    "kind" : "CGImageMetadata",
+    "present" : true,
+    "tags" : [
+      {
+        "kind" : "scalar",
+        "name" : "Orientation",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:Orientation",
+        "prefix" : "tiff",
+        "value" : "1"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileWidth",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileWidth",
+        "prefix" : "tiff",
+        "value" : "1024"
+      },
+      {
+        "kind" : "scalar",
+        "name" : "TileLength",
+        "namespace" : "http://ns.adobe.com/tiff/1.0/",
+        "path" : "tiff:TileLength",
+        "prefix" : "tiff",
+        "value" : "576"
+      }
+    ],
+    "totalTags" : 3,
+    "truncated" : false
+  },
+  "overall" : {
+    "checkCount" : 7,
+    "failures" : [
+      "isoAuxPresent: kCGImageAuxiliaryDataTypeISOGainMap absent (Apple legacy HDRGainMap present: false)"
+    ],
+    "pass" : false,
+    "passedCount" : 6,
+    "skippedChecks" : [
+      "headroomWithin5pct (no --expect-headroom supplied)"
+    ]
+  },
+  "primaryImage" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "colorModel" : "RGB",
+    "decodedHeight" : 4000,
+    "decodedWidth" : 6000,
+    "depth" : 8,
+    "hasAlpha" : false,
+    "height" : 4000,
+    "isFloat" : false,
+    "isFloatDecoded" : false,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 6000
+  },
+  "properties" : {
+    "colorModel" : "RGB",
+    "depth" : 8,
+    "height" : 4000,
+    "orientation" : 1,
+    "profileName" : "Display P3",
+    "width" : 6000
+  },
+  "sdrDecode" : {
+    "alphaInfo" : "noneSkipLast",
+    "alphaInfoRaw" : 5,
+    "bitsPerComponent" : 8,
+    "bitsPerPixel" : 32,
+    "calculatedContentHeadroom" : 1,
+    "colorSpaceName" : "kCGColorSpaceDisplayP3",
+    "contentAverageLightLevel" : 0,
+    "contentHeadroom" : 1,
+    "decoded" : true,
+    "hasAlpha" : false,
+    "height" : 4000,
+    "isFloat" : false,
+    "measured" : {
+      "cap" : null,
+      "fractionAboveCap" : null,
+      "fractionAboveOne" : 0.00095545833333333333,
+      "mean" : 0.31691832536006059,
+      "method" : "CIContext.render -> RGBAf, extendedLinearDisplayP3, 256-row strips",
+      "min" : -0.0044051501899957657,
+      "nanCount" : 0,
+      "peak" : 1.2055537700653076,
+      "pixelCount" : 24000000,
+      "renderHeight" : 4000,
+      "renderWidth" : 6000,
+      "sampleCount" : 72000000
+    },
+    "width" : 6000
+  },
+  "tool" : {
+    "arguments" : {
+      "base" : "/Users/criphc/Sites/llm-photon/work/m4/base-check/sdr.tif",
+      "expectHeadroom" : null,
+      "input" : "/Users/criphc/Sites/llm-photon/out/R0003777-P3-sdr.heic",
+      "out" : "/Users/criphc/Sites/llm-photon/work/m4/verify-heic-sdr.json"
+    },
+    "generatedAt" : "2026-11-03T05:42:13Z",
+    "hostOS" : "Version 27.2 (Build 26B123)",
+    "name" : "verify-heic",
+    "version" : "0.1.0"
+  }
+}

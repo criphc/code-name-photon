@@ -1,0 +1,12 @@
+verify-heic: error: missing input file
+usage: verify-heic <file.heic> [--base <sdr.tif>] [--expect-headroom <linear-float>] [--out <report.json>]
+
+Objective ImageIO verifier for gain-map HEIC files (ISO 21496-1 / Apple legacy).
+Never uses sips. Exit 0 iff every applicable check passes, else 1.
+
+options:
+  --base <path>              SDR base (TIFF or any ImageIO-readable image) to compare against
+  --expect-headroom <float>  expected linear headroom (e.g. 2.5); adds the headroomWithin5pct check
+  --out <path>               write the JSON report here
+  -h, --help                 show this help
+  --version                  show the version

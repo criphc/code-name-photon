@@ -1,0 +1,4 @@
+# build scratch (recreated by build.sh; keep tools/verify-heic/ commit light)
+.tmp/
+.mc/
+bin/
