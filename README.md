@@ -1,41 +1,70 @@
-# HDR Highlight Finisher
-
 个人工具：把 Capture One 导出的 16-bit **Display P3** TIFF 做成 **gain-map HEIC（ISO 21496-1）** 的 HDR 照片。Mac 负责色彩管理渲染、编码、验证与交付；iPad 在 XDR 屏上判图，只回传一份带版本号的 recipe。Capture One 的 SDR 导出始终是权威底图。
 
-**当前状态**：项目迁移已结束；v1（iPad UI）与 v2（server/engine）均已收尾，macOS GUI 推迟——见 [docs/status.md](docs/status.md)。
+# 快速上手
 
-## 阶段
+日常操作：从 P3 TIFF 生成一张可交付的 HDR HEIC。假定 CLI 已构建，iPad 应用已安装。
 
-- **v1**（iPad UI 重做）与 **v2**（server/engine：进程内 Core Image 编码器、profile 门禁、缩略图、batch deliver）均已收尾；见 [docs/ui/plan/v1-plan.md](docs/ui/plan/v1-plan.md) 与 [docs/plans/v2-plan.md](docs/plans/v2-plan.md)。
-- 历史 `M{0-5}` / `P{0-6}` / stage-1/2/3 编号只出现在 `docs/plans/` 与 `docs/archive/`，不再是路线图。
+## 工作流程
 
-## 目录
+Mac 负责渲染、编码、验证和交付；iPad 仅用于判图并回传 recipe。
 
-```text
-workspace.xcworkspace  工程 + 包的统一导航（当前：iOS 工程 + 3 个包）
-Configs/                共享 xcconfig（team / 版本 / bundle id）
-server/                 Mac 端 SwiftPM：EngineKit + ServerKit + ServerControl + appctl
-contract/               两端共享契约（无 I/O）：recipe / wire / IPC
-client/                 判图客户端包：ClientKit + ClientModel
-design/                 v1 新建：DesignTokens + DesignComponents（薄）
-apps/ios/               PhotonClient iOS 工程（iPad 优先；v1 重做 UI）
-docs/                   文档：status、reference、plans、decisions、ui（v1）、archive
-fixtures/               本地素材（gitignored）
-tools/                  toGainMapHDR（外部 clone，仅 oracle）、verify-heic、visual-check、make-fixtures
-AGENTS.md               agent 入口：命令、红线、文档路由
-```
+```text inbox/*.tif ──serve──> iPad 判图 ──recipe──> work/<sha>/recipe.json ──deliver──> out/ ```
 
-## 文档
+开始前请确认：素材是 16-bit Display P3 TIFF，已放入 `inbox/`；iPad 与 Mac 连接到同一 Wi-Fi 网络。
 
-[docs/README.md](docs/README.md) 是按任务导航的索引。最常看的是 [docs/reference/](docs/reference/)（精确事实）与 [docs/status.md](docs/status.md)（现在做到哪）。
+## 1. 启动服务
 
-## 开发环境
+```bash .build/server/release/appctl serve --batch inbox --work work --port 8787 ```
 
-- macOS 27.2 / Apple Silicon / Xcode 27.2 / Swift 6.4；判图需 iPad Pro（M2，Liquid Retina XDR），iPadOS 27。
-- 编码在进程内（Core Image/ImageIO）；`tools/toGainMapHDR/` 是外部 MIT clone，只作本地 differential oracle，不随仓库跟踪，不是 `make test` 的前提。
-- `fixtures/media/`、`tools/toGainMapHDR/`、`docs/archive/stage-1/delivery/` 仅本地存在。
+**请查看 stderr，不要查看 stdout。** stderr 会输出 `listen` 和 `token` 两行；stdout 只有一行 JSON，是供 GUI 使用的协议，不是日志。
 
-## 说明
+`listen` 中的 `<mac-lan-ip>` 是占位符。请用以下命令查询实际地址：
 
-- 归档 `docs/archive/` 是冻结的历史文档与证据，非必要不读；新决策写活文档。
-- 视觉验收工具只展示，不能证明 HDR；判断 HDR 只用 ImageIO（`tools/verify-heic`）。
+```bash ipconfig getifaddr en0 ```
+
+判图期间，请勿停止此进程。
+
+## 2. 连接 iPad
+
+Host 填写上方查询到的 IP，Port 填写 `8787`，Token 填写 stderr 中显示的字符串，然后点击 Connect。
+
+## 3. 判图
+
+选择图片 → 选择 Cap并调整三个滑条（Start HDR / Highlight lift / Transition） → 点击发送按钮。
+
+点击发送按钮后，recipe 会保存在 Mac 的 `work/<sha>/recipe.json` 中。
+
+## 4. 交付
+
+```bash .build/server/release/appctl deliver --batch inbox --out out/ ```
+
+每个有 recipe 的素材都会生成一组文件；没有 recipe 的素材会被跳过。只有请求的每个 profile 均通过全部 8 项检查，文件才会写入磁盘；只要有任意一项检查失败，就不会写入任何文件，退出码为 1。
+
+## 产物在哪
+
+| 路径 | 内容 |
+|---|---|
+| `out/{stem}-hdr-{profile}.heic` | 交付的 gain-map HEIC，默认 `10-half-rgb` |
+| `out/{stem}-sdr.heic` | 移除 gain map 后的 SDR 回退文件 |
+| `out/{stem}.recipe.json` | 实际使用的 recipe |
+| `out/{stem}.report.json` | 验证报告 |
+| `work/<sha>/` | 每个素材的中间文件与 recipe |
+| `work/<sha>/rejected/<renderKey12>/` | 失败证据：暂存产物和 report |
+
+## 出问题怎么办
+
+| 现象 | 处理方法 |
+|---|---|
+| `sourceHashMismatch` | 源文件已重新导出，旧 recipe 失效。请重新判图 |
+| `unsupportedSource` | 源文件不是 Display P3。请返回 Capture One，以 P3 重新导出 |
+| `hdrTooDim` | 峰值低于 1.05。请提高 Highlight lift 或 Cap，然后重新点击 Submit |
+| `unauthorized` | token 不正确。请返回连接页重新填写 |
+| iPad 无法连接 | 请确认设备处于同一网段、`serve` 仍在运行，且端口未被占用 |
+
+## 想深入了解
+
+- 命令与选项 → [reference/cli.md](reference/cli.md)
+- 交付契约、report、8 项检查 → [reference/deliver.md](reference/deliver.md)
+- recipe 字段与数学 → [reference/recipe.md](reference/recipe.md)
+- 判图硬件与条件 → [reference/hardware.md](reference/hardware.md)
+- 容器验证 → [reference/verification.md](reference/verification.md)
